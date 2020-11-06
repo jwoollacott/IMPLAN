@@ -1,0 +1,9 @@
+./IMPLANData/*
+./rawdata/*
+./255*/*
+*.lst
+./IMPLANData/*
+./data/*
+./rawdata/*
+./listings/*
+*.gen
