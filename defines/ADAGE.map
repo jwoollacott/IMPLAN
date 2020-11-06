@@ -1,0 +1,653 @@
+$STITLE  Sectoral mapping to ADAGE
+
+$setglobal source implan
+
+$eolcom !
+*   !
+
+SET mapr(*,*)	Mapping from states to regions /
+	ak.ak,
+	al.al,
+	ar.ar,
+	az.az,
+	ca.ca,
+	co.co,
+	ct.ct,
+	de.de,
+	fl.fl,
+	ga.ga,
+	hi.hi,
+	ia.ia,
+	id.id,
+	il.il,
+	in.in,
+	ks.ks,
+	ky.ky,
+	la.la,
+	ma.ma,
+	md.(dc,md),
+	me.me,
+	mi.mi,
+	mn.mn,
+	mo.mo,
+	ms.ms,
+	mt.mt,
+	nc.nc,
+	nd.nd,
+	ne.ne,
+	nh.nh,
+	nj.nj,
+	nm.nm,
+	nv.nv,
+	ny.ny,
+	oh.oh,
+	ok.ok,
+	or.or,
+	pa.pa,
+	ri.ri,
+	sc.sc,
+	sd.sd,
+	tn.tn,
+	tx.tx,
+	ut.ut,
+	va.va,
+	vt.vt,
+	wa.wa,
+	wi.wi,
+	wv.wv,
+	wy.wy /;
+
+
+SET	maps(*,*)	Mapping from Duke sectors to IMPLAN 509 /
+
+AGR.(1      !  Oilseed farming     !
+     2      !  Grain farming     !
+     3      !  Vegetable and melon farming     !
+     4      !  Fruit farming     !
+     5      !  Tree nut farming      !
+     6      !  Greenhouse, nursery, and floriculture production     !
+     7      !  Tobacco farming      !
+     8      !  Cotton farming     !
+     9      !  Sugarcane and sugar beet farming      !
+     10     !  All other crop farming     !
+     11     !  Beef cattle ranching and farming, including feedlots and dual-purpose ranching and farming     !
+     12     !  Dairy cattle and milk production     !
+     13     !  Poultry and egg production     !
+     14     !  Animal production, except cattle and poultry and eggs     !
+     15     !  Forestry, forest products, and timber tract production      !
+     16     !  Commercial logging       !
+     17     !  Commercial fishing      !
+     18     !  Commercial hunting and trapping       !
+     19     !  Support activities for agriculture and forestry     !    
+    ),
+
+CHM.(161     !  Petrochemical manufacturing     !
+     162     !  Industrial gas manufacturing     !
+     163     !  Synthetic dye and pigment manufacturing     !
+     164     !  Other basic inorganic chemical manufacturing     !
+     165     !  Other basic organic chemical manufacturing     !
+     166     !  Plastics material and resin manufacturing     !
+     167     !  Synthetic rubber manufacturing               !
+     168     !  Artificial and synthetic fibers and filaments manufacturing               !
+     169     !  Nitrogenous fertilizer manufacturing     !
+     170     !  Phosphatic fertilizer manufacturing     !
+     171     !  Fertilizer mixing     !
+     172     !  Pesticide and other agricultural chemical manufacturing     !
+     173     !  Medicinal and botanical manufacturing     !
+     174     !  Pharmaceutical preparation manufacturing     !
+     175     !  In-vitro diagnostic substance manufacturing     !
+     176     !  Biological product (except diagnostic) manufacturing     !
+     177     !  Paint and coating manufacturing     !
+     178     !  Adhesive manufacturing     !
+     179     !  Soap and other detergent manufacturing     !
+     180     !  Polish and other sanitation good manufacturing     !
+     181     !  Surface active agent manufacturing     !
+     182     !  Toilet preparation manufacturing     !
+     183     !  Printing ink manufacturing     !
+     184     !  Explosives manufacturing     !
+     185     !  Custom compounding of purchased resins     !
+     186     !  Photographic film and chemical manufacturing     !
+     187     !  Other miscellaneous chemical product manufacturing     !
+     188     !  Plastics packaging materials and unlaminated film and sheet manufacturing     !
+     189     !  Unlaminated plastics profile shape manufacturing    !
+     190     !  Plastics pipe and pipe fitting manufacturing    !
+     191     !  Laminated plastics plate, sheet (except packaging), and shape manufacturing     !
+     192     !  Polystyrene foam product manufacturing     !
+     193     !  Urethane and other foam product (except polystyrene) manufacturing     !
+     194     !  Plastics bottle manufacturing     !
+     195     !  Other plastics product manufacturing     !
+     196     !  Tire manufacturing     !
+     197     !  Rubber and plastics hoses and belting manufacturing     !
+     198     !  Other rubber product manufacturing     !    
+    ),
+
+COL.(22     !  Coal mining     !    
+    ),
+
+CRU.(20     !  Extraction of natural gas and crude petroleum     !
+     21     !  Extraction of natural gas liquids     !
+     37     !  Drilling oil and gas wells     !
+     38     !  Support activities for oil and gas operations     !  
+    ),
+
+ELE.(41     !  Electric power generation - Hydroelectric     !
+     42     !  Electric power generation - Fossil  fuel      !
+     43     !  Electric power generation - Nuclear     !
+     44     !  Electric power generation - Solar     !
+     45     !  Electric power generation - Wind     !
+     46     !  Electric power generation - Geothermal     !
+     47     !  Electric power generation - Biomass     !
+     48     !  Electric power generation - All other     !
+     49     !  Electric power transmission and distribution     !
+     519     !  Federal electric utilities     !
+     522     !  State government electric utilities     !
+     525     !  Local government electric utilities     !   
+    ),
+
+FOO.(65     !  Dog and cat food manufacturing     !
+     66     !  Other animal food manufacturing     !
+     67     !  Flour milling     !
+     68     !  Rice milling     !
+     69     !  Malt manufacturing     !
+     70     !  Wet corn milling     !
+     71     !  Soybean and other oilseed processing     !
+     72     !  Fats and oils refining and blending     !
+     73     !  Breakfast cereal manufacturing     !
+     74     !  Beet sugar manufacturing     !
+     75     !  Sugar cane mills and refining     !
+     76     !  Nonchocolate confectionery manufacturing      !
+     77     !  Chocolate and confectionery manufacturing from cacao beans     !
+     78     !  Confectionery manufacturing from purchased chocolate      !
+     79     !  Frozen fruits, juices and vegetables manufacturing     !
+     80     !  Frozen specialties manufacturing     !
+     81     !  Canned fruits and vegetables manufacturing     !
+     82     !  Canned specialties     !
+     83     !  Dehydrated food products manufacturing     !
+     84     !  Fluid milk manufacturing     !
+     85     !  Creamery butter manufacturing     !
+     86     !  Cheese manufacturing     !
+     87     !  Dry, condensed, and evaporated dairy product manufacturing     !
+     88     !  Ice cream and frozen dessert manufacturing     !
+     89     !  Animal, except poultry, slaughtering     !
+     90     !  Meat processed from carcasses     !
+     91     !  Rendering and meat byproduct processing     !
+     92     !  Poultry processing     !
+     93     !  Seafood product preparation and packaging     !
+     94     !  Bread and bakery product, except frozen, manufacturing     !
+     95     !  Frozen cakes and other pastries manufacturing     !
+     96     !  Cookie and cracker manufacturing     !
+     97     !  Dry pasta, mixes, and dough manufacturing     !
+     98     !  Tortilla manufacturing     !
+     99     !  Roasted nuts and peanut butter manufacturing     !
+     100     !  Other snack food manufacturing     !
+     101     !  Coffee and tea manufacturing     !
+     102     !  Flavoring syrup and concentrate manufacturing     !
+     103     !  Mayonnaise, dressing, and sauce manufacturing     !
+     104     !  Spice and extract manufacturing     !
+     105     !  All other food manufacturing     !
+     106     !  Bottled and canned soft drinks & water     !
+     107     !  Manufactured ice     !
+     108     !  Breweries     !
+     109     !  Wineries     !
+     110     !  Distilleries     !
+     111     !  Tobacco product manufacturing     ! 
+    ),
+
+GAS.(50     !  Natural gas distribution     !   
+    ),
+
+I_S.(217     !  Iron and steel mills and ferroalloy manufacturing     !
+     218     !  Iron, steel pipe and tube manufacturing from purchased steel     !
+     219     !  Rolled steel shape manufacturing     !
+     220     !  Steel wire drawing     !    
+    ),
+
+MAN.(23     !  Iron ore mining     !
+     24     !  Gold ore mining     !
+     25     !  Silver ore mining     !
+     26     !  Lead and zinc ore mining     !
+     27     !  Copper ore mining     !
+     28     !  Uranium-radium-vanadium ore mining     !
+     29     !  Other metal ore mining     !
+     30     !  Stone mining and quarrying     !
+     31     !  Sand and gravel mining     !
+     32     !  Other clay, ceramic, refractory minerals mining     !
+     33     !  Potash, soda, and borate mineral mining     !
+     34     !  Phosphate rock mining     !
+     35     !  Other chemical and fertilizer mineral mining     !
+     36     !  Other nonmetallic minerals     !
+     39     !  Metal mining services     !
+     40     !  Other nonmetallic minerals services     !
+     52     !  Construction of new health care structures     !
+     53     !  Construction of new manufacturing structures     !
+     54     !  Construction of new power and communication structures     !
+     55     !  Construction of new educational and vocational structures     !
+     56     !  Construction of new highways and streets     !
+     57     !  Construction of new commercial structures, including farm structures     !
+     58     !  Construction of other new nonresidential structures     !
+     59     !  Construction of new single-family residential structures     !
+     60     !  Construction of new multifamily residential structures     !
+     61     !  Construction of other new residential structures     !
+     62     !  Maintenance and repair construction of nonresidential structures     !
+     63     !  Maintenance and repair construction of residential structures     !
+     64     !  Maintenance and repair construction of highways, streets, bridges, and tunnels     !
+     112     !  Fiber, yarn, and thread mills     !
+     113     !  Broadwoven fabric mills     !
+     114     !  Narrow fabric mills and schiffli machine embroidery     !
+     115     !  Nonwoven fabric mills     !
+     116     !  Knit fabric mills     !
+     117     !  Textile and fabric finishing mills     !
+     118     !  Fabric coating mills    !
+     119     !  Carpet and rug mills     !
+     120     !  Curtain and linen mills     !
+     121     !  Textile bag and canvas mills     !
+     122     !  Rope, cordage, twine, tire cord and tire fabric mills     !
+     123     !  Other textile product mills     !
+     124     !  Hosiery and sock mills     !
+     125     !  Other apparel knitting mills     !
+     126     !  Cut and sew apparel contractors !
+     127     !  Mens and boys cut and sew apparel manufacturing       !
+     128     !  Womens and girls cut and sew apparel manufacturing    !
+     129     !  Other cut and sew apparel manufacturing !
+     130     !  Apparel accessories and other apparel manufacturing     !
+     131     !  Leather and hide tanning and finishing  !
+     132     !  Footwear manufacturing  !
+     133     !  Other leather and allied product manufacturing  !
+     134     !  Sawmills     !
+     135     !  Wood preservation     !
+     136     !  Veneer and plywood manufacturing    !
+     137     !  Engineered wood member and truss manufacturing  !
+     138     !  Reconstituted wood product manufacturing    !
+     139     !  Wood windows and door manufacturing     !
+     140     !  Cut stock, resawing lumber, and planing     !
+     141     !  Other millwork, including flooring     !
+     142     !  Wood container and pallet manufacturing !
+     143     !  Manufactured home (mobile home) manufacturing     !
+     144     !  Prefabricated wood building manufacturing   !
+     145     !  All other miscellaneous wood product manufacturing     !
+     233     !  Custom roll forming     !
+     234     !  Crown and closure manufacturing and metal stamping     !
+     235     !  Cutlery, utensil, pot, and pan manufacturing      !
+     236     !  Handtool manufacturing  !
+     237     !  Prefabricated metal buildings and components manufacturing     !
+     238     !  Fabricated structural metal manufacturing     !
+     239     !  Plate work manufacturing     !
+     240     !  Metal window and door manufacturing     !
+     241     !  Sheet metal work manufacturing     !
+     242     !  Ornamental and architectural metal work manufacturing     !
+     243     !  Power boiler and heat exchanger manufacturing     !
+     244     !  Metal tank (heavy gauge) manufacturing     !
+     245     !  Metal cans manufacturing     !
+     246     !  Metal barrels, drums and pails manufacturing     !
+     247     !  Hardware manufacturing     !
+     248     !  Spring and wire product manufacturing     !
+     249     !  Machine shops     !
+     250     !  Turned product and screw, nut, and bolt manufacturing     !
+     251     !  Metal heat treating     !
+     252     !  Metal coating and nonprecious engraving     !
+     253     !  Electroplating, anodizing, and coloring metal     !
+     254     !  Valve and fittings, other than plumbing, manufacturing     !
+     255     !  Plumbing fixture fitting and trim manufacturing     !
+     256     !  Ball and roller bearing manufacturing     !
+     257     !  Small arms ammunition manufacturing     !
+     258     !  Ammunition, except for small arms, manufacturing     !
+     259     !  Small arms, ordnance, and accessories manufacturing     !
+     260     !  Fabricated pipe and pipe fitting manufacturing     !
+     261     !  Other fabricated metal manufacturing     !
+     262     !  Farm machinery and equipment manufacturing     !
+     263     !  Lawn and garden equipment manufacturing     !
+     264     !  Construction machinery manufacturing     !
+     265     !  Mining machinery and equipment manufacturing     !
+     266     !  Oil and gas field machinery and equipment manufacturing     !
+     267     !  Food product machinery manufacturing     !
+     268     !  Semiconductor machinery manufacturing     !
+     269     !  Sawmill, woodworking, and paper machinery     !
+     270     !  Printing machinery and equipment manufacturing     !
+     271     !  All other industrial machinery manufacturing     !
+     272     !  Optical instrument and lens manufacturing     !
+     273     !  Photographic and photocopying equipment manufacturing     !
+     274     !  Other commercial service industry machinery manufacturing     !
+     275     !  Air purification and ventilation equipment manufacturing     !
+     276     !  Heating equipment (except warm air furnaces) manufacturing     !
+     277     !  Air conditioning, refrigeration, and warm air heating equipment manufacturing     !
+     278     !  Industrial mold manufacturing     !
+     279     !  Special tool, die, jig, and fixture manufacturing     !
+     280     !  Cutting tool and machine tool accessory manufacturing !
+     281     !  Machine tool manufacturing     !
+     282     !  Rolling mill and other metalworking machinery manufacturing     !
+     283     !  Turbine and turbine generator set units manufacturing     !
+     284     !  Speed changer, industrial high-speed drive, and gear manufacturing     !
+     285     !  Mechanical power transmission equipment manufacturing     !
+     286     !  Other engine equipment manufacturing     !
+     287     !  Pump and pumping equipment manufacturing     !
+     288     !  Air and gas compressor manufacturing     !
+     289     !  Measuring and dispensing pump manufacturing     !
+     290     !  Elevator and moving stairway manufacturing     !
+     291     !  Conveyor and conveying equipment manufacturing     !
+     292     !  Overhead cranes, hoists, and monorail systems manufacturing     !
+     293     !  Industrial truck, trailer, and stacker manufacturing     !
+     294     !  Power-driven handtool manufacturing     !
+     295     !  Welding and soldering equipment manufacturing     !
+     296     !  Packaging machinery manufacturing     !
+     297     !  Industrial process furnace and oven manufacturing     !
+     298     !  Fluid power cylinder and actuator manufacturing     !
+     299     !  Fluid power pump and motor manufacturing     !
+     300     !  Scales, balances, and miscellaneous general purpose machinery manufacturing     !
+     301     !  Electronic computer manufacturing     !
+     302     !  Computer storage device manufacturing     !
+     303     !  Computer terminals and other computer peripheral equipment manufacturing     !
+     304     !  Telephone apparatus manufacturing     !
+     305     !  Broadcast and wireless communications equipment manufacturing     !
+     306     !  Other communications equipment manufacturing     !
+     307     !  Audio and video equipment manufacturing     !
+     308     !  Bare printed circuit board manufacturing                                    !
+     309     !  Semiconductor and related device manufacturing     !
+     310     !  Capacitor, resistor, coil, transformer, and other inductor manufacturing   !
+     311     !  Electronic connector manufacturing  !
+     312     !  Printed circuit assembly (electronic assembly) manufacturing     !     
+     313     !  Other electronic component manufacturing    !
+     314     !  Electromedical and electrotherapeutic apparatus manufacturing     !
+     315     !  Search, detection, and navigation instruments manufacturing     !
+     316     !  Automatic environmental control manufacturing     !
+     317     !  Industrial process variable instruments manufacturing     !
+     318     !  Totalizing fluid meter and counting device manufacturing     !
+     319     !  Electricity and signal testing instruments manufacturing     !
+     320     !  Analytical laboratory instrument manufacturing     !
+     321     !  Irradiation apparatus manufacturing     !
+     322     !  Watch, clock, and other measuring and controlling device manufacturing     !
+     323     !  Blank magnetic and optical recording media manufacturing         !
+     324     !  Software and other prerecorded and record reproducing     !
+     325     !  Electric lamp bulb and part manufacturing     !
+     326     !  Lighting fixture manufacturing     !
+     327     !  Small electrical appliance manufacturing     !
+     328     !  Household cooking appliance manufacturing     !
+     329     !  Household refrigerator and home freezer manufacturing     !
+     330     !  Household laundry equipment manufacturing     !
+     331     !  Other major household appliance manufacturing     !
+     332     !  Power, distribution, and specialty transformer manufacturing     !
+     333     !  Motor and generator manufacturing     !
+     334     !  Switchgear and switchboard apparatus manufacturing     !
+     335     !  Relay and industrial control manufacturing     !
+     336     !  Storage battery manufacturing     !
+     337     !  Primary battery manufacturing     !
+     338     !  Fiber optic cable manufacturing     !
+     339     !  Other communication and energy wire manufacturing     !
+     340     !  Wiring device manufacturing     !
+     341     !  Carbon and graphite product manufacturing     !
+     342     !  All other miscellaneous electrical equipment and component manufacturing     !
+     343     !  Automobile manufacturing     !
+     344     !  Light truck and utility vehicle manufacturing     !
+     345     !  Heavy duty truck manufacturing     !
+     346     !  Motor vehicle body manufacturing     !
+     347     !  Truck trailer manufacturing     !
+     348     !  Motor home manufacturing     !
+     349     !  Travel trailer and camper manufacturing     !
+     350     !  Motor vehicle gasoline engine and engine parts manufacturing     !
+     351     !  Motor vehicle electrical and electronic equipment manufacturing     !
+     352     !  Motor vehicle steering, suspension component (except spring), and brake systems manufacturing     !
+     353     !  Motor vehicle transmission and power train parts manufacturing     !
+     354     !  Motor vehicle seating and interior trim manufacturing     !
+     355     !  Motor vehicle metal stamping     !
+     356     !  Other motor vehicle parts manufacturing     !
+     357     !  Aircraft manufacturing     !
+     358     !  Aircraft engine and engine parts manufacturing     !
+     359     !  Other aircraft parts and auxiliary equipment manufacturing     !
+     360     !  Guided missile and space vehicle manufacturing     !
+     361     !  Propulsion units and parts for space vehicles and guided missiles manufacturing     !
+     362     !  Railroad rolling stock manufacturing     !
+     363     !  Ship building and repairing     !
+     364     !  Boat building     !
+     365     !  Motorcycle, bicycle, and parts manufacturing     !
+     366     !  Military armored vehicle, tank, and tank component manufacturing     !
+     367     !  All other transportation equipment manufacturing     !
+     368     !  Wood kitchen cabinet and countertop manufacturing     !
+     369     !  Upholstered household furniture manufacturing     !
+     370     !  Nonupholstered wood household furniture manufacturing     !
+     371     !  Other household nonupholstered furniture manufacturing     !
+     372     !  Institutional furniture manufacturing     !
+     373     !  Wood office furniture manufacturing     !
+     374     !  Custom architectural woodwork and millwork     !
+     375     !  Office furniture, except wood, manufacturing     !
+     376     !  Showcase, partition, shelving, and locker manufacturing     !
+     377     !  Mattress manufacturing       !
+     378     !  Blind and shade manufacturing        !
+     379     !  Surgical and medical instrument manufacturing     !
+     380     !  Surgical appliance and supplies manufacturing     !
+     381     !  Dental equipment and supplies manufacturing     !
+     382     !  Ophthalmic goods manufacturing     !
+     383     !  Dental laboratories     !
+     384     !  Jewelry and silverware manufacturing     !
+     385     !  Sporting and athletic goods manufacturing     !
+     386     !  Doll, toy, and game manufacturing     !
+     387     !  Office supplies (except paper) manufacturing     !
+     388     !  Sign manufacturing     !
+     389     !  Gasket, packing, and sealing device manufacturing   !
+     390     !  Musical instrument manufacturing    !
+     391     !  Fasteners, buttons, needles, and pins manufacturing     !
+     392     !  Broom, brush, and mop manufacturing !
+     393     !  Burial casket manufacturing     !
+     394     !  All other miscellaneous manufacturing     ! 
+    ),
+
+NFM.(221     !  Alumina refining and primary aluminum production     !
+     222     !  Secondary smelting and alloying of aluminum     !
+     223     !  Aluminum sheet, plate, and foil manufacturing     !
+     224     !  Other aluminum rolling, drawing and extruding     !
+     225     !  Nonferrous metal (exc aluminum) smelting and refining     !
+     226     !  Copper rolling, drawing, extruding and alloying     !
+     227     !  Nonferrous metal, except copper and aluminum, shaping     !
+     228     !  Secondary processing of other nonferrous metals     !
+     229     !  Ferrous metal foundries     !
+     230     !  Nonferrous metal foundries     !
+     231     !  Iron and steel forging     !
+     232     !  Nonferrous forging     ! 
+    ),
+
+NMM.(199     !  Pottery, ceramics, and plumbing fixture manufacturing     !
+     200     !  Brick, tile, and other structural clay product manufacturing      !
+     201     !  Flat glass manufacturing    !
+     202     !  Other pressed and blown glass and glassware manufacturing   !
+     203     !  Glass container manufacturing   !
+     204     !  Glass product manufacturing made of purchased glass !
+     205     !  Cement manufacturing     !
+     206     !  Ready-mix concrete manufacturing     !
+     207     !  Concrete block and brick manufacturing     !
+     208     !  Concrete pipe manufacturing     !
+     209     !  Other concrete product manufacturing     !
+     210     !  Lime manufacturing     !
+     211     !  Gypsum product manufacturing     !
+     212     !  Abrasive product manufacturing     !
+     213     !  Cut stone and stone product manufacturing     !
+     214     !  Ground or treated mineral and earth manufacturing     !
+     215     !  Mineral wool manufacturing     ! 
+     216     !  Miscellaneous nonmetallic mineral products manufacturing     ! 
+    ),
+
+OIL.(156     !  Petroleum refineries                                !
+     157     !  Asphalt paving mixture and block manufacturing      !
+     158     !  Asphalt shingle and coating materials manufacturing !
+     159     !  Petroleum lubricating oil and grease manufacturing  !
+     160     !  All other petroleum and coal products manufacturing !    
+    ),
+
+PPP.(146     !  Pulp mills     !
+     147     !  Paper mills     !
+     148     !  Paperboard mills     !
+     149     !  Paperboard container manufacturing     !
+     150     !  Paper bag and coated and treated paper manufacturing     !
+     151     !  Stationery product manufacturing     !
+     152     !  Sanitary paper product manufacturing     !
+     153     !  All other converted paper product manufacturing     !
+     154     !  Printing     !
+     155     !  Support activities for printing     !
+     417     !  Newspaper publishers     !
+     418     !  Periodical publishers     !
+     419     !  Book publishers     !
+     420     !  Directory, mailing list, and other publishers     !
+     421     !  Greeting card publishing     !
+     422     !  Software publishers     !   
+    ),
+
+PUB.(471     !  Waste management and remediation services     !
+     472     !  Elementary and secondary schools     !
+     473     !  Junior colleges, colleges, universities, and professional schools     !
+     474     !  Other educational services     !
+     513     !  Religious organizations     !
+     514     !  Grantmaking, giving, and social advocacy organizations     !
+     515     !  Business and professional associations     !
+     516     !  Labor and civic organizations     !
+     517     !  Private households     !
+     518     !  Postal service     !
+     520     !  Other federal government enterprises     !
+     521     !  State government passenger transit     !
+     523     !  Other state government enterprises     !
+     524     !  Local government passenger transit     !
+     526     !  Other local government enterprises     !
+     527     !  Used and secondhand goods     !
+     528     !  Scrap     !
+     529     !  Rest of the world adjustment     !
+     530     !  Noncomparable imports     !
+     531     !  Employment and payroll of state govt, non-education     !
+     532     !  Employment and payroll of state govt, education     !
+     533     !  Employment and payroll of local govt, non-education     !
+     534     !  Employment and payroll of local govt, education     !
+     535     !  Employment and payroll of federal govt, non-military     !
+     536     !  Employment and payroll of federal govt, military     !  
+    ),
+
+SRV.(51     !  Water, sewage and other systems     !
+     395     !  Wholesale trade     !
+     396     !  Retail - Motor vehicle and parts dealers     !
+     397     !  Retail - Furniture and home furnishings stores     !
+     398     !  Retail - Electronics and appliance stores     !
+     399     !  Retail - Building material and garden equipment and supplies stores     !
+     400     !  Retail - Food and beverage stores     !
+     401     !  Retail - Health and personal care stores     !
+     402     !  Retail - Gasoline stores     !
+     403     !  Retail - Clothing and clothing accessories stores     !
+     404     !  Retail - Sporting goods, hobby, musical instrument and book stores     !
+     405     !  Retail - General merchandise stores     !
+     406     !  Retail - Miscellaneious store retailers     !
+     407     !  Retail - Nonstore retailers     !
+     423     !  Motion picture and video industries     !
+     424     !  Sound recording industries     !
+     425     !  Radio and television broadcasting     !
+     426     !  Cable and other subscription programming     !
+     427     !  Wired telecommunications carriers     !
+     428     !  Wireless telecommunications carriers (except satellite)     !
+     429     !  Satellite, telecommunications resellers, and all other telecommunications     !
+     430     !  Data processing, hosting, and related services     !
+     431     !  News syndicates, libraries, archives and all other information services     !
+     432     !  Internet publishing and broadcasting and web search portals     !
+     433     !  Monetary authorities and depository credit intermediation     !
+     434     !  Nondepository credit intermediation and related activities     !
+     435     !  Securities and commodity contracts intermediation and brokerage     !
+     436     !  Other financial investment activities     !
+     437     !  Insurance carriers     !
+     438     !  Insurance agencies, brokerages, and related activities     !
+     439     !  Funds, trusts, and other financial vehicles     !
+     440     !  Real estate     !
+     441     !  Owner-occupied dwellings     !
+     442     !  Automotive equipment rental and leasing     !
+     443     !  General and consumer goods rental except video tapes and discs !
+     444     !  Video tape and disc rental  !
+     445     !  Commercial and industrial machinery and equipment rental and leasing     !
+     446     !  Lessors of nonfinancial intangible assets     !
+     447     !  Legal services     !
+     448     !  Accounting, tax preparation, bookkeeping, and payroll services     !
+     449     !  Architectural, engineering, and related services     !
+     450     !  Specialized design services     !
+     451     !  Custom computer programming services     !
+     452     !  Computer systems design services     !
+     453     !  Other computer related services, including facilities management     !
+     454     !  Management consulting services     !
+     455     !  Environmental and other technical consulting services     !
+     456     !  Scientific research and development services     !
+     457     !  Advertising, public relations, and related services     !
+     458     !  Photographic services     !
+     459     !  Veterinary services     !
+     460     !  Marketing research and all other miscellaneous professional, scientific, and technical services     !
+     461     !  Management of companies and enterprises     !
+     462     !  Office administrative services     !
+     463     !  Facilities support services     !
+     464     !  Employment services     !
+     465     !  Business support services     !
+     466     !  Travel arrangement and reservation services     !
+     467     !  Investigation and security services     !
+     468     !  Services to buildings     !
+     469     !  Landscape and horticultural services     !
+     470     !  Other support services     !
+     475     !  Offices of physicians     !
+     476     !  Offices of dentists     !
+     477     !  Offices of other health practitioners     !
+     478     !  Outpatient care centers     !
+     479     !  Medical and diagnostic laboratories     !
+     480     !  Home health care services     !
+     481     !  Other ambulatory health care services     !
+     482     !  Hospitals     !
+     483     !  Nursing and community care facilities     !
+     484     !  Residential mental retardation, mental health, substance abuse and other facilities     !
+     485     !  Individual and family services     !
+     486     !  Community food, housing, and other relief services, including rehabilitation services     !
+     487     !  Child day care services     !
+     488     !  Performing arts companies     !
+     489     !  Commercial Sports Except Racing     !
+     490     !  Racing and Track Operation     !
+     491     !  Promoters of performing arts and sports and agents for public figures     !
+     492     !  Independent artists, writers, and performers     !
+     493     !  Museums, historical sites, zoos, and parks     !
+     494     !  Amusement parks and arcades     !
+     495     !  Gambling industries (except casino hotels)     !
+     496     !  Other amusement and recreation industries     !
+     497     !  Fitness and recreational sports centers       !
+     498     !  Bowling centers                               !
+     499     !  Hotels and motels, including casino hotels      !
+     500     !  Other accommodations                       !
+     501     !  Full-service restaurants     !
+     502     !  Limited-service restaurants     !
+     503     !  All other food and drinking places     !
+     504     !  Automotive repair and maintenance, except car washes                       !
+     505     !  Car washes  !
+     506     !  Electronic and precision equipment repair and maintenance     !
+     507     !  Commercial and industrial machinery and equipment repair and maintenance     !
+     508     !  Personal and household goods repair and maintenance     !
+     509     !  Personal care services     !
+     510     !  Death care services     !
+     511     !  Dry-cleaning and laundry services     !
+     512     !  Other personal services     !   
+    ),
+
+TRN.(408     !  Air transportation     !
+     409     !  Rail transportation     !
+     410     !  Water transportation     !
+     411     !  Truck transportation     !
+     412     !  Transit and ground passenger transportation     !
+     413     !  Pipeline transportation     !
+     414     !  Scenic and sightseeing transportation and support activities for transportation     !
+     415     !  Couriers and messengers     !
+     416     !  Warehousing and storage     ! 
+    ),
+
+
+*   OMN sectors are a complete subset of the manufacturing sectors
+*   OMN is not included within the industry set
+
+OMN.(23     !  Iron ore mining     !
+     26     !  Lead and zinc ore mining     !
+     27     !  Copper ore mining     !
+     24     !  Gold ore mining     !
+     25     !  Silver ore mining     !
+     28     !  Uranium-radium-vanadium ore mining     !
+     29     !  Other metal ore mining     !
+     30     !  Stone mining and quarrying     !
+     31     !  Sand and gravel mining     !
+     32     !  Other clay, ceramic, refractory minerals mining     !
+     33     !  Potash, soda, and borate mineral mining     !
+     34     !  Phosphate rock mining     !
+     35     !  Other chemical and fertilizer mineral mining     !
+     36     !  Other nonmetallic minerals     !
+     39     !  Metal mining services     !
+     40     !  Other nonmetallic minerals services     ! 
+    )
+
+/;

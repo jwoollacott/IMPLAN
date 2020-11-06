@@ -1,0 +1,557 @@
+$TITLE  Sectoral mapping from IMPLAN 546 to NAICS 3-digit plus or minus a few (see ./defines/IMPLAN_minaggr.xlsx)
+
+$eolcom !
+
+SET   mapr(*,*) Mapping from aggregate regions to states ;
+    mapr(r,r) = YES ;
+
+
+SET	maps(*,*)	Mapping from medium aggregation sectors to IMPLAN 546 /
+N11.1     ! Oilseed farming
+N11.2     ! Grain farming
+N11.3     ! Vegetable and melon farming
+N11.4     ! Fruit farming
+N11.5     ! Tree nut farming
+N11.6     ! Greenhouse, nursery, and floriculture production
+N11.7     ! Tobacco farming
+N11.8     ! Cotton farming
+N11.9     ! Sugarcane and sugar beet farming
+N11.10     ! All other crop farming
+N11.11     ! Beef cattle ranching and farming, including feedlots and dual-purpose ranching and farming
+N11.12     ! Dairy cattle and milk production
+N11.13     ! Poultry and egg production
+N11.14     ! Animal production, except cattle and poultry and eggs
+N11.15     ! Forestry, forest products, and timber tract production
+N11.16     ! Commercial logging
+N11.17     ! Commercial fishing
+N11.18     ! Commercial hunting and trapping
+N11.19     ! Support activities for agriculture and forestry
+I20.20     ! Oil and gas extraction
+I21.21     ! Coal mining
+N21.22     ! Copper, nickel, lead, and zinc mining
+N21.23     ! Iron ore mining
+N21.24     ! Gold ore mining
+N21.25     ! Silver ore mining
+N21.26     ! Uranium-radium-vanadium ore mining
+N21.27     ! Other metal ore mining
+N21.28     ! Stone mining and quarrying
+N21.29     ! Sand and gravel mining
+N21.30     ! Other clay, ceramic, refractory minerals mining
+N21.31     ! Potash, soda, and borate mineral mining
+N21.32     ! Phosphate rock mining
+N21.33     ! Other chemical and fertilizer mineral mining
+N21.34     ! Other nonmetallic minerals
+I35.35     ! Drilling oil and gas wells
+I36.36     ! Support activities for oil and gas operations
+N21.37     ! Metal mining services
+N21.38     ! Other nonmetallic minerals services
+I39.39     ! Electric power generation - Hydroelectric
+I40.40     ! Electric power generation - Fossil  fuel
+I41.41     ! Electric power generation - Nuclear
+I42.42     ! Electric power generation - Solar
+I43.43     ! Electric power generation - Wind
+I44.44     ! Electric power generation - Geothermal
+I45.45     ! Electric power generation - Biomass
+I46.46     ! Electric power generation - All other
+I47.47     ! Electric power transmission and distribution
+I48.48     ! Natural gas distribution
+N22.49     ! Water, sewage and other systems
+Icns.50     ! Construction of new health care structures
+Icns.51     ! Construction of new manufacturing structures
+Icns.52     ! Construction of new power and communication structures
+Icns.53     ! Construction of new educational and vocational structures
+Icns.54     ! Construction of new highways and streets
+Icns.55     ! Construction of new commercial structures, including farm structures
+Icns.56     ! Construction of other new nonresidential structures
+Icns.57     ! Construction of new single-family residential structures
+Icns.58     ! Construction of new multifamily residential structures
+Icns.59     ! Construction of other new residential structures
+Icns.60     ! Maintenance and repair construction of nonresidential structures
+Icns.61     ! Maintenance and repair construction of residential structures
+Icns.62     ! Maintenance and repair construction of highways, streets, bridges, and tunnels
+N31.63     ! Dog and cat food manufacturing
+N31.64     ! Other animal food manufacturing
+N31.65     ! Flour milling
+N31.66     ! Rice milling
+N31.67     ! Malt manufacturing
+N31.68     ! Wet corn milling
+N31.69     ! Soybean and other oilseed processing
+N31.70     ! Fats and oils refining and blending
+N31.71     ! Breakfast cereal manufacturing
+N31.72     ! Beet sugar manufacturing
+N31.73     ! Sugar cane mills and refining
+N31.74     ! Nonchocolate confectionery manufacturing
+N31.75     ! Chocolate and confectionery manufacturing from cacao beans
+N31.76     ! Confectionery manufacturing from purchased chocolate
+N31.77     ! Frozen fruits, juices and vegetables manufacturing
+N31.78     ! Frozen specialties manufacturing
+N31.79     ! Canned fruits and vegetables manufacturing
+N31.80     ! Canned specialties
+N31.81     ! Dehydrated food products manufacturing
+N31.82     ! Cheese manufacturing
+N31.83     ! Dry, condensed, and evaporated dairy product manufacturing
+N31.84     ! Fluid milk manufacturing
+N31.85     ! Creamery butter manufacturing
+N31.86     ! Ice cream and frozen dessert manufacturing
+N31.87     ! Frozen cakes and other pastries manufacturing
+N31.88     ! Poultry processing
+N31.89     ! Animal, except poultry, slaughtering
+N31.90     ! Meat processed from carcasses
+N31.91     ! Rendering and meat byproduct processing
+N31.92     ! Seafood product preparation and packaging
+N31.93     ! Bread and bakery product, except frozen, manufacturing
+N31.94     ! Cookie and cracker manufacturing
+N31.95     ! Dry pasta, mixes, and dough manufacturing
+N31.96     ! Tortilla manufacturing
+N31.97     ! Roasted nuts and peanut butter manufacturing
+N31.98     ! Other snack food manufacturing
+N31.99     ! Coffee and tea manufacturing
+N31.100     ! Flavoring syrup and concentrate manufacturing
+N31.101     ! Mayonnaise, dressing, and sauce manufacturing
+N31.102     ! Spice and extract manufacturing
+N31.103     ! All other food manufacturing
+N31.104     ! Bottled and canned soft drinks & water
+N31.105     ! Manufactured ice
+N31.106     ! Breweries
+N31.107     ! Wineries
+N31.108     ! Distilleries
+N31.109     ! Tobacco product manufacturing
+N31.110     ! Fiber, yarn, and thread mills
+N31.111     ! Broadwoven fabric mills
+N31.112     ! Narrow fabric mills and schiffli machine embroidery
+N31.113     ! Nonwoven fabric mills
+N31.114     ! Knit fabric mills
+N31.115     ! Textile and fabric finishing mills
+N31.116     ! Fabric coating mills
+N31.117     ! Carpet and rug mills
+N31.118     ! Curtain and linen mills
+N31.119     ! Textile bag and canvas mills
+N31.120     ! Rope, cordage, twine, tire cord and tire fabric mills
+N31.121     ! Other textile product mills
+N31.122     ! Hosiery and sock mills
+N31.123     ! Other apparel knitting mills
+N31.124     ! Cut and sew apparel contractors
+N31.125     ! Men's and boys' cut and sew apparel manufacturing
+N31.126     ! Women's and girls' cut and sew apparel manufacturing
+N31.127     ! Other cut and sew apparel manufacturing
+N31.128     ! Apparel accessories and other apparel manufacturing
+N31.129     ! Leather and hide tanning and finishing
+N31.130     ! Footwear manufacturing
+N31.131     ! Other leather and allied product manufacturing
+N32.132     ! Sawmills
+N32.133     ! Wood preservation
+N32.134     ! Veneer and plywood manufacturing
+N32.135     ! Engineered wood member and truss manufacturing
+N32.136     ! Reconstituted wood product manufacturing
+N32.137     ! Wood windows and door manufacturing
+N32.138     ! Cut stock, resawing lumber, and planing
+N32.139     ! Other millwork, including flooring
+N32.140     ! Wood container and pallet manufacturing
+N32.141     ! Manufactured home (mobile home) manufacturing
+N32.142     ! Prefabricated wood building manufacturing
+N32.143     ! All other miscellaneous wood product manufacturing
+N32.144     ! Pulp mills
+N32.145     ! Paper mills
+N32.146     ! Paperboard mills
+N32.147     ! Paperboard container manufacturing
+N32.148     ! Paper bag and coated and treated paper manufacturing
+N32.149     ! Stationery product manufacturing
+N32.150     ! Sanitary paper product manufacturing
+N32.151     ! All other converted paper product manufacturing
+N32.152     ! Printing
+N32.153     ! Support activities for printing
+N32.154     ! Petroleum refineries
+N32.155     ! Asphalt paving mixture and block manufacturing
+N32.156     ! Asphalt shingle and coating materials manufacturing
+N32.157     ! Petroleum lubricating oil and grease manufacturing
+N32.158     ! All other petroleum and coal products manufacturing
+N32.159     ! Petrochemical manufacturing
+N32.160     ! Industrial gas manufacturing
+N32.161     ! Synthetic dye and pigment manufacturing
+N32.162     ! Other basic inorganic chemical manufacturing
+N32.163     ! Other basic organic chemical manufacturing
+N32.164     ! Plastics material and resin manufacturing
+N32.165     ! Synthetic rubber manufacturing
+N32.166     ! Artificial and synthetic fibers and filaments manufacturing
+N32.167     ! Nitrogenous fertilizer manufacturing
+N32.168     ! Phosphatic fertilizer manufacturing
+N32.169     ! Fertilizer mixing
+N32.170     ! Pesticide and other agricultural chemical manufacturing
+N32.171     ! Medicinal and botanical manufacturing
+N32.172     ! Pharmaceutical preparation manufacturing
+N32.173     ! In-vitro diagnostic substance manufacturing
+N32.174     ! Biological product (except diagnostic) manufacturing
+N32.175     ! Paint and coating manufacturing
+N32.176     ! Adhesive manufacturing
+N32.177     ! Soap and other detergent manufacturing
+N32.178     ! Polish and other sanitation good manufacturing
+N32.179     ! Surface active agent manufacturing
+N32.180     ! Toilet preparation manufacturing
+N32.181     ! Printing ink manufacturing
+N32.182     ! Explosives manufacturing
+N32.183     ! Custom compounding of purchased resins
+N32.184     ! Photographic film and chemical manufacturing
+N32.185     ! Other miscellaneous chemical product manufacturing
+N32.186     ! Plastics packaging materials and unlaminated film and sheet manufacturing
+N32.187     ! Unlaminated plastics profile shape manufacturing
+N32.188     ! Plastics pipe and pipe fitting manufacturing
+N32.189     ! Laminated plastics plate, sheet (except packaging), and shape manufacturing
+N32.190     ! Polystyrene foam product manufacturing
+N32.191     ! Urethane and other foam product (except polystyrene) manufacturing
+N32.192     ! Plastics bottle manufacturing
+N32.193     ! Other plastics product manufacturing
+N32.194     ! Tire manufacturing
+N32.195     ! Rubber and plastics hoses and belting manufacturing
+N32.196     ! Other rubber product manufacturing
+N32.197     ! Pottery, ceramics, and plumbing fixture manufacturing
+N32.198     ! Brick, tile, and other structural clay product manufacturing
+N32.199     ! Flat glass manufacturing
+N32.200     ! Other pressed and blown glass and glassware manufacturing
+N32.201     ! Glass container manufacturing
+N32.202     ! Glass product manufacturing made of purchased glass
+I203.203     ! Cement manufacturing
+N32.204     ! Ready-mix concrete manufacturing
+N32.205     ! Concrete block and brick manufacturing
+N32.206     ! Concrete pipe manufacturing
+N32.207     ! Other concrete product manufacturing
+N32.208     ! Lime manufacturing
+N32.209     ! Gypsum product manufacturing
+N32.210     ! Abrasive product manufacturing
+N32.211     ! Cut stone and stone product manufacturing
+N32.212     ! Ground or treated mineral and earth manufacturing
+N32.213     ! Mineral wool manufacturing
+N32.214     ! Miscellaneous nonmetallic mineral products manufacturing
+I215.215     ! Iron and steel mills and ferroalloy manufacturing
+N33.216     ! Iron, steel pipe and tube manufacturing from purchased steel
+N33.217     ! Rolled steel shape manufacturing
+N33.218     ! Steel wire drawing
+I219.219     ! Alumina refining and primary aluminum production
+I220.220     ! Secondary smelting and alloying of aluminum
+N33.221     ! Aluminum sheet, plate, and foil manufacturing
+N33.222     ! Other aluminum rolling, drawing and extruding
+N33.223     ! Nonferrous metal (exc aluminum) smelting and refining
+N33.224     ! Copper rolling, drawing, extruding and alloying
+N33.225     ! Nonferrous metal, except copper and aluminum, shaping
+N33.226     ! Secondary processing of other nonferrous metals
+N33.227     ! Ferrous metal foundries
+N33.228     ! Nonferrous metal foundries
+N33.229     ! Custom roll forming
+N33.230     ! Crown and closure manufacturing and metal stamping
+N33.231     ! Iron and steel forging
+N33.232     ! Nonferrous forging
+N33.233     ! Cutlery, utensil, pot, and pan manufacturing
+N33.234     ! Handtool manufacturing
+N33.235     ! Prefabricated metal buildings and components manufacturing
+N33.236     ! Fabricated structural metal manufacturing
+N33.237     ! Plate work manufacturing
+N33.238     ! Metal window and door manufacturing
+N33.239     ! Sheet metal work manufacturing
+N33.240     ! Ornamental and architectural metal work manufacturing
+N33.241     ! Power boiler and heat exchanger manufacturing
+N33.242     ! Metal tank (heavy gauge) manufacturing
+N33.243     ! Metal cans manufacturing
+N33.244     ! Metal barrels, drums and pails manufacturing
+N33.245     ! Hardware manufacturing
+N33.246     ! Spring and wire product manufacturing
+N33.247     ! Machine shops
+N33.248     ! Turned product and screw, nut, and bolt manufacturing
+N33.249     ! Metal heat treating
+N33.250     ! Metal coating and nonprecious engraving
+N33.251     ! Electroplating, anodizing, and coloring metal
+N33.252     ! Valve and fittings, other than plumbing, manufacturing
+N33.253     ! Plumbing fixture fitting and trim manufacturing
+N33.254     ! Ball and roller bearing manufacturing
+N33.255     ! Small arms ammunition manufacturing
+N33.256     ! Ammunition, except for small arms, manufacturing
+N33.257     ! Small arms, ordnance, and accessories manufacturing
+N33.258     ! Fabricated pipe and pipe fitting manufacturing
+N33.259     ! Other fabricated metal manufacturing
+N33.260     ! Farm machinery and equipment manufacturing
+N33.261     ! Lawn and garden equipment manufacturing
+N33.262     ! Construction machinery manufacturing
+N33.263     ! Mining machinery and equipment manufacturing
+N33.264     ! Oil and gas field machinery and equipment manufacturing
+N33.265     ! Semiconductor machinery manufacturing
+N33.266     ! Food product machinery manufacturing
+N33.267     ! Sawmill, woodworking, and paper machinery
+N33.268     ! Printing machinery and equipment manufacturing
+N33.269     ! All other industrial machinery manufacturing
+N33.270     ! Optical instrument and lens manufacturing
+N33.271     ! Photographic and photocopying equipment manufacturing
+N33.272     ! Other commercial service industry machinery manufacturing
+N33.273     ! Air purification and ventilation equipment manufacturing
+N33.274     ! Heating equipment (except warm air furnaces) manufacturing
+N33.275     ! Air conditioning, refrigeration, and warm air heating equipment manufacturing
+N33.276     ! Industrial mold manufacturing
+N33.277     ! Special tool, die, jig, and fixture manufacturing
+N33.278     ! Cutting tool and machine tool accessory manufacturing
+N33.279     ! Machine tool manufacturing
+N33.280     ! Rolling mill and other metalworking machinery manufacturing
+N33.281     ! Turbine and turbine generator set units manufacturing
+N33.282     ! Speed changer, industrial high-speed drive, and gear manufacturing
+N33.283     ! Mechanical power transmission equipment manufacturing
+N33.284     ! Other engine equipment manufacturing
+N33.285     ! Pump and pumping equipment manufacturing
+N33.286     ! Air and gas compressor manufacturing
+N33.287     ! Elevator and moving stairway manufacturing
+N33.288     ! Conveyor and conveying equipment manufacturing
+N33.289     ! Overhead cranes, hoists, and monorail systems manufacturing
+N33.290     ! Industrial truck, trailer, and stacker manufacturing
+N33.291     ! Power-driven handtool manufacturing
+N33.292     ! Welding and soldering equipment manufacturing
+N33.293     ! Packaging machinery manufacturing
+N33.294     ! Industrial process furnace and oven manufacturing
+N33.295     ! Fluid power cylinder and actuator manufacturing
+N33.296     ! Fluid power pump and motor manufacturing
+N33.297     ! Scales, balances, and miscellaneous general purpose machinery manufacturing
+N33.298     ! Electronic computer manufacturing
+N33.299     ! Computer storage device manufacturing
+N33.300     ! Computer terminals and other computer peripheral equipment manufacturing
+N33.301     ! Telephone apparatus manufacturing
+N33.302     ! Broadcast and wireless communications equipment manufacturing
+N33.303     ! Other communications equipment manufacturing
+N33.304     ! Audio and video equipment manufacturing
+N33.305     ! Printed circuit assembly (electronic assembly) manufacturing
+N33.306     ! Bare printed circuit board manufacturing
+N33.307     ! Semiconductor and related device manufacturing
+N33.308     ! Capacitor, resistor, coil, transformer, and other inductor manufacturing
+N33.309     ! Electronic connector manufacturing
+N33.310     ! Other electronic component manufacturing
+N33.311     ! Electromedical and electrotherapeutic apparatus manufacturing
+N33.312     ! Search, detection, and navigation instruments manufacturing
+N33.313     ! Automatic environmental control manufacturing
+N33.314     ! Industrial process variable instruments manufacturing
+N33.315     ! Totalizing fluid meter and counting device manufacturing
+N33.316     ! Electricity and signal testing instruments manufacturing
+N33.317     ! Analytical laboratory instrument manufacturing
+N33.318     ! Irradiation apparatus manufacturing
+N33.319     ! Watch, clock, and other measuring and controlling device manufacturing
+N33.320     ! Blank magnetic and optical recording media manufacturing
+N33.321     ! Software and other prerecorded and record reproducing
+N33.322     ! Electric lamp bulb and part manufacturing
+N33.323     ! Lighting fixture manufacturing
+N33.324     ! Small electrical appliance manufacturing
+N33.325     ! Household cooking appliance manufacturing
+N33.326     ! Household refrigerator and home freezer manufacturing
+N33.327     ! Household laundry equipment manufacturing
+N33.328     ! Other major household appliance manufacturing
+I329.329     ! Power, distribution, and specialty transformer manufacturing
+N33.330     ! Motor and generator manufacturing
+N33.331     ! Switchgear and switchboard apparatus manufacturing
+N33.332     ! Relay and industrial control manufacturing
+N33.333     ! Storage battery manufacturing
+N33.334     ! Primary battery manufacturing
+N33.335     ! Fiber optic cable manufacturing
+N33.336     ! Other communication and energy wire manufacturing
+N33.337     ! Wiring device manufacturing
+N33.338     ! Carbon and graphite product manufacturing
+N33.339     ! All other miscellaneous electrical equipment and component manufacturing
+N33.340     ! Automobile manufacturing
+N33.341     ! Light truck and utility vehicle manufacturing
+N33.342     ! Heavy duty truck manufacturing
+N33.343     ! Motor vehicle body manufacturing
+N33.344     ! Truck trailer manufacturing
+N33.345     ! Motor home manufacturing
+N33.346     ! Travel trailer and camper manufacturing
+N33.347     ! Motor vehicle gasoline engine and engine parts manufacturing
+N33.348     ! Motor vehicle electrical and electronic equipment manufacturing
+N33.349     ! Motor vehicle transmission and power train parts manufacturing
+N33.350     ! Motor vehicle seating and interior trim manufacturing
+N33.351     ! Motor vehicle metal stamping
+N33.352     ! Other motor vehicle parts manufacturing
+N33.353     ! Motor vehicle steering, suspension component (except spring), and brake systems manufacturing
+N33.354     ! Aircraft manufacturing
+N33.355     ! Aircraft engine and engine parts manufacturing
+N33.356     ! Other aircraft parts and auxiliary equipment manufacturing
+N33.357     ! Guided missile and space vehicle manufacturing
+N33.358     ! Propulsion units and parts for space vehicles and guided missiles manufacturing
+N33.359     ! Railroad rolling stock manufacturing
+N33.360     ! Ship building and repairing
+N33.361     ! Boat building
+N33.362     ! Motorcycle, bicycle, and parts manufacturing
+N33.363     ! Military armored vehicle, tank, and tank component manufacturing
+N33.364     ! All other transportation equipment manufacturing
+N33.365     ! Wood kitchen cabinet and countertop manufacturing
+N33.366     ! Upholstered household furniture manufacturing
+N33.367     ! Nonupholstered wood household furniture manufacturing
+N33.368     ! Other household nonupholstered furniture manufacturing
+N33.369     ! Institutional furniture manufacturing
+N33.370     ! Wood office furniture manufacturing
+N33.371     ! Custom architectural woodwork and millwork
+N33.372     ! Office furniture, except wood, manufacturing
+N33.373     ! Showcase, partition, shelving, and locker manufacturing
+N33.374     ! Mattress manufacturing
+N33.375     ! Blind and shade manufacturing
+N33.376     ! Surgical and medical instrument manufacturing
+N33.377     ! Surgical appliance and supplies manufacturing
+N33.378     ! Dental equipment and supplies manufacturing
+N33.379     ! Ophthalmic goods manufacturing
+N33.380     ! Dental laboratories
+N33.381     ! Jewelry and silverware manufacturing
+N33.382     ! Sporting and athletic goods manufacturing
+N33.383     ! Doll, toy, and game manufacturing
+N33.384     ! Office supplies (except paper) manufacturing
+N33.385     ! Sign manufacturing
+N33.386     ! Gasket, packing, and sealing device manufacturing
+N33.387     ! Musical instrument manufacturing
+N33.388     ! Fasteners, buttons, needles, and pins manufacturing
+N33.389     ! Broom, brush, and mop manufacturing
+N33.390     ! Burial casket manufacturing
+N33.391     ! All other miscellaneous manufacturing
+N42.392     ! Wholesale - Motor vehicle and motor vehicle parts and supplies
+N42.393     ! Wholesale - Professional and commercial equipment and supplies
+N42.394     ! Wholesale - Household appliances and electrical and electronic goods
+N42.395     ! Wholesale - Machinery, equipment, and supplies
+N42.396     ! Wholesale - Other durable goods merchant wholesalers
+N42.397     ! Wholesale - Drugs and druggists’ sundries
+N42.398     ! Wholesale - Grocery and related product wholesalers
+N42.399     ! Wholesale - Petroleum and petroleum products
+N42.400     ! Wholesale - Other nondurable goods merchant wholesalers
+N42.401     ! Wholesale - Wholesale electronic markets and agents and brokers
+N44.402     ! Retail - Motor vehicle and parts dealers
+N44.403     ! Retail - Furniture and home furnishings stores
+N44.404     ! Retail - Electronics and appliance stores
+N44.405     ! Retail - Building material and garden equipment and supplies stores
+N44.406     ! Retail - Food and beverage stores
+N44.407     ! Retail - Health and personal care stores
+N44.408     ! Retail - Gasoline stores
+N44.409     ! Retail - Clothing and clothing accessories stores
+N45.410     ! Retail - Sporting goods, hobby, musical instrument and book stores
+N45.411     ! Retail - General merchandise stores
+N45.412     ! Retail - Miscellaneous store retailers
+N45.413     ! Retail - Nonstore retailers
+N48.414     ! Air transportation
+N48.415     ! Rail transportation
+N48.416     ! Water transportation
+N48.417     ! Truck transportation
+N48.418     ! Transit and ground passenger transportation
+N48.419     ! Pipeline transportation
+I420.420     ! Scenic and sightseeing transportation and support activities for transportation
+N49.421     ! Couriers and messengers
+N49.422     ! Warehousing and storage
+N51.423     ! Newspaper publishers
+N51.424     ! Periodical publishers
+N51.425     ! Book publishers
+N51.426     ! Directory, mailing list, and other publishers
+N51.427     ! Greeting card publishing
+N51.428     ! Software publishers
+N51.429     ! Motion picture and video industries
+N51.430     ! Sound recording industries
+N51.431     ! Radio and television broadcasting
+N51.432     ! Cable and other subscription programming
+N51.433     ! Wired telecommunications carriers
+N51.434     ! Wireless telecommunications carriers (except satellite)
+N51.435     ! Satellite, telecommunications resellers, and all other telecommunications
+N51.436     ! Data processing, hosting, and related services
+N51.437     ! News syndicates, libraries, archives and all other information services
+N51.438     ! Internet publishing and broadcasting and web search portals
+N52.439     ! Nondepository credit intermediation and related activities
+N52.440     ! Securities and commodity contracts intermediation and brokerage
+I441.441     ! Monetary authorities and depository credit intermediation
+N52.442     ! Other financial investment activities
+N52.443     ! Direct life insurance carriers
+N52.444     ! Insurance carriers, except direct life
+N52.445     ! Insurance agencies, brokerages, and related activities
+N52.446     ! Funds, trusts, and other financial vehicles
+N53.447     ! Other real estate
+N53.448     ! Tenant-occupied housing
+Ioth.449     ! Owner-occupied dwellings
+N53.450     ! Automotive equipment rental and leasing
+N53.451     ! General and consumer goods rental except video tapes and discs
+N53.452     ! Video tape and disc rental
+N53.453     ! Commercial and industrial machinery and equipment rental and leasing
+N53.454     ! Lessors of nonfinancial intangible assets
+N54.455     ! Legal services
+N54.456     ! Accounting, tax preparation, bookkeeping, and payroll services
+N54.457     ! Architectural, engineering, and related services
+N54.458     ! Specialized design services
+N54.459     ! Custom computer programming services
+N54.460     ! Computer systems design services
+N54.461     ! Other computer related services, including facilities management
+N54.462     ! Management consulting services
+N54.463     ! Environmental and other technical consulting services
+N54.464     ! Scientific research and development services
+N54.465     ! Advertising, public relations, and related services
+N54.466     ! Photographic services
+N54.467     ! Veterinary services
+N54.468     ! Marketing research and all other miscellaneous professional, scientific, and technical services
+N55.469     ! Management of companies and enterprises
+N56.470     ! Office administrative services
+N56.471     ! Facilities support services
+N56.472     ! Employment services
+N56.473     ! Business support services
+N56.474     ! Travel arrangement and reservation services
+N56.475     ! Investigation and security services
+N56.476     ! Services to buildings
+N56.477     ! Landscape and horticultural services
+N56.478     ! Other support services
+N56.479     ! Waste management and remediation services
+N61.480     ! Elementary and secondary schools
+N61.481     ! Junior colleges, colleges, universities, and professional schools
+N61.482     ! Other educational services
+N62.483     ! Offices of physicians
+N62.484     ! Offices of dentists
+N62.485     ! Offices of other health practitioners
+N62.486     ! Outpatient care centers
+N62.487     ! Medical and diagnostic laboratories
+N62.488     ! Home health care services
+N62.489     ! Other ambulatory health care services
+N62.490     ! Hospitals
+N62.491     ! Nursing and community care facilities
+N62.492     ! Residential mental retardation, mental health, substance abuse and other facilities
+N62.493     ! Individual and family services
+N62.494     ! Child day care services
+N62.495     ! Community food, housing, and other relief services, including rehabilitation services
+N71.496     ! Performing arts companies
+N71.497     ! Commercial Sports Except Racing
+N71.498     ! Racing and Track Operation
+N71.499     ! Independent artists, writers, and performers
+N71.500     ! Promoters of performing arts and sports and agents for public figures
+N71.501     ! Museums, historical sites, zoos, and parks
+N71.502     ! Amusement parks and arcades
+N71.503     ! Gambling industries (except casino hotels)
+N71.504     ! Other amusement and recreation industries
+N71.505     ! Fitness and recreational sports centers
+N71.506     ! Bowling centers
+N72.507     ! Hotels and motels, including casino hotels
+N72.508     ! Other accommodations
+N72.509     ! Full-service restaurants
+N72.510     ! Limited-service restaurants
+N72.511     ! All other food and drinking places
+N81.512     ! Automotive repair and maintenance, except car washes
+N81.513     ! Car washes
+N81.514     ! Electronic and precision equipment repair and maintenance
+N81.515     ! Commercial and industrial machinery and equipment repair and maintenance
+N81.516     ! Personal and household goods repair and maintenance
+N81.517     ! Personal care services
+N81.518     ! Death care services
+N81.519     ! Dry-cleaning and laundry services
+N81.520     ! Other personal services
+N81.521     ! Religious organizations
+N81.522     ! Grantmaking, giving, and social advocacy organizations
+N81.523     ! Business and professional associations
+N81.524     ! Labor and civic organizations
+N81.525     ! Private households
+N49.526     ! Postal service
+Igov.527     ! Federal electric utilities
+Igov.528     ! Other federal government enterprises
+Igov.529     ! State government passenger transit
+Igov.530     ! State government electric utilities
+Igov.531     ! Other state government enterprises
+Igov.532     ! Local government passenger transit
+Igov.533     ! Local government electric utilities
+Igov.534     ! Other local government enterprises
+Ioth.535     ! * Not an industry (Used and secondhand goods)
+Ioth.536     ! * Not an industry (Scrap)
+Ioth.537     ! * Not an industry (Rest of world adjustment)
+Ioth.538     ! * Not an industry (Noncomparable foreign imports)
+Ioth.539     ! * Employment and payroll of state govt, education
+Ioth.540     ! * Employment and payroll of state govt, hospitals and health services
+Ioth.541     ! * Employment and payroll of state govt, other services
+Ioth.542     ! * Employment and payroll of local govt, education
+Ioth.543     ! * Employment and payroll of local govt, hospitals and health services
+Ioth.544     ! * Employment and payroll of local govt, other services
+Ioth.545     ! * Employment and payroll of federal govt, military
+Ioth.546     ! * Employment and payroll of federal govt, non-military
+/;
+

@@ -1,0 +1,24 @@
+SET   reg	Aggregate regions /
+	AK,AL,AR,AZ,CA,CO,CT,DC,DE,FL,
+	  GA,HI,IA,ID,IL,IN,KS,KY,LA,MA,
+	  MD,ME,MI,MN,MO,MS,MT,NC,ND,NE,
+	  NH,NJ,NM,NV,NY,OH,OK,OR,PA,RI,
+	  SC,SD,TN,TX,UT,VA,VT,WA,WI,WV,
+	  WY /;
+
+SET  SS	minimum aggregation Sectoral classifications /
+AGR     "Agriculture"
+MIN     "Mining"
+TCPU     "Transportation, Communication, and Public Utilities (TCPU)"
+CNS     "Construction"
+SRV     "Services"
+MNF     "Manufacturing"
+FMP     "Fabricated metal products"
+MAC     "Machinery"
+ELQ     "Electrical equipment"
+WHL     "Wholesale trade"
+RET     "Retail trade"
+FIRE     "Finance, Insurance, and Real Estate (FIRE)"
+PRS     "Professional Services"
+GVT     "Government"
+/;

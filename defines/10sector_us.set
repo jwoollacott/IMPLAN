@@ -1,0 +1,17 @@
+SET   reg	Aggregate regions /
+	us /;
+
+SET  S Aggregated SAM accounts /
+
+*	5 sectors + 5 energy 
+
+SRV	Services 
+TRN	Transportation
+MAN	Manufactured and Processed Goods
+EIS	Energy Intensive Sector
+AGR	Agriculture
+GAS	Natural Gas Distribution
+COL	Coal -- SIC 12
+CRU	Natural Gas and Crude -- SIC 13
+ELE	Electric generation -- SIC 49
+OIL	Refined Petroleum -- SIC 29/;

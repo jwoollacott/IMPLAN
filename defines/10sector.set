@@ -1,0 +1,25 @@
+SET  reg  Regions (states) /
+	CA	California
+	EA	Eastern and southern states
+	GL	Great Lakes state
+	PL	Plains states	
+	WE	Western states (except California) /;
+
+set  R  Regions (states)
+	 /AK,AL,AR,AZ,CA,CO,CT,DC,DE,FL,GA,HI,IA,ID,IL,IN,KS,KY,LA,MA,MD,ME,MI,MN,MO,MS,
+	   MT,NC,ND,NE,NH,NJ,NM,NV,NY,OH,OK,OR,PA,RI,SC,SD,TN,TX,UT,VA,VT,WA,WI,WV,WY /;
+
+SET  S Aggregated SAM accounts /
+
+*	5 sectors + 5 energy 
+
+SRV	Services 
+TRN	Transportation
+MAN	Manufactured and Processed Goods
+EIS	Energy Intensive Sector
+AGR	Agriculture
+GAS	Natural Gas Distribution
+COL	Coal -- SIC 12
+CRU	Natural Gas and Crude -- SIC 13
+ELE	Electric generation -- SIC 49
+OIL	Refined Petroleum -- SIC 29 /;

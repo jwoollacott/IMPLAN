@@ -1,0 +1,40 @@
+
+
+SET  reg  Regions (states) /
+	ak,al,ar,az,ca
+	co,ct,   de,fl,
+	ga,hi,ia,id,il,
+	in,ks,ky,la,ma,
+	md,me,mi,mn,mo,
+	ms,mt,nc,nd,ne,
+	nh,nj,nm,nv,ny,
+	oh,ok,or,pa,ri,
+	sc,sd,tn,tx,ut,
+	va,vt,wa,wi,wv,wy /;
+
+SET  S	ADAGE Sectoral classifications /
+
+*------ Energy types ------* 
+	COL	Coal
+	CRU	Crude
+	ELE	Electric generation
+	GAS	Natural Gas Production and Distribution
+	OIL	Refined Petroleum
+
+*------ INDUSTRIAL categories ------*
+	AGR	"Agriculture"
+	FOO	"Food and Kindred Products"
+	PPP	"Paper and Printing"
+	NMM	"Non-metallic minerals"
+	CHM	"Chemical and Allied Products"
+	I_S	"Iron and Steel Mills and Products"
+	NFM	"Non-ferrous metals"
+	MAN	"Manufacturing"
+
+*------ SERVICE categories ------*
+	SRV	"Services"
+	TRN	"Transportation" 
+
+	pub	"public (government)" /;
+
+

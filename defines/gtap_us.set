@@ -1,0 +1,63 @@
+SET   reg	Aggregate regions /
+	us /;
+
+SET  S	GTAP Sectoral classifications /
+
+*	Minor aggregation of GTAP6:
+
+*	GRN.(PDR,WHT,GRO)	Grains
+*	OAP.(OAP,RMK,WOL)	Animal products nec
+*	CRU.(OIL,GAS)	Crude oil and natural gas
+
+	GRN	"Grains -- paddy rice, wheat, and cereal grains nec",
+	V_F	"Vegetables, fruit, nuts",
+	OSD 	"Oil seeds",
+	C_B 	"Sugar cane, sugar beet",
+	PFB 	"Plant-based fibers",
+	OCR 	"Crops nec",
+	CTL	"Bovine cattle, sheep and goats, horses",
+	OAP 	"Animal products nec -- with raw milk, wool, silk-worm cocoons",
+	FRS 	"Forestry",
+	FSH 	"Fishing",
+	COA 	"Coal",
+	CRU 	"Crude oil and natural gas",
+	OMN 	"Minerals nec",
+	CMT 	"Bovine meat products",
+	OMT 	"Meat products nec",
+	VOL 	"Vegetable oils and fats",
+	MIL 	"Dairy products",
+	PCR 	"Processed rice",
+	SGR 	"Sugar",
+	OFD 	"Food products nec",
+	B_T 	"Beverages and tobacco products",
+	TEX 	"Textiles",
+	WAP 	"Wearing apparel",
+	LEA 	"Leather products",
+	LUM 	"Wood products",
+	PPP 	"Paper products, publishing",
+	P_C 	"Petroleum, coal products",
+	CRP 	"Chemical, rubber, plastic products",
+	NMM 	"Mineral products nec",
+	I_S 	"Ferrous metals",
+	NFM 	"Metals nec",
+	FMP 	"Metal products",
+	MVH 	"Motor vehicles and parts",
+	OTN 	"Transport equipment nec",
+	ELE 	"Electronic equipment",
+	OME 	"Machinery and equipment nec",
+	OMF 	"Manufactures nec",
+	ELY 	"Electricity",
+	GDT 	"Gas manufacture, distribution",
+	WTR 	"Water",
+	CNS 	"Construction",
+	TRD 	"Trade",
+	OTP 	"Transport nec",
+	WTP 	"Water transport",
+	ATP 	"Air transport",
+	CMN 	"Communication",
+	OFI 	"Financial services nec",
+	ISR 	"Insurance",
+	OBS 	"Business services nec",
+	ROS 	"Recreational and other services",
+	OSG 	"Public Administration, Defense, Education, Health",
+	DWE 	"Dwellings" /;
