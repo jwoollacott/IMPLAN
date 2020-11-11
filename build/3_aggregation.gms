@@ -28,29 +28,29 @@ SET     mkt /dmkt,ftrd,dtrd/,
 *       Define and load basic parameters:
 
 PARAMETER
-        vom(r,s)        Aggregate output
-        vx(r,s)         Aggregate exports
-        vdxm(r,s,trd)   Output to export markets
-        vdfm(r,g,s)     Domestic intermediate demand
-        vifm(r,g,trd,s) Imported intermediate demand
-        vfm(r,f,s)      Factor demand
-        vxm(r,s,trd)    National and international exports
-        vx(r,s)         Aggregate exports
-        vim(r,g,trd)    Aggregate imports
-        vpm(r,h)        Aggregate consumption
-        vdpm(r,g,h)     Domestic consumption demand
-        vipm(r,g,trd,h) Imported consumption demand
-        vinv(r)         Aggregate investment
-        vdim(r,g)       Domestic investment demand
-        viim(r,g,trd)   Imported investment demand
-        vgm(r,pub)      Public sector demand
-        vdgm(r,g,pub)   Domestic public demand
-        vigm(r,g,trd,pub) Imported public demand
-        evom(r,f,i,t)   Factor supply,
-        evpm(r,g,i)     Goods supply (make and export),
-        vprf(r,i)       Corporate profit
-        vtrn(r,i,t)     Transfers
-        vdmi(r,s)       Domestic output including institutional imake
+        vom(r,s)                Aggregate output
+        vx(r,s)                 Aggregate exports
+        vdxm(r,s,trd)           Output to export markets
+        vdfm(r,g,s)             Domestic intermediate demand
+        vifm(r,g,trd,s)         Imported intermediate demand
+        vfm(r,f,s)              Factor demand
+        vxm(r,s,trd)            National and international exports
+        vx(r,s)                 Aggregate exports
+        vim(r,g,trd)            Aggregate imports
+        vpm(r,h)                Aggregate consumption
+        vdpm(r,g,h)             Domestic consumption demand
+        vipm(r,g,trd,h)         Imported consumption demand
+        vinv(r)                 Aggregate investment
+        vdim(r,g)               Domestic investment demand
+        viim(r,g,trd)           Imported investment demand
+        vgm(r,pub)              Public sector demand
+        vdgm(r,g,pub)           Domestic public demand
+        vigm(r,g,trd,pub)       Imported public demand
+        evom(r,f,i,t)           Factor supply,
+        evpm(r,g,i)             Goods supply (make and export),
+        vprf(r,i)               Corporate profit
+        vtrn(r,i,t)             Transfers
+        vdmi(r,s)               Domestic output including institutional imake
         trnsfer(r,i,t,ii)       Inter-institutional transfers;
 
 $load vdxm vdfm vifm vfm vxm vdpm vipm
@@ -98,29 +98,29 @@ abort$(sum(ss, chk_agg(ss)) ne card(s)) "bad mapping";
 *       Use mapping to load basic parameters:
 
 PARAMETER
-        vom_    Aggregate output
-        vx_(reg,ss)     Aggregate exports
+        vom_                    Aggregate output
+        vx_(reg,ss)             Aggregate exports
         vdxm_(reg,ss,trd)       Output to export markets
         vdfm_(reg,gg,ss)        Domestic intermediate demand
-        vifm_(reg,gg,trd,ss) Imported intermediate demand
-        vfm_(reg,f,ss)  Factor demand
+        vifm_(reg,gg,trd,ss)    Imported intermediate demand
+        vfm_(reg,f,ss)          Factor demand
         vxm_(reg,ss,trd)        National and international exports
-        vx_(reg,ss)     Aggregate exports
+        vx_(reg,ss)             Aggregate exports
         vim_(reg,gg,trd)        Aggregate imports
-        vpm_(reg,h)     Aggregate consumption
-        vdpm_(reg,gg,h) Domestic consumption demand
-        vipm_(reg,gg,trd,h) Imported consumption demand
-        vinv_(reg)      Aggregate investment
-        vdim_(reg,gg)   Domestic investment demand
+        vpm_(reg,h)             Aggregate consumption
+        vdpm_(reg,gg,h)         Domestic consumption demand
+        vipm_(reg,gg,trd,h)     Imported consumption demand
+        vinv_(reg)              Aggregate investment
+        vdim_(reg,gg)           Domestic investment demand
         viim_(reg,gg,trd)       Imported investment demand
-        vgm_(reg,pub)   Public sector demand
+        vgm_(reg,pub)           Public sector demand
         vdgm_(reg,gg,pub)       Domestic public demand
-        vigm_(reg,gg,trd,pub) Imported public demand
+        vigm_(reg,gg,trd,pub)   Imported public demand
         evom_(reg,f,i,t)        Factor supply,
-        evpm_(reg,gg,i) Goods supply (make and export),
-        vprf_(reg,i)    Corporate profit
-        vtrn_(reg,i,t)  Transfers
-        vdmi_(reg,ss)   Domestic output including institutional imake
+        evpm_(reg,gg,i)         Goods supply (make and export),
+        vprf_(reg,i)            Corporate profit
+        vtrn_(reg,i,t)          Transfers
+        vdmi_(reg,ss)           Domestic output including institutional imake
         trnsfer_(reg,i,t,ii)    Inter-institutional transfers;
 
 vom_(reg,ss) = sum((mapr(reg,r),maps(ss,s)), vom(r,s));
