@@ -50,10 +50,11 @@ PARAMETER
     vprf(r,ins) Corporate profit
     vtrn(r,ins,t)   Transfers
     vdmi(r,s)   Domestic output including institutional imake
-    trnsfer(r,ins,t,iins)   Inter-institutional transfers;
+    trnsfer(r,ins,t,iins)   Inter-institutional transfers
+    empl(*,*)   Employment by region and sector     ;
 
 $load  vdxm vdfm vifm vfm vxm vdpm vipm vdim viim vdgm vigm vprf evom evpm vtrn 
-$load  vom vim vx vgm vinv vpm vdmi trnsfer
+$load  vom vim vx vgm vinv vpm vdmi trnsfer empl
 
 parameter chk_mktbal, chk_imp, chk_trns, chk_evpm2imp, chk_evpm2vom, chk_evpm2vomK, chk_pip;
 
@@ -395,5 +396,5 @@ VA0(r,"kap","GOV") = kd0(r,"GOV")  ;
 VA0(r,"tax",s)     = ty(r,s) * y0(r,s) + tl(r) * ld0(r,s) + tk(r) * kd0(r,s) ;
 VA0(r,"tax","GOV") = tl(r) * ld0(r,"GOV") + tk(r) * kd0(r,"GOV") ;
 
-execute_unload './data/%target%/IMPLAN_data_%target%.gdx', ID0 FD0 VA0 r g fdcol varow ;
+execute_unload './data/%target%/IMPLAN_data_%target%.gdx', ID0 FD0 VA0 r g h fdcol varow empl ;
 

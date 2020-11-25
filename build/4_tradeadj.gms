@@ -51,10 +51,11 @@ PARAMETER
     vprf(r,i)   Corporate profit
     vtrn(r,i,t) Transfers
     vdmi(r,s)   Domestic output including institutional imake
-    trnsfer(r,i,t,ii)   Inter-institutional transfers;
+    trnsfer(r,i,t,ii)   Inter-institutional transfers
+    empl(*,*)           Employment by region and sector;
 
 $load  vdxm vdfm vifm vfm vxm vdpm vipm vdim viim vdgm vigm vprf evom evpm vtrn 
-$load  vom vim vx vgm vinv vpm vdmi trnsfer
+$load  vom vim vx vgm vinv vpm vdmi trnsfer empl
 
 *   Check if domestic trade flows balance:
 
@@ -150,4 +151,4 @@ display chk_adj;
 
 execute_unload 'data\%target%\%target%_dtrdbal.gdx', f,t,i,j,g,r,h,pub,corp,vdxm,vdfm,
     vifm,vfm,vxm,vdpm,vipm,vdim,viim,vdgm,vigm,vprf,evom,evpm,vtrn,
-    vom,vim,vx,vgm,vinv,vpm,vdmi,trnsfer;
+    vom,vim,vx,vgm,vinv,vpm,vdmi,trnsfer, empl;

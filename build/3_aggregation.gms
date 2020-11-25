@@ -147,6 +147,16 @@ vtrn_(reg,i,t) = sum(mapr(reg,r), vtrn(r,i,t));
 vdmi_(reg,ss) = sum((mapr(reg,r),maps(ss,s)), vdmi(r,s));
 trnsfer_(reg,i,t,ii) = sum(mapr(reg,r), trnsfer(r,i,t,ii));
 
+
+*       AGGREGATE EMPLOYMENT COUNT DATA 
+PARAMETER empl, lab ;
+$GDXIN ./data/labor.gdx
+$load  lab
+$GDXIN ./data/labor.gdx
+
+empl(reg,ss) = sum((mapr(reg,r),maps(ss,s)), lab(r,s)) ;
+
+
 $call 'if not exist data\nul mkdir data'
 $call 'if not exist data\%target%\nul mkdir data\%target%'
 
@@ -154,7 +164,7 @@ execute_unload 'data\%target%\%target%.gdx', f,t,i,j,gg=g,reg=r,h,pub,corp,vdxm_
         vifm_=vifm,vfm_=vfm,vxm_=vxm,vdpm_=vdpm,vipm_=vipm,
         vdim_=vdim,viim_=viim,vdgm_=vdgm,vigm_=vigm,vprf_=vprf,evom_=evom,evpm_=evpm,vtrn_=vtrn,
         vdmi_=vdmi,trnsfer_=trnsfer,vom_=vom,vx_=vx,vim_=vim,vpm_=vpm,vinv_=vinv,vgm_=vgm,
-        vprf_=vprf;
+        vprf_=vprf, empl;
 
 $label end
 
