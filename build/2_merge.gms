@@ -27,7 +27,7 @@ $load h pub corp
 set r(*)    Regions;
 
 $GDXIN 'data\noaggr\noaggr.gdx'
-$load r=merged_set_1
+$load   r=merged_set_1
 
 alias (s,g) , (h,hh) , (i,ii);
 

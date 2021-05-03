@@ -4,11 +4,11 @@ echo Target is set to %target%
 @echo off
 
 :: goto merge
-:: goto aggregation
+goto aggregation
 :: goto tradeadj
 :: goto translate
 :: goto census_agg
-goto state_agg
+:: goto state_agg
 
 :	Whenever possible, skip the reading of individual state data files --
 :	it takes a while...
@@ -35,6 +35,7 @@ call gams build\4_tradeadj o=.\listings\4_tradeadj.lst --target=%target%
 :translate
 call gams build\5_translate o=.\listings\5_translate.lst --target=%target%
 
+goto end
 goto state_agg
 :census_agg
 call gams build\6_census_agg o=.\listings\6_census_agg.lst 
