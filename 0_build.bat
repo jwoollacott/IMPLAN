@@ -4,7 +4,7 @@ echo Target is set to %target%
 @echo off
 
 :: goto merge
-goto aggregation
+:: goto aggregation
 :: goto tradeadj
 :: goto translate
 :: goto census_agg
