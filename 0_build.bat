@@ -5,7 +5,7 @@ echo Target is set to %target%
 @echo off
 
 :: goto merge
-goto aggregation
+:: goto aggregation
 :: goto tradeadj
 :: goto translate
 :: goto census_agg
@@ -47,19 +47,11 @@ goto state_agg
 call gams build\6_census_agg o=.\listings\6_census_agg.lst 
 
 :state_agg
-call gams build\6_StateOut.gms o=.\listings\6_StateOut.lst --target=%target% --ST=NC
-call gams build\6_StateOut.gms o=.\listings\6_StateOut.lst --target=%target% --ST=VA
-call gams build\6_StateOut.gms o=.\listings\6_StateOut.lst --target=%target% --ST=GA
-call gams build\6_StateOut.gms o=.\listings\6_StateOut.lst --target=%target% --ST=TX
-call gams build\6_StateOut.gms o=.\listings\6_StateOut.lst --target=%target% --ST=NM
-call gams build\6_StateOut.gms o=.\listings\6_StateOut.lst --target=%target% --ST=UT
-call gams build\6_StateOut.gms o=.\listings\6_StateOut.lst --target=%target% --ST=TN
-call gams build\6_StateOut.gms o=.\listings\6_StateOut.lst --target=%target% --ST=OH
-call gams build\6_StateOut.gms o=.\listings\6_StateOut.lst --target=%target% --ST=IN
-call gams build\6_StateOut.gms o=.\listings\6_StateOut.lst --target=%target% --ST=IL
-call gams build\6_StateOut.gms o=.\listings\6_StateOut.lst --target=%target% --ST=OR
-call gams build\6_StateOut.gms o=.\listings\6_StateOut.lst --target=%target% --ST=AL
-call gams build\6_StateOut.gms o=.\listings\6_StateOut.lst --target=%target% --ST=MT
-call gams build\6_StateOut.gms o=.\listings\6_StateOut.lst --target=%target% --ST=NE
+call gams build\6_StateOut.gms o=.\listings\6_StateOut.lst --target=%target% --ST=WRIA7
+call gams build\6_StateOut.gms o=.\listings\6_StateOut.lst --target=%target% --ST=BLUES
+call gams build\6_StateOut.gms o=.\listings\6_StateOut.lst --target=%target% --ST=NEWA
+call gams build\6_StateOut.gms o=.\listings\6_StateOut.lst --target=%target% --ST=NCENT
+call gams build\6_StateOut.gms o=.\listings\6_StateOut.lst --target=%target% --ST=SCENT
+call gams build\6_StateOut.gms o=.\listings\6_StateOut.lst --target=%target% --ST=ROWWA
 
 :end

@@ -228,7 +228,8 @@ chk_gov2evpm(r,g,pub)$id0(r,g,"gov")    = 100 * evpm(r,g,pub) / id0(r,g,"gov");
 display id0, chk_gov2evpm;
 
 
-chk_govinp(g,"demand")  = sum(pub, vdgm("ca",g,pub)+sum(trd,vigm("ca",g,trd,pub)));
+*chk_govinp(g,"demand")  = sum(pub, vdgm("ca",g,pub)+sum(trd,vigm("ca",g,trd,pub)));
+chk_govinp(g,"demand")  =  0;
 
 option chk_govinp:1;
 display chk_govinp;
