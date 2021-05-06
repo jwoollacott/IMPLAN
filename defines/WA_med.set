@@ -1,0 +1,56 @@
+SET   reg	Aggregate regions /
+	AK,AL,AR,AZ,CA,CO,CT,DC,DE,FL,
+	  GA,HI,IA,ID,IL,IN,KS,KY,LA,MA,
+	  MD,ME,MI,MN,MO,MS,MT,NC,ND,NE,
+	  NH,NJ,NM,NV,NY,OH,OK,OR,PA,RI,
+	  SC,SD,TN,TX,UT,VA,VT,WA,WI,WV,
+	  WY /;
+
+SET  SS	medium aggregation Sectoral classifications /
+N11
+I20
+I21
+N21
+I35
+I36
+I39
+I40
+I41
+I42
+I43
+I44
+I45
+I46
+I47
+I48
+N22
+Icns
+N31
+N32
+I203
+I215
+N33
+I219
+I220
+I329
+N42
+N44
+N45
+N48
+I420
+N49
+N51
+N52
+I441
+N53
+Ioth
+N54
+N55
+N56
+N61
+N62
+N71
+N72
+N81
+Igov
+/;

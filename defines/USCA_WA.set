@@ -1,0 +1,52 @@
+$TITLE ARTIMAS Sets
+
+
+SET   reg   Aggregate regions / 
+    WRIA7
+    BLUES
+    NEWA
+    NCENT
+    SCENT
+    ROWWA
+/;
+ 
+SET  ss  Base AEO sectoral classifications /
+    AFS	    "Agriculture and forestry support services"
+    AGR	    "Agriculture"
+    ALU	    "Aluminum"
+    BCH	    "Bulk chemicals"
+    BOM	    "Balance of manufacturing"
+    CEM	    "Cement"
+    CNS     "Construction"
+    COL	    "Coal"
+    COM	    "Commercial"
+    CPU	    "Computer equipment"
+    ELE	    "Electricity"
+    ELQ	    "Electrical equipment"
+    FDP	    "Food products"
+    FMP	    "Fabricated metal products"
+    FRS	    "Forestry"
+    GAS	    "Natural gas"
+    GLS	    "Glass manufacturing"
+    IAS	    "Iron and steel"
+    INF     "Infrastructure"
+    LIV	    "Livestock"
+    LOG	    "Logging"
+    MAC	    "Machinery"
+    MIN	    "Mining"
+    MLL	    "Saw and pulp mills"
+    OGE	    "Oil and gass extraction"
+    OIL	    "Oil refining"
+    PUB     "Public sectors"
+    PLS	    "Plastics"
+    PPR	    "Paper"
+    TRA	    "Air Transportation"
+    TRG	    "Ground Transportation"
+    TRP	    "Pipeline Transportation"
+    TRQ	    "Transportation Equipment"
+    TRW	    "Water Transportation"
+    WAT	    "Water utilities"
+    WDP	    "Wood products"
+/;
+
+

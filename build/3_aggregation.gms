@@ -6,7 +6,7 @@ SET     f(*)    Factors,
         i(*)    Institutions
         g(*)    Goods and sectors
         j(*)    Aggregated SAM accounts;
-$GDXIN 'data\noaggr\ak.gdx'
+$GDXIN 'data\noaggr%subdir%\%ds1%.gdx'
 $load f t i g j
 
 SET     h(i)    Households
@@ -17,7 +17,7 @@ $load h pub corp
 
 SET     r(*)    Regions (states);
 
-$GDXIN 'data\noaggr\noaggr.gdx'
+$GDXIN 'data\noaggr%subdir%\noaggr.gdx'
 $load r=merged_set_1
 
 alias (s,g) , (h,hh) , (i,ii) , (r,rr);

@@ -1,7 +1,8 @@
 $TITLE   Translate the IMPLAN SOE Framework into GTAP-Style Data Structures
 
-$if not set tol $set tol 4
+$if not set tol $set tol 9
 $if not set ds $set ds ak
+$if not set subdir $set subdir \WA_county
 
 scalar tol  Tolerance parameter for filtering data /1e-%tol%/;
 
@@ -84,7 +85,7 @@ fimprt(trd,t,f)$(abs(fimprt(trd,t,f)) < tol*sum((i,tt),fs(i,tt,f))) = 0;
 
 *   Drop other terms which are small in an absolute sense:
 
-zerotol = 1e-6;
+zerotol = tol;
 trnsfer(i,t,ii)$(abs(trnsfer(i,t,ii)) < zerotol) = 0;
 iexport(i,t,trd)$(abs(iexport(i,t,trd)) < zerotol) = 0;
 iimport(trd,t,i)$(abs(iimport(trd,t,i)) < zerotol) = 0;
@@ -431,8 +432,7 @@ benchchk(g,"market") = vom(g) + sum(i,evpm(g,i))
 display benchchk,vprf;
 
 *   Unload data:
-
-$call 'if not exist data\noaggr\nul mkdir data\noaggr'
-execute_unload 'data\noaggr\%ds%.gdx', f,t,i,j,g,h,pub,corp,vdxm,vdfm,vifm,
+$call 'if not exist data\noaggr%subdir%\nul mkdir data\noaggr%subdir%'
+execute_unload 'data\noaggr%subdir%\%ds%.gdx', f,t,i,j,g,h,pub,corp,vdxm,vdfm,vifm,
     vfm,vxm,vdpm,vipm, vdim,viim,vdgm,vigm,vprf,evom,evpm,vtrn,
     vdmi,trnsfer;
