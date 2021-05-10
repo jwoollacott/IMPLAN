@@ -88,7 +88,7 @@ set T  Account codes  /
 alias (r,c);
 
 *   Unzip the data file, read it and then delete it:
-$if  exist .\IMPLANData\%ds%.GMS  $goto readdata
+$if  exist .\IMPLANData\IMPLAN%year%\%ds%.GMS  $goto readdata
 
 $set dataset .\st%year%-%ds%.zip
 $if  exist .\IMPLANData\%dataset% $goto unzip
@@ -103,7 +103,7 @@ $call 'unzip -j ..\IMPLANData\%dataset%'
 $label readdata
 PARAMETER sam(r,t,c)  Base year social accounts /
 $offlisting
-$include .\IMPLANData\%ds%.GMS
+$include .\IMPLANData\IMPLAN%year%\%ds%.GMS
 $onlisting
 /;
 $if exist .\IMPLANData\%dataset% $call 'del st%year%-%ds%.gms'

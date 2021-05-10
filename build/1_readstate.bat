@@ -5,6 +5,7 @@ if "%year%"=="" set year=18
 if not exist ..\listings\nul mkdir listings
 if not exist ..\data\nul mkdir data
 if not exist ..\data\tempdata\nul mkdir data\tempdata
+if not exist .\listings\State_Listings\ mkdir .\listings\State_Listings\
 
 :start
 

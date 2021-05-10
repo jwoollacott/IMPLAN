@@ -1,9 +1,10 @@
 $title  Merge Individual State Data Files and Check Consistency 
+$if not set subdir $set subdir 
 
 *   Merge individual data files into one file:
 
 $if exist data\noaggr\noaggr.gdx    $call 'del data\noaggr\noaggr*.gdx'
-$call 'gdxmerge data\noaggr\*.gdx output=data\noaggr\noaggr.gdx'
+$call 'gdxmerge data\noaggr%subdir%\*.gdx output=data\noaggr%subdir%\noaggr.gdx'
 
 
 *   Retrieve sets:
@@ -13,7 +14,7 @@ SET f(*)    Factors,
     g(*)    Goods and sectors
     j(*)    Aggregated SAM accounts;
 
-$GDXIN 'data\noaggr\ak.gdx'
+$GDXIN 'data\noaggr%subdir%\%ds1%.gdx'
 $load f t i g j
 
 set h(i)    Households
@@ -26,8 +27,8 @@ $load h pub corp
 
 set r(*)    Regions;
 
-$GDXIN 'data\noaggr\noaggr.gdx'
-$load r=merged_set_1
+$GDXIN 'data\noaggr%subdir%\noaggr.gdx'
+$load   r=merged_set_1
 
 alias (s,g) , (h,hh) , (i,ii);
 
