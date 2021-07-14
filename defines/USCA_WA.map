@@ -477,9 +477,9 @@ LIV.( 	11     !  "Beef cattle ranching and farming including feedlots and dual-p
 	13     !  "Poultry and egg production"
 	14     !  "Animal production except cattle and poultry and eggs"
 	18     !  "Commercial hunting and trapping" 
+	17     !  "Commercial fishing" 
     )
 LOG.( 	16     !  "Commercial logging"
-	17     !  "Commercial fishing" 
     )
 MAC.( 	260     !  "Farm machinery and equipment manufacturing"
 	261     !  "Lawn and garden equipment manufacturing"

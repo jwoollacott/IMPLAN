@@ -16,12 +16,12 @@ if %REG% == USA (
     set sd=\%REG%_county
 )
 
-goto merge
-:: goto aggregation
+:: goto merge
+goto aggregation
 :: goto tradeadj
 :: goto translate
 :: goto census_agg
-:: goto state_agg
+goto state_agg
 
 : Whenever possible, skip the reading of individual state data files --
 : it takes a while...

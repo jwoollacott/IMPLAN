@@ -1,4 +1,4 @@
-$SETGLOBAL st NY
+$if not set st $SETGLOBAL st WA
 
 $CALL       'csv2gdx ./IMPLAN18/%st%_Labor.csv ID=%st%_labor UseHeader=y index=1,9 values=3..8' ;
 $INCLUDE    ../Defines/USCA_%st%.set

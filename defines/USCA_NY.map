@@ -508,10 +508,10 @@ LIV.( 	11     !  "Beef cattle ranching and farming including feedlots and dual-p
 	12     !  "Dairy cattle and milk production"
 	13     !  "Poultry and egg production"
 	14     !  "Animal production except cattle and poultry and eggs"
+	17     !  "Commercial fishing" 
 	18     !  "Commercial hunting and trapping" 
     )
 LOG.( 	16     !  "Commercial logging"
-	17     !  "Commercial fishing" 
     )
 MAC.( 	260     !  "Farm machinery and equipment manufacturing"
 	261     !  "Lawn and garden equipment manufacturing"
@@ -568,7 +568,7 @@ MIN.( 	21 !  "Coal mining"
 	34     !  "Other nonmetallic minerals" 
     )
 MLL.( 	132     !  "Sawmills"
-	144     !  "Pulp mills" 
+		144     !  "Pulp mills" 
     )
 OGE.( 	20     !  "Oil and gas extraction" 
 )
@@ -578,7 +578,10 @@ OIL.( 	154     !  "Petroleum refineries"
 	157     !  "Petroleum lubricating oil and grease manufacturing"
 	158     !  "All other petroleum and coal products manufacturing" 
     )
-PLS.( 	186     !  "Plastics packaging materials and unlaminated film and sheet manufacturing"
+PLC.( 		
+	186     !  "Plastics packaging materials and unlaminated film and sheet manufacturing"
+)
+PLS.( 	
 	187     !  "Unlaminated plastics profile shape manufacturing"
 	188     !  "Plastics pipe and pipe fitting manufacturing"
 	189     !  "Laminated plastics plate sheet (except packaging) and shape manufacturing"
