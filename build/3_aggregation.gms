@@ -6,7 +6,7 @@ SET     f(*)    Factors,
         i(*)    Institutions
         g(*)    Goods and sectors
         j(*)    Aggregated SAM accounts;
-$GDXIN 'data\noaggr%subdir%\%ds1%.gdx'
+$GDXIN '.\data\noaggr\%subdir%\%ds1%.gdx'
 $load f t i g j
 
 SET     h(i)    Households
@@ -17,7 +17,7 @@ $load h pub corp
 
 SET     r(*)    Regions (states);
 
-$GDXIN 'data\noaggr%subdir%\noaggr.gdx'
+$GDXIN '.\data\noaggr\%subdir%\noaggr.gdx'
 $load r=merged_set_1
 
 alias (s,g) , (h,hh) , (i,ii) , (r,rr);
@@ -70,8 +70,8 @@ SETS    reg     Map-to regions
         maps    Sector mapping
         mapr    Region mapping  ;
 *       Define sets & mappings:
-$include defines\%target%.set
-$include defines\%target%.map
+$include .\defines\%target%.set
+$include .\defines\%target%.map
 
 ALIAS (gg,ss);
 
@@ -149,24 +149,31 @@ trnsfer_(reg,i,t,ii) = sum(mapr(reg,r), trnsfer(r,i,t,ii));
 
 
 *       AGGREGATE EMPLOYMENT COUNT DATA 
-PARAMETER empl, lab, lab_con ;
-$CALL  'csv2gdx ./Defines/EC_EMP.csv ID=./Data/lab_con UseHeader=y index=1 values=2,3' ;
-$GDXIN ./data/labor.gdx
-$LOAD  lab
-$GDXIN ./data/labor.gdx
-
+PARAMETER empl, lab, lab_con, lab_adj ;
+$CALL  'csv2gdx ./Defines/EC_EMP.csv Output=./Data/lab_con.gdx   id=lab_con index=1 values=2..3 useHeader=y trace=0' ;
 $GDXIN ./Data/lab_con.gdx
 $LOAD  lab_con
+$GDXIN 
+
+$GDXIN ./Data/labor.gdx
+$LOAD  lab
 $GDXIN
 
-display lab_con ;
-empl(reg,ss) = sum((mapr(reg,r),maps(ss,s)), lab(r,s)) ;
+empl(reg,ss)            = sum((mapr(reg,r),maps(ss,s)), lab(r,s)) ;
+lab_adj(reg,ss,"WS_EC")$sum((mapr(reg,r), maps(ss,s)), vfm(r,"empl",s)) 
+                        = 1 / ( sum((mapr(reg,r), maps(ss,s)), vfm(r,"empl",s) * lab_con(s,"ECtoWSInc")) /
+                                sum((mapr(reg,r), maps(ss,s)), vfm(r,"empl",s))) ;
 
-execute_unload 'data\%target%\%target%.gdx', f,t,i,j,gg=g,reg=r,h,pub,corp,vdxm_=vdxm,vdfm_=vdfm,
+*       Currently weighting the FTE conversion by wages but would ideally be by jobs (don't have )
+lab_adj(reg,ss,"FTE_JOB")$sum((mapr(reg,r), maps(ss,s)), vfm(r,"empl",s))
+                        = sum((mapr(reg,r), maps(ss,s)), vfm(r,"empl",s) * lab_con(s,"FTEperTotalEMP")) /
+                          sum((mapr(reg,r), maps(ss,s)), vfm(r,"empl",s)) ;
+
+execute_unload '.\data\%target%\%target%.gdx', f,t,i,j,gg=g,reg=r,h,pub,corp,vdxm_=vdxm,vdfm_=vdfm,
         vifm_=vifm,vfm_=vfm,vxm_=vxm,vdpm_=vdpm,vipm_=vipm,
         vdim_=vdim,viim_=viim,vdgm_=vdgm,vigm_=vigm,vprf_=vprf,evom_=evom,evpm_=evpm,vtrn_=vtrn,
         vdmi_=vdmi,trnsfer_=trnsfer,vom_=vom,vx_=vx,vim_=vim,vpm_=vpm,vinv_=vinv,vgm_=vgm,
-        vprf_=vprf, empl;
+        vprf_=vprf, empl, lab_adj;
 
 $label end
 

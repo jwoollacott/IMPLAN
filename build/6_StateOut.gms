@@ -1,14 +1,19 @@
 $IF not set ST set ST AK
-PARAMETER   Y0, ID0, FD0, VA0, Y0_, ID0_, FD0_, VA0_, empl, labor ;
+PARAMETER   Y0, ID0, FD0, VA0, Y0_, ID0_, FD0_, VA0_, empl, labor, lab_adj ;
 SET         r, g, fdcol, varow, h ;
 ALIAS       (g,s), (h, hh)   ;
 $GDXIN      ./data/%target%/IMPLAN_data_%target%.gdx
 $LOAD       ID0 FD0 VA0 r g fdcol varow empl h
 $GDXIN  
 
-$GDXIN      ./IMPLANData/NY_labor.gdx
+$GDXIN      ./IMPLANData/%ST%_labor.gdx
 $LOAD       labor
 $GDXIN      
+
+*   Adjustment factors: Empl Comp to Wages & Jobs to FTEs
+$GDXIN      .\data\%target%\%target%.gdx
+$LOAD       lab_adj
+$GDXIN     
 
 $IFTHEN %AGG%=="Y"
     alias (r,r_) ;
@@ -16,7 +21,7 @@ $ELSE
     set r_ / %ST% / ;
 $ENDIF
 
-display r_ ;
+display r_, r ;
 
 Y0(r,s)         = sum(g, ID0(r,g,s)) + sum(varow, VA0(r,varow,s))  ;
 
@@ -34,6 +39,7 @@ parameter   mult    multipliers
 set         mt      mulitplier type         / dir, idr, idu /
             mq      multiplier quantity     / emp, lab, va  /
             im(fdcol) imports               / imd, imf /
+            ex(fdcol) exports               / exd, exf /
             geo     geography of impacts    / 1REG, REGS, NATL /
             gh      set g plus households for induced closure / set.g, "HH" / ;
 ALIAS (gh, sh) ;
@@ -45,11 +51,21 @@ lpc(g,"1REG")$sum(r_, y0(r_,g)) = max(0, 1 + sum((r_,im), FD0(r_,g,im)) / sum(r_
 lpc(g,"REGS")$sum(r_, y0(r_,g)) = max(lpc(g,"1REG"), max(0, 1 + sum((r,im),  FD0(r,g,im))  / sum(r,  y0(r,g)))) ;
 lpc(g,"NATL")$sum(r_, y0(r_,g)) = max(0, 1 + sum(r_, FD0(r_,g,"imf"))   / sum(r_, y0(r_,g))) ;
 
+lpc(g,"1REG")$sum(r_, y0(r_,g))  = max(0, sum(r_, y0(r_,g) - sum(ex, FD0(r_,g,ex))) / 
+                                              (  sum(r_, y0(r_,g) - sum(ex, FD0(r_,g,ex)) - sum(im, FD0(r_,g,im)) )) ) ;
+lpc(g,"REGS")$sum(r_, y0(r_,g))  = max(lpc_(g,"new","1REG"), 
+                                              max(0, sum(r, y0(r,g) - sum(ex, FD0(r,g,ex)))  / sum(r,  y0(r,g) - sum(ex, FD0(r,g,ex)) 
+                                                       - sum(im, FD0(r,g,im))) ) ) ;
+lpc(g,"NATL")$sum(r_, y0(r_,g))   = max(0, sum(r_, y0(r_,g) - FD0(r_,g,"exf")) / 
+                                                 sum(r_, y0(r_,g) - FD0(r_,g,"exf") - FD0(r_,g,"imf")) ) ;
+
 *   Direct
+amat(g,s,"FULL")$sum(r_, y0(r_,s))  = sum(r_, ID0(r_,g,s)) / sum(r_, y0(r_,s)) ;
+amat("va",s,"FULL")$sum(r_, y0(r_,s))= sum((r_,varow), VA0(r_,varow,s)) / sum(r_, y0(r_,s)) ;
 amat(g,s,geo)$sum(r_, y0(r_,s))     = lpc(g,geo) * sum(r_, ID0(r_,g,s)) / sum(r_, y0(r_,s)) ;
-amat("lab",s,geo)$sum(r_, y0(r_,s)) = sum(r_, VA0(r_,"LAB",s))          / sum(r_, y0(r_,s)) ;
+amat("lab",s,geo)$sum(r_, y0(r_,s)) = sum(r_, VA0(r_,"LAB",s) * lab_adj(r_,s,"WS_EC")) / sum(r_, y0(r_,s)) ;
 amat("va",s,geo)$sum(r_, y0(r_,s))  = sum((r_,varow), VA0(r_,varow,s))  / sum(r_, y0(r_,s)) ;
-amat("emp",s,geo)$sum(r_, y0(r_,s)) = sum(r_,labor(r_,s)) * 1e-3        / sum(r_, y0(r_,s)) ;
+amat("emp",s,geo)$sum(r_, y0(r_,s)) = sum(r_,labor(r_,s) * lab_adj(r_,s,"FTE_JOB")) * 1e-3  / sum(r_, y0(r_,s)) ;
 
 amat("hh",s,geo)$sum(r_, y0(r_,s))  = sum(r_,VA0(r_,"KAP",s)+VA0(r_,"LAB",s)) / sum(r_, y0(r_,s)) ;
 amat(g,"hh",geo)                    = lpc(g,geo) * sum(r_, sum(h, FD0(r_,g,h))     + FD0(r_,g,"INV")) 
@@ -57,6 +73,7 @@ amat(g,"hh",geo)                    = lpc(g,geo) * sum(r_, sum(h, FD0(r_,g,h))  
 
 PARAMETER   idr                     indirect multipliers 
             idu                     induced multipliers  
+            oshr                    output share of multiplier
             idr_(*,*), idu_(*,*)    temporary params
             idr_1reg(g,s), idu_1reg(gh,sh), idr_regs(g,s), idu_regs(gh,sh)    ;
 
@@ -86,8 +103,13 @@ mult(mq,"dir",geo,s) = lpc(s,geo) * amat(mq,s,geo);
 mult(mq,"idr",geo,s) = sum(g, idr(geo,g,s) * amat(mq,g,geo)) - mult(mq,"dir",geo,s);
 mult(mq,"idu",geo,s) = sum(g, idu(geo,g,s) * amat(mq,g,geo)) - mult(mq,"dir",geo,s) - mult(mq,"idr",geo,s);
 
+oshr("idr",geo,g,s)  = (idr(geo,g,s)  - mult("out","dir",geo,s)$sameas(g,s)) / 
+                       mult("out","idr",geo,s) ;
+
 DISPLAY mult, idr, idu, lpc;
-execute_unload './data/%target%/IMPLAN_data_%target%_%ST%.gdx', ID0_ FD0_ VA0_ Y0_ mult lpc ;
+
+$exit
+execute_unload './data/%target%/IMPLAN_data_%target%_%ST%.gdx', ID0_ FD0_ VA0_ Y0_ mult lpc idr idu amat ;
 $onecho > out.txt
 PAR=ID0_    RNG=%ST%_ID!A1
 PAR=VA0_    RNG=%ST%_VA!A1
@@ -95,6 +117,9 @@ PAR=FD0_    RNG=%ST%_FD!A1
 PAR=Y0_     RNG=%ST%_Y!A1
 PAR=mult    RNG=%ST%_Mult!A1
 PAR=lpc     RNG=%ST%_LPC!A1
+PAR=idr     RNG=%ST%_idr!A1
+PAR=idu     RNG=%ST%_idu!A1
+PAR=amat    RNG=%ST%_amat!A1
 $offecho
 execute 'gdxxrw.exe ./data/%target%/IMPLAN_data_%target%_%ST%.gdx o=./data/%target%/%target%_SAMs.xlsx epsout=0 @out.txt' ;
 execute 'rm out.txt'
