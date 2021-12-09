@@ -16,6 +16,7 @@ if %REG% == USA (
     set sd=\%REG%_county
 )
 
+
 :: goto merge
 goto aggregation
 :: goto tradeadj
