@@ -6,7 +6,15 @@ SET     f(*)    Factors,
         i(*)    Institutions
         g(*)    Goods and sectors
         j(*)    Aggregated SAM accounts;
-$GDXIN 'data\noaggr%subdir%\%ds1%.gdx'
+
+* original code
+*#$GDXIN 'data\noaggr%subdir%\%ds1%.gdx'
+
+* when I change it to this from the merge script, I get a dimension mismatch error
+*$GDXIN 'data\noaggr%subdir%\noaggr.gdx' 
+
+* Temporarily reading in just alabama just so I can get past this point by fixing the dimension mismatches
+$GDXIN 'data\noaggr%subdir%\AL.gdx'
 $load f t i g j
 
 SET     h(i)    Households
