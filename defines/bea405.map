@@ -5,49 +5,70 @@ $setglobal source IMPLAN
 
 alias(reg,mapto); 
 alias(reg,mapfrom); 
-SET mapr(mapto,mapfrom); 
+SET mapr(*,*); 
 mapr(mapto,mapfrom)$(SAMEAS(mapto,mapfrom)) = yes; 
 
 SET maps(*,*) Mapping from IMPLAN 546 to BEA   /
 
-1111A0.(    1      !  Oilseed farming)
-1111B0.(    2      !  Grain farming)
-111200.(    3      !  Vegetable and melon farming)
+1111A0.(    1      !  Oilseed farming
+)
+1111B0.(    2      !  Grain farming
+)
+111200.(    3      !  Vegetable and melon farming
+)
 111300.(    4      !  Fruit farming
-            5      !  Tree nut farming )
-111400.(    6      !  Greenhouse, nursery, and floriculture production)
+            5      !  Tree nut farming 
+)
+111400.(    6      !  Greenhouse nursery and floriculture production
+)
 111900.(    7      !  Tobacco farming 
             8      !  Cotton farming
             9      !  Sugarcane and sugar beet farming 
-            10      !  All other crop farming)
-1121A0.(    11      !  Beef cattle ranching and farming, including feedlots and dual-purpose ranching and farming)
-112120.(    12      !  Dairy cattle and milk production)
-112300.(    13      !  Poultry and egg production)
-112A00.(    14      !  Animal production, except cattle and poultry and eggs)
-113000.(    15      !  Forestry, forest products, and timber tract production 
-            16      !  Commercial logging  )
+            10      !  All other crop farming
+)
+1121A0.(    11      !  Beef cattle ranching and farming including feedlots and dual-purpose ranching and farming
+)
+112120.(    12      !  Dairy cattle and milk production
+)
+112300.(    13      !  Poultry and egg production
+)
+112A00.(    14      !  Animal production except cattle and poultry and eggs
+)
+113000.(    15      !  Forestry forest products and timber tract production 
+            16      !  Commercial logging  
+)
 114000.(    17      !  Commercial fishing 
-            18      !  Commercial hunting and trapping  )
-115000.(    19      !  Support activities for agriculture and forestry)
-211000.(    20      !  Oil and gas extraction)
-212100.(    21      !  Coal mining)
+            18      !  Commercial hunting and trapping  
+)
+115000.(    19      !  Support activities for agriculture and forestry
+)
+211000.(    20      !  Oil and gas extraction
+)
+212100.(    21      !  Coal mining
+)
 2122A0.(    23      !  Iron ore mining
             24      !  Gold ore mining
             25      !  Silver ore mining
             26      !  Uranium-radium-vanadium ore mining
-            27      !  Other metal ore mining)
-212230.(    22      !  Copper, nickel, lead, and zinc mining)
-212310.(    28      !  Stone mining and quarrying)
+            27      !  Other metal ore mining
+)
+212230.(    22      !  Copper nickel lead and zinc mining
+)
+212310.(    28      !  Stone mining and quarrying
+)
 2123A0.(    29      !  Sand and gravel mining
-            30      !  Other clay, ceramic, refractory minerals mining
-            31      !  Potash, soda, and borate mineral mining
+            30      !  Other clay ceramic refractory minerals mining
+            31      !  Potash soda and borate mineral mining
             32      !  Phosphate rock mining
             33      !  Other chemical and fertilizer mineral mining
-            34      !  Other nonmetallic minerals)
-213111.(    35      !  Drilling oil and gas wells)
+            34      !  Other nonmetallic minerals
+)
+213111.(    35      !  Drilling oil and gas wells
+)
 21311A.(    36      !  Support activities for oil and gas operations
             37      !  Metal mining services
-            38      !  Other nonmetallic minerals services)
+            38      !  Other nonmetallic minerals services
+)
 221100.(    39      !  Electric power generation - Hydroelectric
             40      !  Electric power generation - Fossil  fuel 
             41      !  Electric power generation - Nuclear
@@ -56,81 +77,131 @@ SET maps(*,*) Mapping from IMPLAN 546 to BEA   /
             44      !  Electric power generation - Geothermal
             45      !  Electric power generation - Biomass
             46      !  Electric power generation - All other
-            47      !  Electric power transmission and distribution)
-221200.(    48      !  Natural gas distribution)
-221300.(    49      !  Water, sewage and other systems)
-233210.(    50      !  Construction of new health care structures)
-233230.(    51      !  Construction of new manufacturing structures)
-233240.(    52      !  Construction of new power and communication structures)
-233262.(    53      !  Construction of new educational and vocational structures)
+            47      !  Electric power transmission and distribution
+)
+221200.(    48      !  Natural gas distribution
+)
+221300.(    49      !  Water sewage and other systems
+)
+233210.(    50      !  Construction of new health care structures
+)
+233230.(    51      !  Construction of new manufacturing structures
+)
+233240.(    52      !  Construction of new power and communication structures
+)
+233262.(    53      !  Construction of new educational and vocational structures
+)
 2332C0.(    54      !  Construction of new highways and streets
-            62      !  Maintenance and repair construction of highways, streets, bridges, and tunnels)
-2332A0.(    55      !  Construction of new commercial structures, including farm structures)
-2332D0.(    56      !  Construction of other new nonresidential structures)
-233411.(    57      !  Construction of new single-family residential structures)
-233412.(    58      !  Construction of new multifamily residential structures)
-2334A0.(    59      !  Construction of other new residential structures)
-230301.(    60      !  Maintenance and repair construction of nonresidential structures)
-230302.(    61      !  Maintenance and repair construction of residential structures)
-311111.(    63      !  Dog and cat food manufacturing)
-311119.(    64      !  Other animal food manufacturing)
+            62      !  Maintenance and repair construction of highways streets bridges and tunnels
+)
+2332A0.(    55      !  Construction of new commercial structures including farm structures
+)
+2332D0.(    56      !  Construction of other new nonresidential structures
+)
+233411.(    57      !  Construction of new single-family residential structures
+)
+233412.(    58      !  Construction of new multifamily residential structures
+)
+2334A0.(    59      !  Construction of other new residential structures
+)
+230301.(    60      !  Maintenance and repair construction of nonresidential structures
+)
+230302.(    61      !  Maintenance and repair construction of residential structures
+)
+311111.(    63      !  Dog and cat food manufacturing
+)
+311119.(    64      !  Other animal food manufacturing
+)
 311210.(    65      !  Flour milling
-            67      !  Malt manufacturing)
+            67      !  Malt manufacturing
+)
 311990.(    66      !  Rice milling
-            103      !  All other food manufacturing)
-311221.(    68      !  Wet corn milling)
-311224.(    69      !  Soybean and other oilseed processing)
-311225.(    70      !  Fats and oils refining and blending)
-311230.(    71      !  Breakfast cereal manufacturing)
+            103      !  All other food manufacturing
+)
+311221.(    68      !  Wet corn milling
+)
+311224.(    69      !  Soybean and other oilseed processing
+)
+311225.(    70      !  Fats and oils refining and blending
+)
+311230.(    71      !  Breakfast cereal manufacturing
+)
 311300.(    72      !  Beet sugar manufacturing
             73      !  Sugar cane mills and refining
             74      !  Nonchocolate confectionery manufacturing 
             75      !  Chocolate and confectionery manufacturing from cacao beans
-            76      !  Confectionery manufacturing from purchased chocolate )
-311420.(    77      !  Frozen fruits, juices and vegetables manufacturing
+            76      !  Confectionery manufacturing from purchased chocolate 
+)
+311420.(    77      !  Frozen fruits juices and vegetables manufacturing
             79      !  Canned fruits and vegetables manufacturing
             80      !  Canned specialties
-            81      !  Dehydrated food products manufacturing)
-311410.(    78      !  Frozen specialties manufacturing)
+            81      !  Dehydrated food products manufacturing
+)
+311410.(    78      !  Frozen specialties manufacturing
+)
 31151A.(    84      !  Fluid milk manufacturing
-            85      !  Creamery butter manufacturing)
-311513.(    82      !  Cheese manufacturing)
-311514.(    83      !  Dry, condensed, and evaporated dairy product manufacturing)
-311520.(    86      !  Ice cream and frozen dessert manufacturing)
-31161A.(    89      !  Animal, except poultry, slaughtering
+            85      !  Creamery butter manufacturing
+)
+311513.(    82      !  Cheese manufacturing
+)
+311514.(    83      !  Dry condensed and evaporated dairy product manufacturing
+)
+311520.(    86      !  Ice cream and frozen dessert manufacturing
+)
+31161A.(    89      !  Animal except poultry slaughtering
             90      !  Meat processed from carcasses
-            91      !  Rendering and meat byproduct processing)
-311615.(    88      !  Poultry processing)
-311700.(    92      !  Seafood product preparation and packaging)
-311810.(    93      !  Bread and bakery product, except frozen, manufacturing
-            87      !  Frozen cakes and other pastries manufacturing)
+            91      !  Rendering and meat byproduct processing
+)
+311615.(    88      !  Poultry processing
+)
+311700.(    92      !  Seafood product preparation and packaging
+)
+311810.(    93      !  Bread and bakery product except frozen manufacturing
+            87      !  Frozen cakes and other pastries manufacturing
+)
 3118A0.(    94      !  Cookie and cracker manufacturing
-            95      !  Dry pasta, mixes, and dough manufacturing
-            96      !  Tortilla manufacturing)
+            95      !  Dry pasta mixes and dough manufacturing
+            96      !  Tortilla manufacturing
+)
 311910.(    97      !  Roasted nuts and peanut butter manufacturing
-            98      !  Other snack food manufacturing)
-311920.(    99      !  Coffee and tea manufacturing)
-311930.(    100      !  Flavoring syrup and concentrate manufacturing)
-311940.(    101      !  Mayonnaise, dressing, and sauce manufacturing
-            102      !  Spice and extract manufacturing)
+            98      !  Other snack food manufacturing
+)
+311920.(    99      !  Coffee and tea manufacturing
+)
+311930.(    100      !  Flavoring syrup and concentrate manufacturing
+)
+311940.(    101      !  Mayonnaise dressing and sauce manufacturing
+            102      !  Spice and extract manufacturing
+)
 312110.(    104      !  Bottled and canned soft drinks & water
-            105      !  Manufactured ice)
-312120.(    106      !  Breweries)
-312130.(    107      !  Wineries)
-312140.(    108      !  Distilleries)
-312200.(    109      !  Tobacco product manufacturing)
-313100.(    110      !  Fiber, yarn, and thread mills)
+            105      !  Manufactured ice
+)
+312120.(    106      !  Breweries
+)
+312130.(    107      !  Wineries
+)
+312140.(    108      !  Distilleries
+)
+312200.(    109      !  Tobacco product manufacturing
+)
+313100.(    110      !  Fiber yarn and thread mills
+)
 313200.(    111      !  Broadwoven fabric mills
             112      !  Narrow fabric mills and schiffli machine embroidery
             113      !  Nonwoven fabric mills
             114      !  Knit fabric mills
-            115      !  Textile and fabric finishing mills)
-313300.(    116      !  Fabric coating mills                                                                                                         )
-314110.(    117      !  Carpet and rug mills)
-314120.(    118      !  Curtain and linen mills)
+            115      !  Textile and fabric finishing mills
+)
+313300.(    116      !  Fabric coating mills                                                                                                         
+)
+314110.(    117      !  Carpet and rug mills
+)
+314120.(    118      !  Curtain and linen mills
+)
 314900.(    119      !  Textile bag and canvas mills
-            120      !  Rope, cordage, twine, tire cord and tire fabric mills
-            121      !  Other textile product mills)
+            120      !  Rope cordage twine tire cord and tire fabric mills
+            121      !  Other textile product mills
+)
 315000.(    122      !  Hosiery and sock mills
             123      !  Other apparel knitting mills
             124      !  Cut and sew apparel contractors                                                                                              
@@ -138,423 +209,749 @@ SET maps(*,*) Mapping from IMPLAN 546 to BEA   /
             126      !  Women's and girls' cut and sew apparel manufacturing                                                                         
             127      !  Other cut and sew apparel manufacturing                                                                                      
             128      !  Apparel accessories and other apparel manufacturing
-            130      !  Footwear manufacturing                                                                                                       )
+            130      !  Footwear manufacturing                                                                                                       
+)
 316000.(    129      !  Leather and hide tanning and finishing                                                                                       
-            131      !  Other leather and allied product manufacturing                                                                               )
-321100.(    132      !  Sawmills)
+            131      !  Other leather and allied product manufacturing                                                                               
+)
+321100.(    132      !  Sawmills
+)
 321200.(    133      !  Wood preservation
             134      !  Veneer and plywood manufacturing                                                                                             
             135      !  Engineered wood member and truss manufacturing                                                                               
-            136      !  Reconstituted wood product manufacturing                                                                                     )
+            136      !  Reconstituted wood product manufacturing                                                                                     
+)
 3219A0.(    137      !  Wood windows and door manufacturing
             140      !  Wood container and pallet manufacturing                                                                                      
-            141      !  Manufactured home (mobile home) manufacturing
+            141      !  Manufactured home mobile home manufacturing
             142      !  Prefabricated wood building manufacturing                                                                                    
-            143      !  All other miscellaneous wood product manufacturing)
-321910.(    138      !  Cut stock, resawing lumber, and planing
-            139      !  Other millwork, including flooring)
-322110.(    144      !  Pulp mills)
-322120.(    145      !  Paper mills)
-322130.(    146      !  Paperboard mills)
-322210.(    147      !  Paperboard container manufacturing)
-322220.(    148      !  Paper bag and coated and treated paper manufacturing)
-322230.(    149      !  Stationery product manufacturing)
-322291.(    150      !  Sanitary paper product manufacturing)
-322299.(    151      !  All other converted paper product manufacturing)
-323110.(    152      !  Printing)
-323120.(    153      !  Support activities for printing)
-324110.(    154      !  Petroleum refineries)
-324121.(    155      !  Asphalt paving mixture and block manufacturing)
-324122.(    156      !  Asphalt shingle and coating materials manufacturing)
+            143      !  All other miscellaneous wood product manufacturing
+)
+321910.(    138      !  Cut stock resawing lumber and planing
+            139      !  Other millwork including flooring
+)
+322110.(    144      !  Pulp mills
+)
+322120.(    145      !  Paper mills
+)
+322130.(    146      !  Paperboard mills
+)
+322210.(    147      !  Paperboard container manufacturing
+)
+322220.(    148      !  Paper bag and coated and treated paper manufacturing
+)
+322230.(    149      !  Stationery product manufacturing
+)
+322291.(    150      !  Sanitary paper product manufacturing
+)
+322299.(    151      !  All other converted paper product manufacturing
+)
+323110.(    152      !  Printing
+)
+323120.(    153      !  Support activities for printing
+)
+324110.(    154      !  Petroleum refineries
+)
+324121.(    155      !  Asphalt paving mixture and block manufacturing
+)
+324122.(    156      !  Asphalt shingle and coating materials manufacturing
+)
 324190.(    157      !  Petroleum lubricating oil and grease manufacturing                                                                           
-            158      !  All other petroleum and coal products manufacturing                                                                          )
-325110.(    159      !  Petrochemical manufacturing)
-325120.(    160      !  Industrial gas manufacturing)
-325130.(    161      !  Synthetic dye and pigment manufacturing)
-325180.(    162      !  Other basic inorganic chemical manufacturing)
-325190.(    163      !  Other basic organic chemical manufacturing)
+            158      !  All other petroleum and coal products manufacturing                                                                          
+)
+325110.(    159      !  Petrochemical manufacturing
+)
+325120.(    160      !  Industrial gas manufacturing
+)
+325130.(    161      !  Synthetic dye and pigment manufacturing
+)
+325180.(    162      !  Other basic inorganic chemical manufacturing
+)
+325190.(    163      !  Other basic organic chemical manufacturing
+)
 325211.(    164      !  Plastics material and resin manufacturing
-            183      !  Custom compounding of purchased resins)
+            183      !  Custom compounding of purchased resins
+)
 3252A0.(    165      !  Synthetic rubber manufacturing                                                                                               
-            166      !  Artificial and synthetic fibers and filaments manufacturing                                                                  )
+            166      !  Artificial and synthetic fibers and filaments manufacturing                                                                  
+)
 325310.(    167      !  Nitrogenous fertilizer manufacturing
             168      !  Phosphatic fertilizer manufacturing
-            169      !  Fertilizer mixing)
-325320.(    170      !  Pesticide and other agricultural chemical manufacturing)
-325411.(    171      !  Medicinal and botanical manufacturing)
-325412.(    172      !  Pharmaceutical preparation manufacturing)
-325413.(    173      !  In-vitro diagnostic substance manufacturing)
-325414.(    174      !  Biological product (except diagnostic) manufacturing)
+            169      !  Fertilizer mixing
+)
+325320.(    170      !  Pesticide and other agricultural chemical manufacturing
+)
+325411.(    171      !  Medicinal and botanical manufacturing
+)
+325412.(    172      !  Pharmaceutical preparation manufacturing
+)
+325413.(    173      !  In-vitro diagnostic substance manufacturing
+)
+325414.(    174      !  Biological product except diagnostic manufacturing
+)
 325510.(    175      !  Paint and coating manufacturing
             178      !  Polish and other sanitation good manufacturing
-            179      !  Surface active agent manufacturing)
-325520.(    176      !  Adhesive manufacturing)
-325610.(    177      !  Soap and other detergent manufacturing)
-325620.(    180      !  Toilet preparation manufacturing)
-325910.(    181      !  Printing ink manufacturing)
+            179      !  Surface active agent manufacturing
+)
+325520.(    176      !  Adhesive manufacturing
+)
+325610.(    177      !  Soap and other detergent manufacturing
+)
+325620.(    180      !  Toilet preparation manufacturing
+)
+325910.(    181      !  Printing ink manufacturing
+)
 3259A0.(    182      !  Explosives manufacturing
             184      !  Photographic film and chemical manufacturing
-            185      !  Other miscellaneous chemical product manufacturing)
-326110.(    186      !  Plastics packaging materials and unlaminated film and sheet manufacturing)
+            185      !  Other miscellaneous chemical product manufacturing
+)
+326110.(    186      !  Plastics packaging materials and unlaminated film and sheet manufacturing
+)
 326120.(    187      !  Unlaminated plastics profile shape manufacturing                                                                             
-            188      !  Plastics pipe and pipe fitting manufacturing                                                                                 )
-326130.(    189      !  Laminated plastics plate, sheet (except packaging), and shape manufacturing)
-326140.(    190      !  Polystyrene foam product manufacturing)
-326150.(    191      !  Urethane and other foam product (except polystyrene) manufacturing)
-326160.(    192      !  Plastics bottle manufacturing)
-326190.(    193      !  Other plastics product manufacturing)
-326210.(    194      !  Tire manufacturing)
-326220.(    195      !  Rubber and plastics hoses and belting manufacturing)
-326290.(    196      !  Other rubber product manufacturing)
-327100.(    197      !  Pottery, ceramics, and plumbing fixture manufacturing                                                                        
-            198      !  Brick, tile, and other structural clay product manufacturing )
+            188      !  Plastics pipe and pipe fitting manufacturing                                                                                 
+)
+326130.(    189      !  Laminated plastics plate sheet except packaging and shape manufacturing
+)
+326140.(    190      !  Polystyrene foam product manufacturing
+)
+326150.(    191      !  Urethane and other foam product except polystyrene manufacturing
+)
+326160.(    192      !  Plastics bottle manufacturing
+)
+326190.(    193      !  Other plastics product manufacturing
+)
+326210.(    194      !  Tire manufacturing
+)
+326220.(    195      !  Rubber and plastics hoses and belting manufacturing
+)
+326290.(    196      !  Other rubber product manufacturing
+)
+327100.(    197      !  Pottery ceramics and plumbing fixture manufacturing                                                                        
+            198      !  Brick tile and other structural clay product manufacturing 
+)
 327200.(    199      !  Flat glass manufacturing                                                                                                     
             200      !  Other pressed and blown glass and glassware manufacturing                                                                    
             201      !  Glass container manufacturing                                                                                                
-            202      !  Glass product manufacturing made of purchased glass                                                                          )
-327310.(    203      !  Cement manufacturing)
-327320.(    204      !  Ready-mix concrete manufacturing)
+            202      !  Glass product manufacturing made of purchased glass                                                                          
+)
+327310.(    203      !  Cement manufacturing
+)
+327320.(    204      !  Ready-mix concrete manufacturing
+)
 327330.(    205      !  Concrete block and brick manufacturing
-            206      !  Concrete pipe manufacturing)
-327390.(    207      !  Other concrete product manufacturing)
+            206      !  Concrete pipe manufacturing
+)
+327390.(    207      !  Other concrete product manufacturing
+)
 327400.(    208      !  Lime manufacturing
-            209      !  Gypsum product manufacturing)
-327910.(    210      !  Abrasive product manufacturing)
-327991.(    211      !  Cut stone and stone product manufacturing)
-327992.(    212      !  Ground or treated mineral and earth manufacturing)
-327993.(    213      !  Mineral wool manufacturing)
-327999.(    214      !  Miscellaneous nonmetallic mineral products manufacturing)
+            209      !  Gypsum product manufacturing
+)
+327910.(    210      !  Abrasive product manufacturing
+)
+327991.(    211      !  Cut stone and stone product manufacturing
+)
+327992.(    212      !  Ground or treated mineral and earth manufacturing
+)
+327993.(    213      !  Mineral wool manufacturing
+)
+327999.(    214      !  Miscellaneous nonmetallic mineral products manufacturing
+)
 331110.(    215      !  Iron and steel mills and ferroalloy manufacturing
             217      !  Rolled steel shape manufacturing
-            231      !  Iron and steel forging)
-331200.(    216      !  Iron, steel pipe and tube manufacturing from purchased steel
-            218      !  Steel wire drawing)
-331313.(    219      !  Alumina refining and primary aluminum production)
+            231      !  Iron and steel forging
+)
+331200.(    216      !  Iron steel pipe and tube manufacturing from purchased steel
+            218      !  Steel wire drawing
+)
+331313.(    219      !  Alumina refining and primary aluminum production
+)
 33131B.(    220      !  Secondary smelting and alloying of aluminum
-            221      !  Aluminum sheet, plate, and foil manufacturing
-            222      !  Other aluminum rolling, drawing and extruding
-            223      !  Nonferrous metal (exc aluminum) smelting and refining)
-331420.(    224      !  Copper rolling, drawing, extruding and alloying)
-331490.(    225      !  Nonferrous metal, except copper and aluminum, shaping
-            226      !  Secondary processing of other nonferrous metals)
-331510.(    227      !  Ferrous metal foundries)
-331520.(    228      !  Nonferrous metal foundries)
-33211A.(    232      !  Nonferrous forging)
-332114.(    229      !  Custom roll forming)
-332119.(    230      !  Crown and closure manufacturing and metal stamping)
-332200.(    233      !  Cutlery, utensil, pot, and pan manufacturing 
-            234      !  Handtool manufacturing                                                                                                       )
+            221      !  Aluminum sheet plate and foil manufacturing
+            222      !  Other aluminum rolling drawing and extruding
+            223      !  Nonferrous metal exc aluminum smelting and refining
+)
+331420.(    224      !  Copper rolling drawing extruding and alloying
+)
+331490.(    225      !  Nonferrous metal except copper and aluminum shaping
+            226      !  Secondary processing of other nonferrous metals
+)
+331510.(    227      !  Ferrous metal foundries
+)
+331520.(    228      !  Nonferrous metal foundries
+)
+33211A.(    232      !  Nonferrous forging
+)
+332114.(    229      !  Custom roll forming
+)
+332119.(    230      !  Crown and closure manufacturing and metal stamping
+)
+332200.(    233      !  Cutlery utensil pot and pan manufacturing 
+            234      !  Handtool manufacturing                                                                                                       
+)
 332310.(    235      !  Prefabricated metal buildings and components manufacturing
             236      !  Fabricated structural metal manufacturing
-            237      !  Plate work manufacturing)
+            237      !  Plate work manufacturing
+)
 332999.(    238      !  Metal window and door manufacturing
             239      !  Sheet metal work manufacturing
-            251      !  Electroplating, anodizing, and coloring metal
-            259      !  Other fabricated metal manufacturing)
-332320.(    240      !  Ornamental and architectural metal work manufacturing)
-332410.(    241      !  Power boiler and heat exchanger manufacturing)
-332420.(    242      !  Metal tank (heavy gauge) manufacturing
-            244      !  Metal barrels, drums and pails manufacturing)
-332430.(    243      !  Metal cans manufacturing)
-332500.(    245      !  Hardware manufacturing)
-332600.(    246      !  Spring and wire product manufacturing)
-332710.(    247      !  Machine shops)
-332720.(    248      !  Turned product and screw, nut, and bolt manufacturing)
+            251      !  Electroplating anodizing and coloring metal
+            259      !  Other fabricated metal manufacturing
+)
+332320.(    240      !  Ornamental and architectural metal work manufacturing
+)
+332410.(    241      !  Power boiler and heat exchanger manufacturing
+)
+332420.(    242      !  Metal tank heavy gauge manufacturing
+            244      !  Metal barrels drums and pails manufacturing
+)
+332430.(    243      !  Metal cans manufacturing
+)
+332500.(    245      !  Hardware manufacturing
+)
+332600.(    246      !  Spring and wire product manufacturing
+)
+332710.(    247      !  Machine shops
+)
+332720.(    248      !  Turned product and screw nut and bolt manufacturing
+)
 332800.(    249      !  Metal heat treating
-            250      !  Metal coating and nonprecious engraving)
-33291A.(    252      !  Valve and fittings, other than plumbing, manufacturing)
-332913.(    253      !  Plumbing fixture fitting and trim manufacturing)
-332991.(    254      !  Ball and roller bearing manufacturing)
+            250      !  Metal coating and nonprecious engraving
+)
+33291A.(    252      !  Valve and fittings other than plumbing manufacturing
+)
+332913.(    253      !  Plumbing fixture fitting and trim manufacturing
+)
+332991.(    254      !  Ball and roller bearing manufacturing
+)
 33299A.(    255      !  Small arms ammunition manufacturing
-            256      !  Ammunition, except for small arms, manufacturing
-            257      !  Small arms, ordnance, and accessories manufacturing)
-332996.(    258      !  Fabricated pipe and pipe fitting manufacturing)
-333111.(    260      !  Farm machinery and equipment manufacturing)
-333112.(    261      !  Lawn and garden equipment manufacturing)
-333120.(    262      !  Construction machinery manufacturing)
+            256      !  Ammunition except for small arms manufacturing
+            257      !  Small arms ordnance and accessories manufacturing
+)
+332996.(    258      !  Fabricated pipe and pipe fitting manufacturing
+)
+333111.(    260      !  Farm machinery and equipment manufacturing
+)
+333112.(    261      !  Lawn and garden equipment manufacturing
+)
+333120.(    262      !  Construction machinery manufacturing
+)
 333130.(    263      !  Mining machinery and equipment manufacturing
-            264      !  Oil and gas field machinery and equipment manufacturing)
+            264      !  Oil and gas field machinery and equipment manufacturing
+)
 33329A.(    266      !  Food product machinery manufacturing
-            267      !  Sawmill, woodworking, and paper machinery
+            267      !  Sawmill woodworking and paper machinery
             268      !  Printing machinery and equipment manufacturing
-            269      !  All other industrial machinery manufacturing)
-333242.(    265      !  Semiconductor machinery manufacturing)
-333314.(    270      !  Optical instrument and lens manufacturing)
-333316.(    271      !  Photographic and photocopying equipment manufacturing)
-333318.(    272      !  Other commercial service industry machinery manufacturing)
-333413.(    273      !  Air purification and ventilation equipment manufacturing)
-333414.(    274      !  Heating equipment (except warm air furnaces) manufacturing)
-333415.(    275      !  Air conditioning, refrigeration, and warm air heating equipment manufacturing)
-333511.(    276      !  Industrial mold manufacturing)
-333514.(    277      !  Special tool, die, jig, and fixture manufacturing)
+            269      !  All other industrial machinery manufacturing
+)
+333242.(    265      !  Semiconductor machinery manufacturing
+)
+333314.(    270      !  Optical instrument and lens manufacturing
+)
+333316.(    271      !  Photographic and photocopying equipment manufacturing
+)
+333318.(    272      !  Other commercial service industry machinery manufacturing
+)
+333413.(    273      !  Air purification and ventilation equipment manufacturing
+)
+333414.(    274      !  Heating equipment except warm air furnaces manufacturing
+)
+333415.(    275      !  Air conditioning refrigeration and warm air heating equipment manufacturing
+)
+333511.(    276      !  Industrial mold manufacturing
+)
+333514.(    277      !  Special tool die jig and fixture manufacturing
+)
 33351B.(    278      !  Cutting tool and machine tool accessory manufacturing                                                                        
-            280      !  Rolling mill and other metalworking machinery manufacturing)
-333517.(    279      !  Machine tool manufacturing)
-333611.(    281      !  Turbine and turbine generator set units manufacturing)
-333612.(    282      !  Speed changer, industrial high-speed drive, and gear manufacturing)
-333613.(    283      !  Mechanical power transmission equipment manufacturing)
-333618.(    284      !  Other engine equipment manufacturing)
-33391A.(    285      !  Pump and pumping equipment manufacturing)
-333912.(    286      !  Air and gas compressor manufacturing)
+            280      !  Rolling mill and other metalworking machinery manufacturing
+)
+333517.(    279      !  Machine tool manufacturing
+)
+333611.(    281      !  Turbine and turbine generator set units manufacturing
+)
+333612.(    282      !  Speed changer industrial high-speed drive and gear manufacturing
+)
+333613.(    283      !  Mechanical power transmission equipment manufacturing
+)
+333618.(    284      !  Other engine equipment manufacturing
+)
+33391A.(    285      !  Pump and pumping equipment manufacturing
+)
+333912.(    286      !  Air and gas compressor manufacturing
+)
 333920.(    287      !  Elevator and moving stairway manufacturing
             288      !  Conveyor and conveying equipment manufacturing
-            289      !  Overhead cranes, hoists, and monorail systems manufacturing
-            290      !  Industrial truck, trailer, and stacker manufacturing)
-333991.(    291      !  Power-driven handtool manufacturing)
+            289      !  Overhead cranes hoists and monorail systems manufacturing
+            290      !  Industrial truck trailer and stacker manufacturing
+)
+333991.(    291      !  Power-driven handtool manufacturing
+)
 33399A.(    292      !  Welding and soldering equipment manufacturing
             295      !  Fluid power cylinder and actuator manufacturing
-            297      !  Scales, balances, and miscellaneous general purpose machinery manufacturing)
-333993.(    293      !  Packaging machinery manufacturing)
-333994.(    294      !  Industrial process furnace and oven manufacturing)
-33399B.(    296      !  Fluid power pump and motor manufacturing)
-334111.(    298      !  Electronic computer manufacturing)
-334112.(    299      !  Computer storage device manufacturing)
-334118.(    300      !  Computer terminals and other computer peripheral equipment manufacturing)
-334210.(    301      !  Telephone apparatus manufacturing)
-334220.(    302      !  Broadcast and wireless communications equipment manufacturing)
-334290.(    303      !  Other communications equipment manufacturing)
-334300.(    304      !  Audio and video equipment manufacturing)
+            297      !  Scales balances and miscellaneous general purpose machinery manufacturing
+)
+333993.(    293      !  Packaging machinery manufacturing
+)
+333994.(    294      !  Industrial process furnace and oven manufacturing
+)
+33399B.(    296      !  Fluid power pump and motor manufacturing
+)
+334111.(    298      !  Electronic computer manufacturing
+)
+334112.(    299      !  Computer storage device manufacturing
+)
+334118.(    300      !  Computer terminals and other computer peripheral equipment manufacturing
+)
+334210.(    301      !  Telephone apparatus manufacturing
+)
+334220.(    302      !  Broadcast and wireless communications equipment manufacturing
+)
+334290.(    303      !  Other communications equipment manufacturing
+)
+334300.(    304      !  Audio and video equipment manufacturing
+)
 334418.(    306      !  Bare printed circuit board manufacturing                                                                                     
-            305      !  Printed circuit assembly (electronic assembly) manufacturing)
-334413.(    307      !  Semiconductor and related device manufacturing)
-33441A.(    308      !  Capacitor, resistor, coil, transformer, and other inductor manufacturing                                          
+            305      !  Printed circuit assembly electronic assembly manufacturing
+)
+334413.(    307      !  Semiconductor and related device manufacturing
+)
+33441A.(    308      !  Capacitor resistor coil transformer and other inductor manufacturing                                          
             309      !  Electronic connector manufacturing                                                                                           
-            310      !  Other electronic component manufacturing                                                                                     )
-334510.(    311      !  Electromedical and electrotherapeutic apparatus manufacturing)
-334511.(    312      !  Search, detection, and navigation instruments manufacturing)
-334512.(    313      !  Automatic environmental control manufacturing)
-334513.(    314      !  Industrial process variable instruments manufacturing)
-334514.(    315      !  Totalizing fluid meter and counting device manufacturing)
-334515.(    316      !  Electricity and signal testing instruments manufacturing)
-334516.(    317      !  Analytical laboratory instrument manufacturing)
-334517.(    318      !  Irradiation apparatus manufacturing)
-33451A.(    319      !  Watch, clock, and other measuring and controlling device manufacturing)
+            310      !  Other electronic component manufacturing                                                                                     
+)
+334510.(    311      !  Electromedical and electrotherapeutic apparatus manufacturing
+)
+334511.(    312      !  Search detection and navigation instruments manufacturing
+)
+334512.(    313      !  Automatic environmental control manufacturing
+)
+334513.(    314      !  Industrial process variable instruments manufacturing
+)
+334514.(    315      !  Totalizing fluid meter and counting device manufacturing
+)
+334515.(    316      !  Electricity and signal testing instruments manufacturing
+)
+334516.(    317      !  Analytical laboratory instrument manufacturing
+)
+334517.(    318      !  Irradiation apparatus manufacturing
+)
+33451A.(    319      !  Watch clock and other measuring and controlling device manufacturing
+)
 334610.(    320      !  Blank magnetic and optical recording media manufacturing                                                                           
-            321      !  Software and other prerecorded and record reproducing)
-335110.(    322      !  Electric lamp bulb and part manufacturing)
-335120.(    323      !  Lighting fixture manufacturing)
-335210.(    324      !  Small electrical appliance manufacturing)
-335221.(    325      !  Household cooking appliance manufacturing)
-335222.(    326      !  Household refrigerator and home freezer manufacturing)
-335224.(    327      !  Household laundry equipment manufacturing)
-335228.(    328      !  Other major household appliance manufacturing)
-335311.(    329      !  Power, distribution, and specialty transformer manufacturing)
-335312.(    330      !  Motor and generator manufacturing)
-335313.(    331      !  Switchgear and switchboard apparatus manufacturing)
-335314.(    332      !  Relay and industrial control manufacturing)
-335911.(    333      !  Storage battery manufacturing)
-335912.(    334      !  Primary battery manufacturing)
+            321      !  Software and other prerecorded and record reproducing
+)
+335110.(    322      !  Electric lamp bulb and part manufacturing
+)
+335120.(    323      !  Lighting fixture manufacturing
+)
+335210.(    324      !  Small electrical appliance manufacturing
+)
+335221.(    325      !  Household cooking appliance manufacturing
+)
+335222.(    326      !  Household refrigerator and home freezer manufacturing
+)
+335224.(    327      !  Household laundry equipment manufacturing
+)
+335228.(    328      !  Other major household appliance manufacturing
+)
+335311.(    329      !  Power distribution and specialty transformer manufacturing
+)
+335312.(    330      !  Motor and generator manufacturing
+)
+335313.(    331      !  Switchgear and switchboard apparatus manufacturing
+)
+335314.(    332      !  Relay and industrial control manufacturing
+)
+335911.(    333      !  Storage battery manufacturing
+)
+335912.(    334      !  Primary battery manufacturing
+)
 335920.(    335      !  Fiber optic cable manufacturing
-            336      !  Other communication and energy wire manufacturing)
-335930.(    337      !  Wiring device manufacturing)
-335991.(    338      !  Carbon and graphite product manufacturing)
-335999.(    339      !  All other miscellaneous electrical equipment and component manufacturing)
-336111.(    340      !  Automobile manufacturing)
-336112.(    341      !  Light truck and utility vehicle manufacturing)
-336120.(    342      !  Heavy duty truck manufacturing)
-336211.(    343      !  Motor vehicle body manufacturing)
-336212.(    344      !  Truck trailer manufacturing)
-336213.(    345      !  Motor home manufacturing)
-336214.(    346      !  Travel trailer and camper manufacturing)
-336310.(    347      !  Motor vehicle gasoline engine and engine parts manufacturing)
-336320.(    348      !  Motor vehicle electrical and electronic equipment manufacturing)
-3363A0.(    353      !  Motor vehicle steering, suspension component (except spring), and brake systems manufacturing)
-336350.(    349      !  Motor vehicle transmission and power train parts manufacturing)
-336360.(    350      !  Motor vehicle seating and interior trim manufacturing)
-336370.(    351      !  Motor vehicle metal stamping)
-336390.(    352      !  Other motor vehicle parts manufacturing)
-336411.(    354      !  Aircraft manufacturing)
-336412.(    355      !  Aircraft engine and engine parts manufacturing)
-336413.(    356      !  Other aircraft parts and auxiliary equipment manufacturing)
-336414.(    357      !  Guided missile and space vehicle manufacturing)
-33641A.(    358      !  Propulsion units and parts for space vehicles and guided missiles manufacturing)
-336500.(    359      !  Railroad rolling stock manufacturing)
-336611.(    360      !  Ship building and repairing)
-336612.(    361      !  Boat building)
-336991.(    362      !  Motorcycle, bicycle, and parts manufacturing)
-336992.(    363      !  Military armored vehicle, tank, and tank component manufacturing)
-336999.(    364      !  All other transportation equipment manufacturing)
-337110.(    365      !  Wood kitchen cabinet and countertop manufacturing)
-337121.(    366      !  Upholstered household furniture manufacturing)
-337122.(    367      !  Nonupholstered wood household furniture manufacturing)
-33712N.(    368      !  Other household nonupholstered furniture manufacturing)
-337127.(    369      !  Institutional furniture manufacturing)
+            336      !  Other communication and energy wire manufacturing
+)
+335930.(    337      !  Wiring device manufacturing
+)
+335991.(    338      !  Carbon and graphite product manufacturing
+)
+335999.(    339      !  All other miscellaneous electrical equipment and component manufacturing
+)
+336111.(    340      !  Automobile manufacturing
+)
+336112.(    341      !  Light truck and utility vehicle manufacturing
+)
+336120.(    342      !  Heavy duty truck manufacturing
+)
+336211.(    343      !  Motor vehicle body manufacturing
+)
+336212.(    344      !  Truck trailer manufacturing
+)
+336213.(    345      !  Motor home manufacturing
+)
+336214.(    346      !  Travel trailer and camper manufacturing
+)
+336310.(    347      !  Motor vehicle gasoline engine and engine parts manufacturing
+)
+336320.(    348      !  Motor vehicle electrical and electronic equipment manufacturing
+)
+3363A0.(    353      !  Motor vehicle steering suspension component except spring and brake systems manufacturing
+)
+336350.(    349      !  Motor vehicle transmission and power train parts manufacturing
+)
+336360.(    350      !  Motor vehicle seating and interior trim manufacturing
+)
+336370.(    351      !  Motor vehicle metal stamping
+)
+336390.(    352      !  Other motor vehicle parts manufacturing
+)
+336411.(    354      !  Aircraft manufacturing
+)
+336412.(    355      !  Aircraft engine and engine parts manufacturing
+)
+336413.(    356      !  Other aircraft parts and auxiliary equipment manufacturing
+)
+336414.(    357      !  Guided missile and space vehicle manufacturing
+)
+33641A.(    358      !  Propulsion units and parts for space vehicles and guided missiles manufacturing
+)
+336500.(    359      !  Railroad rolling stock manufacturing
+)
+336611.(    360      !  Ship building and repairing
+)
+336612.(    361      !  Boat building
+)
+336991.(    362      !  Motorcycle bicycle and parts manufacturing
+)
+336992.(    363      !  Military armored vehicle tank and tank component manufacturing
+)
+336999.(    364      !  All other transportation equipment manufacturing
+)
+337110.(    365      !  Wood kitchen cabinet and countertop manufacturing
+)
+337121.(    366      !  Upholstered household furniture manufacturing
+)
+337122.(    367      !  Nonupholstered wood household furniture manufacturing
+)
+33712N.(    368      !  Other household nonupholstered furniture manufacturing
+)
+337127.(    369      !  Institutional furniture manufacturing
+)
 33721A.(    370      !  Wood office furniture manufacturing
             371      !  Custom architectural woodwork and millwork
-            372      !  Office furniture, except wood, manufacturing)
-337215.(    373      !  Showcase, partition, shelving, and locker manufacturing)
+            372      !  Office furniture except wood manufacturing
+)
+337215.(    373      !  Showcase partition shelving and locker manufacturing
+)
 337900.(    374      !  Mattress manufacturing  
-            375      !  Blind and shade manufacturing   )
-339112.(    376      !  Surgical and medical instrument manufacturing)
-339113.(    377      !  Surgical appliance and supplies manufacturing)
-339114.(    378      !  Dental equipment and supplies manufacturing)
-339115.(    379      !  Ophthalmic goods manufacturing)
-339116.(    380      !  Dental laboratories)
-339910.(    381      !  Jewelry and silverware manufacturing)
-339920.(    382      !  Sporting and athletic goods manufacturing)
-339930.(    383      !  Doll, toy, and game manufacturing)
-339940.(    384      !  Office supplies (except paper) manufacturing)
-339950.(    385      !  Sign manufacturing)
-339990.(    386      !  Gasket, packing, and sealing device manufacturing                                                                            
+            375      !  Blind and shade manufacturing   
+)
+339112.(    376      !  Surgical and medical instrument manufacturing
+)
+339113.(    377      !  Surgical appliance and supplies manufacturing
+)
+339114.(    378      !  Dental equipment and supplies manufacturing
+)
+339115.(    379      !  Ophthalmic goods manufacturing
+)
+339116.(    380      !  Dental laboratories
+)
+339910.(    381      !  Jewelry and silverware manufacturing
+)
+339920.(    382      !  Sporting and athletic goods manufacturing
+)
+339930.(    383      !  Doll toy and game manufacturing
+)
+339940.(    384      !  Office supplies except paper manufacturing
+)
+339950.(    385      !  Sign manufacturing
+)
+339990.(    386      !  Gasket packing and sealing device manufacturing                                                                            
             387      !  Musical instrument manufacturing                                                                                             
-            388      !  Fasteners, buttons, needles, and pins manufacturing
-            389      !  Broom, brush, and mop manufacturing                                                                                          
+            388      !  Fasteners buttons needles and pins manufacturing
+            389      !  Broom brush and mop manufacturing                                                                                          
             390      !  Burial casket manufacturing
-            391      !  All other miscellaneous manufacturing)
-423100.(    392      !  Wholesale - Motor vehicle and motor vehicle parts and supplies)
-423400.(    393      !  Wholesale - Professional and commercial equipment and supplies)
-423600.(    394      !  Wholesale - Household appliances and electrical and electronic goods)
-423800.(    395      !  Wholesale - Machinery, equipment, and supplies)
-423A00.(    396      !  Wholesale - Other durable goods merchant wholesalers)
-424200.(    397      !  Wholesale - Drugs and druggists sundries)
-424400.(    398      !  Wholesale - Grocery and related product wholesalers)
-424700.(    399      !  Wholesale - Petroleum and petroleum products)
-424A00.(    400      !  Wholesale - Other nondurable goods merchant wholesalers)
-425000.(    401      !  Wholesale - Wholesale electronic markets and agents and brokers)
-441000.(    402      !  Retail - Motor vehicle and parts dealers)
+            391      !  All other miscellaneous manufacturing
+)
+423100.(    392      !  Wholesale - Motor vehicle and motor vehicle parts and supplies
+)
+423400.(    393      !  Wholesale - Professional and commercial equipment and supplies
+)
+423600.(    394      !  Wholesale - Household appliances and electrical and electronic goods
+)
+423800.(    395      !  Wholesale - Machinery equipment and supplies
+)
+423A00.(    396      !  Wholesale - Other durable goods merchant wholesalers
+)
+424200.(    397      !  Wholesale - Drugs and druggists sundries
+)
+424400.(    398      !  Wholesale - Grocery and related product wholesalers
+)
+424700.(    399      !  Wholesale - Petroleum and petroleum products
+)
+424A00.(    400      !  Wholesale - Other nondurable goods merchant wholesalers
+)
+425000.(    401      !  Wholesale - Wholesale electronic markets and agents and brokers
+)
+441000.(    402      !  Retail - Motor vehicle and parts dealers
+)
 4B0000.(    403      !  Retail - Furniture and home furnishings stores
             404      !  Retail - Electronics and appliance stores
-            410      !  Retail - Sporting goods, hobby, musical instrument and book stores
-            412      !  Retail - Miscellaneous store retailers)
-444000.(    405      !  Retail - Building material and garden equipment and supplies stores)
-445000.(    406      !  Retail - Food and beverage stores)
-446000.(    407      !  Retail - Health and personal care stores)
-447000.(    408      !  Retail - Gasoline stores)
-448000.(    409      !  Retail - Clothing and clothing accessories stores)
-452000.(    411      !  Retail - General merchandise stores)
-454000.(    413      !  Retail - Nonstore retailers)
-481000.(    414      !  Air transportation)
-482000.(    415      !  Rail transportation)
-483000.(    416      !  Water transportation)
-484000.(    417      !  Truck transportation)
-485000.(    418      !  Transit and ground passenger transportation)
-486000.(    419      !  Pipeline transportation)
-48A000.(    420      !  Scenic and sightseeing transportation and support activities for transportation)
-492000.(    421      !  Couriers and messengers)
-493000.(    422      !  Warehousing and storage)
-511110.(    423      !  Newspaper publishers)
-511120.(    424      !  Periodical publishers)
-511130.(    425      !  Book publishers)
-5111A0.(    426      !  Directory, mailing list, and other publishers
-            427      !  Greeting card publishing)
-511200.(    428      !  Software publishers)
-512100.(    429      !  Motion picture and video industries)
-512200.(    430      !  Sound recording industries)
-515100.(    431      !  Radio and television broadcasting)
-515200.(    432      !  Cable and other subscription programming)
-517110.(    433      !  Wired telecommunications carriers)
-517210.(    434      !  Wireless telecommunications carriers (except satellite))
-517A00.(    435      !  Satellite, telecommunications resellers, and all other telecommunications)
-518200.(    436      !  Data processing, hosting, and related services)
-5191A0.(    437      !  News syndicates, libraries, archives and all other information services)
-519130.(    438      !  Internet publishing and broadcasting and web search portals)
-52A000.(    441      !  Monetary authorities and depository credit intermediation)
-522A00.(    439      !  Nondepository credit intermediation and related activities)
-523A00.(    440      !  Securities and commodity contracts intermediation and brokerage)
-523900.(    442      !  Other financial investment activities)
-524113.(    443      !  Direct life insurance carriers)
-5241XX.(    444      !  Insurance carriers, except direct life)
-524200.(    445      !  Insurance agencies, brokerages, and related activities)
-525000.(    446      !  Funds, trusts, and other financial vehicles)
-531ORE.(    447      !  Other real estate)
-531HST.(    448      !  Tenant-occupied housing)
-531HSO.(    449      !  Owner-occupied dwellings)
-532100.(    450      !  Automotive equipment rental and leasing)
+            410      !  Retail - Sporting goods hobby musical instrument and book stores
+            412      !  Retail - Miscellaneous store retailers
+)
+444000.(    405      !  Retail - Building material and garden equipment and supplies stores
+)
+445000.(    406      !  Retail - Food and beverage stores
+)
+446000.(    407      !  Retail - Health and personal care stores
+)
+447000.(    408      !  Retail - Gasoline stores
+)
+448000.(    409      !  Retail - Clothing and clothing accessories stores
+)
+452000.(    411      !  Retail - General merchandise stores
+)
+454000.(    413      !  Retail - Nonstore retailers
+)
+481000.(    414      !  Air transportation
+)
+482000.(    415      !  Rail transportation
+)
+483000.(    416      !  Water transportation
+)
+484000.(    417      !  Truck transportation
+)
+485000.(    418      !  Transit and ground passenger transportation
+)
+486000.(    419      !  Pipeline transportation
+)
+48A000.(    420      !  Scenic and sightseeing transportation and support activities for transportation
+)
+492000.(    421      !  Couriers and messengers
+)
+493000.(    422      !  Warehousing and storage
+)
+511110.(    423      !  Newspaper publishers
+)
+511120.(    424      !  Periodical publishers
+)
+511130.(    425      !  Book publishers
+)
+5111A0.(    426      !  Directory mailing list and other publishers
+            427      !  Greeting card publishing
+)
+511200.(    428      !  Software publishers
+)
+512100.(    429      !  Motion picture and video industries
+)
+512200.(    430      !  Sound recording industries
+)
+515100.(    431      !  Radio and television broadcasting
+)
+515200.(    432      !  Cable and other subscription programming
+)
+517110.(    433      !  Wired telecommunications carriers
+)
+517210.(    434      !  Wireless telecommunications carriers except satellite
+)
+517A00.(    435      !  Satellite telecommunications resellers and all other telecommunications
+)
+518200.(    436      !  Data processing hosting and related services
+)
+5191A0.(    437      !  News syndicates libraries archives and all other information services
+)
+519130.(    438      !  Internet publishing and broadcasting and web search portals
+)
+52A000.(    441      !  Monetary authorities and depository credit intermediation
+)
+522A00.(    439      !  Nondepository credit intermediation and related activities
+)
+523A00.(    440      !  Securities and commodity contracts intermediation and brokerage
+)
+523900.(    442      !  Other financial investment activities
+)
+524113.(    443      !  Direct life insurance carriers
+)
+5241XX.(    444      !  Insurance carriers except direct life
+)
+524200.(    445      !  Insurance agencies brokerages and related activities
+)
+525000.(    446      !  Funds trusts and other financial vehicles
+)
+531ORE.(    447      !  Other real estate
+)
+531HST.(    448      !  Tenant-occupied housing
+)
+531HSO.(    449      !  Owner-occupied dwellings
+)
+532100.(    450      !  Automotive equipment rental and leasing
+)
 532A00.(    451      !  General and consumer goods rental except video tapes and discs                                                               
-            452      !  Video tape and disc rental                                                                                                   )
-532400.(    453      !  Commercial and industrial machinery and equipment rental and leasing)
-533000.(    454      !  Lessors of nonfinancial intangible assets)
-541100.(    455      !  Legal services)
-541200.(    456      !  Accounting, tax preparation, bookkeeping, and payroll services)
-541300.(    457      !  Architectural, engineering, and related services)
-541400.(    458      !  Specialized design services)
-541511.(    459      !  Custom computer programming services)
-541512.(    460      !  Computer systems design services)
-54151A.(    461      !  Other computer related services, including facilities management)
-541610.(    462      !  Management consulting services)
-5416A0.(    463      !  Environmental and other technical consulting services)
-541700.(    464      !  Scientific research and development services)
-541800.(    465      !  Advertising, public relations, and related services)
-541920.(    466      !  Photographic services)
-541940.(    467      !  Veterinary services)
-5419A0.(    468      !  Marketing research and all other miscellaneous professional, scientific, and technical services)
-550000.(    469      !  Management of companies and enterprises)
-561100.(    470      !  Office administrative services)
-561200.(    471      !  Facilities support services)
-561300.(    472      !  Employment services)
-561400.(    473      !  Business support services)
-561500.(    474      !  Travel arrangement and reservation services)
-561600.(    475      !  Investigation and security services)
+            452      !  Video tape and disc rental                                                                                                   
+)
+532400.(    453      !  Commercial and industrial machinery and equipment rental and leasing
+)
+533000.(    454      !  Lessors of nonfinancial intangible assets
+)
+541100.(    455      !  Legal services
+)
+541200.(    456      !  Accounting tax preparation bookkeeping and payroll services
+)
+541300.(    457      !  Architectural engineering and related services
+)
+541400.(    458      !  Specialized design services
+)
+541511.(    459      !  Custom computer programming services
+)
+541512.(    460      !  Computer systems design services
+)
+54151A.(    461      !  Other computer related services including facilities management
+)
+541610.(    462      !  Management consulting services
+)
+5416A0.(    463      !  Environmental and other technical consulting services
+)
+541700.(    464      !  Scientific research and development services
+)
+541800.(    465      !  Advertising public relations and related services
+)
+541920.(    466      !  Photographic services
+)
+541940.(    467      !  Veterinary services
+)
+5419A0.(    468      !  Marketing research and all other miscellaneous professional scientific and technical services
+)
+550000.(    469      !  Management of companies and enterprises
+)
+561100.(    470      !  Office administrative services
+)
+561200.(    471      !  Facilities support services
+)
+561300.(    472      !  Employment services
+)
+561400.(    473      !  Business support services
+)
+561500.(    474      !  Travel arrangement and reservation services
+)
+561600.(    475      !  Investigation and security services
+)
 561700.(    476      !  Services to buildings
-            477      !  Landscape and horticultural services)
-561900.(    478      !  Other support services)
-562000.(    479      !  Waste management and remediation services)
-611100.(    480      !  Elementary and secondary schools)
-611A00.(    481      !  Junior colleges, colleges, universities, and professional schools)
-611B00.(    482      !  Other educational services)
-621100.(    483      !  Offices of physicians)
-621200.(    484      !  Offices of dentists)
-621300.(    485      !  Offices of other health practitioners)
-621400.(    486      !  Outpatient care centers)
-621500.(    487      !  Medical and diagnostic laboratories)
-621600.(    488      !  Home health care services)
-621900.(    489      !  Other ambulatory health care services)
-622000.(    490      !  Hospitals)
-623A00.(    491      !  Nursing and community care facilities)
-623B00.(    492      !  Residential mental retardation, mental health, substance abuse and other facilities)
-624100.(    493      !  Individual and family services)
-624A00.(    495      !  Community food, housing, and other relief services, including rehabilitation services)
-624400.(    494      !  Child day care services)
-711100.(    496      !  Performing arts companies)
+            477      !  Landscape and horticultural services
+)
+561900.(    478      !  Other support services
+)
+562000.(    479      !  Waste management and remediation services
+)
+611100.(    480      !  Elementary and secondary schools
+)
+611A00.(    481      !  Junior colleges colleges universities and professional schools
+)
+611B00.(    482      !  Other educational services
+)
+621100.(    483      !  Offices of physicians
+)
+621200.(    484      !  Offices of dentists
+)
+621300.(    485      !  Offices of other health practitioners
+)
+621400.(    486      !  Outpatient care centers
+)
+621500.(    487      !  Medical and diagnostic laboratories
+)
+621600.(    488      !  Home health care services
+)
+621900.(    489      !  Other ambulatory health care services
+)
+622000.(    490      !  Hospitals
+)
+623A00.(    491      !  Nursing and community care facilities
+)
+623B00.(    492      !  Residential mental retardation mental health substance abuse and other facilities
+)
+624100.(    493      !  Individual and family services
+)
+624A00.(    495      !  Community food housing and other relief services including rehabilitation services
+)
+624400.(    494      !  Child day care services
+)
+711100.(    496      !  Performing arts companies
+)
 711200.(    497      !  Commercial Sports Except Racing
-            498      !  Racing and Track Operation)
-711A00.(    500      !  Promoters of performing arts and sports and agents for public figures)
-711500.(    499      !  Independent artists, writers, and performers)
-712000.(    501      !  Museums, historical sites, zoos, and parks)
-713100.(    502      !  Amusement parks and arcades)
-713200.(    503      !  Gambling industries (except casino hotels))
+            498      !  Racing and Track Operation
+)
+711A00.(    500      !  Promoters of performing arts and sports and agents for public figures
+)
+711500.(    499      !  Independent artists writers and performers
+)
+712000.(    501      !  Museums historical sites zoos and parks
+)
+713100.(    502      !  Amusement parks and arcades
+)
+713200.(    503      !  Gambling industries except casino hotels
+)
 713900.(    504      !  Other amusement and recreation industries
             505      !  Fitness and recreational sports centers  
-            506      !  Bowling centers                                                                                                              )
-721000.(    507      !  Hotels and motels, including casino hotels                                                                                   
-            508      !  Other accommodations                                                                                                         )
-722110.(    509      !  Full-service restaurants)
-722211.(    510      !  Limited-service restaurants)
-722A00.(    511      !  All other food and drinking places)
-811100.(    512      !  Automotive repair and maintenance, except car washes                                                                         
-            513      !  Car washes                                                                                                                   )
-811200.(    514      !  Electronic and precision equipment repair and maintenance)
-811300.(    515      !  Commercial and industrial machinery and equipment repair and maintenance)
-811400.(    516      !  Personal and household goods repair and maintenance)
-812100.(    517      !  Personal care services)
-812200.(    518      !  Death care services)
-812300.(    519      !  Dry-cleaning and laundry services)
-812900.(    520      !  Other personal services)
-813100.(    521      !  Religious organizations)
-813A00.(    522      !  Grantmaking, giving, and social advocacy organizations)
+            506      !  Bowling centers                                                                                                              
+)
+721000.(    507      !  Hotels and motels including casino hotels                                                                                   
+            508      !  Other accommodations                                                                                                         
+)
+722110.(    509      !  Full-service restaurants
+)
+722211.(    510      !  Limited-service restaurants
+)
+722A00.(    511      !  All other food and drinking places
+)
+811100.(    512      !  Automotive repair and maintenance except car washes                                                                         
+            513      !  Car washes                                                                                                                   
+)
+811200.(    514      !  Electronic and precision equipment repair and maintenance
+)
+811300.(    515      !  Commercial and industrial machinery and equipment repair and maintenance
+)
+811400.(    516      !  Personal and household goods repair and maintenance
+)
+812100.(    517      !  Personal care services
+)
+812200.(    518      !  Death care services
+)
+812300.(    519      !  Dry-cleaning and laundry services
+)
+812900.(    520      !  Other personal services
+)
+813100.(    521      !  Religious organizations
+)
+813A00.(    522      !  Grantmaking giving and social advocacy organizations
+)
 813B00.(    523      !  Business and professional associations
-            524      !  Labor and civic organizations)
-814000.(    525      !  Private households)
-491000.(    526      !  Postal service)
+            524      !  Labor and civic organizations
+)
+814000.(    525      !  Private households
+)
+491000.(    526      !  Postal service
+)
 S00102.(    527      !  Federal electric utilities
-            528      !  Other federal government enterprises)
+            528      !  Other federal government enterprises
+)
 S00203.(    529      !  State government passenger transit
             530      !  State government electric utilities
             531      !  Other state government enterprises
             532      !  Local government passenger transit
             533      !  Local government electric utilities
-            534      !  Other local government enterprises)
-S002XX.(    535      !  * Not an industry (Used and secondhand goods)
-            536      !  * Not an industry (Scrap)
-            537      !  * Not an industry (Rest of world adjustment)
-            538      !  * Not an industry (Noncomparable foreign imports))
-GSLGX.(    540      !  * Employment and payroll of state govt, hospitals and health services
-            541      !  * Employment and payroll of state govt, other services
-            539      !  * Employment and payroll of state govt, education
-            543      !  * Employment and payroll of local govt, hospitals and health services
-            544      !  * Employment and payroll of local govt, other services
-            542      !  * Employment and payroll of local govt, education)
-S004XX.(    546      !  * Employment and payroll of federal govt, non-military
-            545      !  * Employment and payroll of federal govt, military)
+            534      !  Other local government enterprises
+)
+S002XX.(    535      !  * Not an industry Used and secondhand goods
+            536      !  * Not an industry Scrap
+            537      !  * Not an industry Rest of world adjustment
+            538      !  * Not an industry Noncomparable foreign imports
+)
+GSLGX.(    540      !  * Employment and payroll of state govt hospitals and health services
+            541      !  * Employment and payroll of state govt other services
+            539      !  * Employment and payroll of state govt education
+            543      !  * Employment and payroll of local govt hospitals and health services
+            544      !  * Employment and payroll of local govt other services
+            542      !  * Employment and payroll of local govt education
+)
+S004XX.(    546      !  * Employment and payroll of federal govt non-military
+            545      !  * Employment and payroll of federal govt military
+)
 
 /;

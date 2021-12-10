@@ -4,6 +4,10 @@
 *.lst
 ./IMPLANData/*
 ./data/*
+data/noaggr/USA/*
+data/tempdata/*
+data/bea405/*
 ./rawdata/*
 ./listings/*
 *.gen
+test.*

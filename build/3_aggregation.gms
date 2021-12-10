@@ -8,7 +8,7 @@ SET     f(*)    Factors,
         j(*)    Aggregated SAM accounts;
 
 * original code
-*#$GDXIN 'data\noaggr%subdir%\%ds1%.gdx'
+*$GDXIN 'data\noaggr%subdir%\%ds1%.gdx'
 
 * when I change it to this from the merge script, I get a dimension mismatch error
 *$GDXIN 'data\noaggr%subdir%\noaggr.gdx' 
@@ -158,16 +158,16 @@ trnsfer_(reg,i,t,ii) = sum(mapr(reg,r), trnsfer(r,i,t,ii));
 
 *       AGGREGATE EMPLOYMENT COUNT DATA 
 PARAMETER empl, lab, lab_con ;
-$CALL  'csv2gdx ./Defines/EC_EMP.csv ID=./Data/lab_con UseHeader=y index=1 values=2,3' ;
+$CALL  'csv2gdx ./Defines/EC_EMP.csv ID=./Data/labor.gdx UseHeader=y index=1 values=2,3' ;
 $GDXIN ./data/labor.gdx
 $LOAD  lab
 $GDXIN ./data/labor.gdx
 
-$GDXIN ./Data/lab_con.gdx
-$LOAD  lab_con
-$GDXIN
+*$GDXIN ./Data/lab_con.gdx
+*$LOAD  lab_con
+*$GDXIN
 
-display lab_con ;
+*display lab_con ;
 empl(reg,ss) = sum((mapr(reg,r),maps(ss,s)), lab(r,s)) ;
 
 execute_unload 'data\%target%\%target%.gdx', f,t,i,j,gg=g,reg=r,h,pub,corp,vdxm_=vdxm,vdfm_=vdfm,

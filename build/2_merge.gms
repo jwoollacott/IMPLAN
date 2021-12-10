@@ -15,10 +15,10 @@ SET f(*)    Factors,
     j(*)    Aggregated SAM accounts;
 
 * original
-$GDXIN 'data\noaggr%subdir%\%ds1%==.gdx'
+*$GDXIN 'data\noaggr%subdir%\%ds1%==.gdx'
 
 * leads to dimension mismatches
-*$GDXIN 'data\noaggr%subdir%\noaggr.gdx'
+$GDXIN 'data\noaggr%subdir%\AL.gdx'
 $load f t i g j
 
 set h(i)    Households

@@ -1,6 +1,8 @@
 $title  Translate GTAP notation into SAM notation
 $if not set target $set target medaggr
 
+$oninline
+
 *   Define and load source sets:
 SET f(*)    Factors,
     ins(*)  institutions
@@ -56,7 +58,8 @@ PARAMETER
 $load  vdxm vdfm vifm vfm vxm vdpm vipm vdim viim vdgm vigm vprf evom evpm vtrn 
 $load  vom vim vx vgm vinv vpm vdmi trnsfer empl
 
-parameter chk_mktbal, chk_imp, chk_trns, chk_evpm2imp, chk_evpm2vom, chk_evpm2vomK, chk_pip;
+parameter chk_mktbal, chk_imp/*, chk_trns*/, chk_evpm2imp,chk_evpm2vom, chk_evpm2vomK/*, chk_pip*/;
+
 
 chk_mktbal(r,g) = round(
       vom(r,g) 
@@ -70,9 +73,12 @@ chk_mktbal(r,g) = round(
     - sum(trd, viim(r,g,trd))
     , 3);
 
+
+
 *benchchk(g,"market") = vom(g) + sum(i,evpm(g,i))
 *        - sum(s, vdfm(g,s))-sum(h,vdpm(g,h))-vdim(g)-sum(pub,vdgm(g,pub))
 *        - vx(g);
+
 
 chk_imp(r,g) = round(
     + sum(trd, vim(r,g,trd)) 
@@ -122,7 +128,7 @@ chk_evpm2vomK(r,g)$(abs(chk_evpm2vomK(r,g)) lt 5)   = 0;
 option chk_evpm2imp:0;
 option chk_evpm2vom:0;
 option chk_evpm2vomK:0;
-display vom,chk_mktbal,chk_imp,chk_evpm2imp,chk_evpm2vom,chk_evpm2vomK;
+display vom/*,chk_mktbal,chk_imp,chk_evpm2imp,chk_evpm2vom,chk_evpm2vomK*/;
 
 *   Define economic variables in CGE model:
 
@@ -218,7 +224,7 @@ m0(r,g,trd)     = vim(r,g,trd);
 a0(r,g)         = y0(r,g) + sum(trd, m0(r,g,trd));
 
 
-parameter chk_trd,chk_neg,chk_gov,chk_govinp, chk_gov2evpm;
+parameter chk_trd/*,chk_neg,chk_gov*/,chk_govinp, chk_gov2evpm;
 
 chk_trd(g)      = sum(r, x0(r,g,"dtrd")) - sum(r, m0(r,g,"dtrd"));
 display a0,x0,m0,chk_trd;
@@ -397,5 +403,5 @@ VA0(r,"kap","GOV") = kd0(r,"GOV")  ;
 VA0(r,"tax",s)     = ty(r,s) * y0(r,s) + tl(r) * ld0(r,s) + tk(r) * kd0(r,s) ;
 VA0(r,"tax","GOV") = tl(r) * ld0(r,"GOV") + tk(r) * kd0(r,"GOV") ;
 
-execute_unload './data/%target%/IMPLAN_data_%target%.gdx', ID0 FD0 VA0 r g h fdcol varow empl ;
+execute_unload './data/%target%/IMPLAN_data_%target%.gdx', ID0, FD0, VA0, r, g, h, fdcol, varow, empl ;
 
