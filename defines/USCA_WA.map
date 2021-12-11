@@ -19,6 +19,7 @@ SET MAPR(*,*) Mapping from states to regions /
             WA_043      ! Lincoln
             WA_051      ! Pend Oreille
             WA_063      ! Spokane
+            WA_065      ! Stevens
         )
     NCENT.( WA_007      ! Chelan
             WA_047      ! Okanogan
@@ -49,7 +50,6 @@ SET MAPR(*,*) Mapping from states to regions /
             WA_053      ! Pierce
             WA_055      ! San Juan
             WA_057      ! Skagit
-            WA_065      ! Stevens
             WA_067      ! Thurston
             WA_069      ! Wahkiakum
             WA_073      ! Whatcom
@@ -195,8 +195,6 @@ CNS.( 	50     !  "Construction of new health care structures"
 	60     !  "Maintenance and repair construction of nonresidential structures"
 	61     !  "Maintenance and repair construction of residential structures" 
     )
-COL.( 	21     !  "Coal mining" 
-)
 COM.( 	392     !  "Wholesale - Motor vehicle and motor vehicle parts and supplies"
 	393     !  "Wholesale - Professional and commercial equipment and supplies"
 	394     !  "Wholesale - Household appliances and electrical and electronic goods"
@@ -479,9 +477,9 @@ LIV.( 	11     !  "Beef cattle ranching and farming including feedlots and dual-p
 	13     !  "Poultry and egg production"
 	14     !  "Animal production except cattle and poultry and eggs"
 	18     !  "Commercial hunting and trapping" 
+	17     !  "Commercial fishing" 
     )
 LOG.( 	16     !  "Commercial logging"
-	17     !  "Commercial fishing" 
     )
 MAC.( 	260     !  "Farm machinery and equipment manufacturing"
 	261     !  "Lawn and garden equipment manufacturing"
@@ -522,7 +520,8 @@ MAC.( 	260     !  "Farm machinery and equipment manufacturing"
 	296     !  "Fluid power pump and motor manufacturing"
 	297     !  "Scales balances and miscellaneous general purpose machinery manufacturing" 
     )
-MIN.( 	22     !  "Copper nickel lead and zinc mining"
+MIN.( 21   !  "Coal mining" 
+	22     !  "Copper nickel lead and zinc mining"
 	23     !  "Iron ore mining"
 	24     !  "Gold ore mining"
 	25     !  "Silver ore mining"

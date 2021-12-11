@@ -1,0 +1,55 @@
+$TITLE ARTIMAS Sets
+
+
+SET   reg   Aggregate regions / 
+    WESNY   Western NY
+    FNGLK   Finger Lakes
+    STIER   Southern Tier
+    CENNY   Central NY
+    MHKVL   Mohawk Valley
+    CPREG   Capital Region
+    MDHUD   Mid-Hudson
+    NYCLI   New York City + Long Island
+    NCNTY   North Country
+/;
+ 
+SET  ss  Base sectoral classifications /
+    AFS	    "Agriculture and forestry support services"
+    AGR	    "Agriculture"
+    ALU	    "Aluminum"
+    BCH	    "Bulk chemicals"
+    BOM	    "Balance of manufacturing"
+    CEM	    "Cement"
+    CNS     "Construction"
+    COM	    "Commercial"
+    CPU	    "Computer equipment"
+    ELE	    "Electricity"
+    ELQ	    "Electrical equipment"
+    FDP	    "Food products"
+    FMP	    "Fabricated metal products"
+    FRS	    "Forestry"
+    GAS	    "Natural gas"
+    GLS	    "Glass manufacturing"
+    IAS	    "Iron and steel"
+    INF     "Infrastructure"
+    LIV	    "Livestock"
+    LOG	    "Logging"
+    MAC	    "Machinery"
+    MIN	    "Mining"
+    MLL	    "Saw and pulp mills"
+    OGE	    "Oil and gas extraction"
+    OIL	    "Oil refining"
+    PUB     "Public sectors"
+    PLS	    "Plastics"
+    PLC     "Plastic Covers (IMPLAN 186   NAICS 32611)"
+    PPR	    "Paper"
+    TRA	    "Air Transportation"
+    TRG	    "Ground Transportation"
+    TRP	    "Pipeline Transportation"
+    TRQ	    "Transportation Equipment"
+    TRW	    "Water Transportation"
+    WAT	    "Water utilities"
+    WDP	    "Wood products"
+/;
+
+

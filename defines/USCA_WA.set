@@ -11,7 +11,7 @@ SET   reg   Aggregate regions /
     COPLT   Columbia plateau
 /;
  
-SET  ss  Base AEO sectoral classifications /
+SET  ss  Base sectoral classifications /
     AFS	    "Agriculture and forestry support services"
     AGR	    "Agriculture"
     ALU	    "Aluminum"
@@ -19,7 +19,6 @@ SET  ss  Base AEO sectoral classifications /
     BOM	    "Balance of manufacturing"
     CEM	    "Cement"
     CNS     "Construction"
-    COL	    "Coal"
     COM	    "Commercial"
     CPU	    "Computer equipment"
     ELE	    "Electricity"

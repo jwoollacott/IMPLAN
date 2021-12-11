@@ -2,7 +2,7 @@ $TITLE   Translate the IMPLAN SOE Framework into GTAP-Style Data Structures
 
 $if not set tol $set tol 9
 $if not set ds $set ds ak
-$if not set subdir $set subdir \WA_county
+$if not set subdir $set subdir
 
 scalar tol  Tolerance parameter for filtering data /1e-%tol%/;
 
@@ -432,7 +432,6 @@ benchchk(g,"market") = vom(g) + sum(i,evpm(g,i))
 display benchchk,vprf;
 
 *   Unload data:
-$call 'if not exist data\noaggr%subdir%\nul mkdir data\noaggr%subdir%'
 execute_unload 'data\noaggr%subdir%\%ds%.gdx', f,t,i,j,g,h,pub,corp,vdxm,vdfm,vifm,
     vfm,vxm,vdpm,vipm, vdim,viim,vdgm,vigm,vprf,evom,evpm,vtrn,
     vdmi,trnsfer;

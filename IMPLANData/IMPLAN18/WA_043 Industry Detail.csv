@@ -1,0 +1,547 @@
+Industry Detail ,,,,,,,
+IndustryCode,Description,Employment,Output,EmployeeCompensation,ProprietorIncome,OtherPropertyTypeIncome,TaxOnProductionAndImports
+0,Total,4694.2294265506789,682875535.98568773,149463682.29981452,75010297.491335228,127149282.5062014,-2102710.9700839594
+1,Oilseed farming,2.363581657409668,3467162.8475189209,5823.7258344888687,3170215.1298522949,133594.88546848297,-40854.886174201965
+2,Grain farming,328.43194580078125,125496932.98339844,6628451.3473510742,41345680.236816406,24964128.494262695,-52341884.613037109
+3,Vegetable and melon farming,52.125904083251953,6969237.3275756836,949255.34725189209,865025.1030921936,1645492.0768737793,1201.5186948701739
+4,Fruit farming,8.6516752243041992,966649.71113204956,90215.370059013367,169055.10425567627,279602.49781608582,206.13161905203015
+5,Tree nut farming,0.0041268719360232353,293.67557726800442,92.699061497114599,31.915500585455447,154.73442908842117,0.12486637501751829
+6,"Greenhouse, nursery, and floriculture production",0.27735394239425659,52077.125757932663,8757.2857737541199,3917.2354154288769,19273.551180958748,4.969290330336662
+7,Tobacco farming,0,0,0,0,0,0
+8,Cotton farming,0,0,0,0,0,0
+9,Sugarcane and sugar beet farming,0,0,0,0,0,0
+10,All other crop farming,441.8299560546875,12196619.033813477,2177745.5806732178,1798819.0650939941,3775117.1588897705,-191782.41491317749
+11,"Beef cattle ranching and farming, including feedlots and dual-purpose ranching and farming",47.404354095458984,11543854.713439941,97317.114472389221,2329954.3857574463,1952488.5416030884,546233.71362686157
+12,Dairy cattle and milk production,0,0,0,0,0,0
+13,Poultry and egg production,0.46916845440864563,644203.42445373535,20615.866407752037,6069.5079155266285,47217.041254043579,20131.904631853104
+14,"Animal production, except cattle and poultry and eggs",0.95674139261245728,335153.54990959167,16021.456569433212,152582.52620697022,129763.1561756134,21185.450255870819
+15,"Forestry, forest products, and timber tract production",0.36434429883956909,28745.230287313461,20878.013223409653,0,-75.870120781473815,835.62493091449142
+16,Commercial logging,13.988021850585938,1329355.4782867432,22414.4347012043,798018.75352859497,-1476.700184866786,41728.917509317398
+17,Commercial fishing,0,0,0,0,0,0
+18,Commercial hunting and trapping,2.4497532844543457,228473.15669059753,0,176857.45656490326,0,24788.772687315941
+19,Support activities for agriculture and forestry,114.35941314697266,8808925.6286621094,4918733.5968017578,3934082.03125,-1052448.9879608154,147294.04449462891
+20,Oil and gas extraction,23.533329010009766,5355220.3178405762,0,565.95349451526999,0,4438.0500912666321
+21,Coal mining,0,0,0,0,0,0
+22,"Copper, nickel, lead, and zinc mining",0,0,0,0,0,0
+23,Iron ore mining,0,0,0,0,0,0
+24,Gold ore mining,0,0,0,0,0,0
+25,Silver ore mining,0,0,0,0,0,0
+26,Uranium-radium-vanadium ore mining,0,0,0,0,0,0
+27,Other metal ore mining,0,0,0,0,0,0
+28,Stone mining and quarrying,0,0,0,0,0,0
+29,Sand and gravel mining,5.9077644348144531,883970.14141082764,173944.42856311798,181819.21541690826,-1817.8168684244156,39080.560207366943
+30,"Other clay, ceramic, refractory minerals mining",0,0,0,0,0,0
+31,"Potash, soda, and borate mineral mining",0,0,0,0,0,0
+32,Phosphate rock mining,0,0,0,0,0,0
+33,Other chemical and fertilizer mineral mining,0,0,0,0,0,0
+34,Other nonmetallic minerals,0,0,0,0,0,0
+35,Drilling oil and gas wells,2.2009458541870117,513300.00162124634,0,-42.923504224745557,0,10094.515047967434
+36,Support activities for oil and gas operations,2.5430991649627686,434719.5029258728,0,60.52526441635564,0,8947.7039873600006
+37,Metal mining services,2.5409841537475586,577185.86921691895,0,60.621656302828342,0,10739.762336015701
+38,Other nonmetallic minerals services,2.5413820743560791,562220.39461135864,0,61.089864175301045,0,2067.474415525794
+39,Electric power generation - Hydroelectric,0,0,0,0,0,0
+40,Electric power generation - Fossil fuel,0,0,0,0,0,0
+41,Electric power generation - Nuclear,0,0,0,0,0,0
+42,Electric power generation - Solar,0,0,0,0,0,0
+43,Electric power generation - Wind,0,0,0,0,0,0
+44,Electric power generation - Geothermal,0,0,0,0,0,0
+45,Electric power generation - Biomass,0,0,0,0,0,0
+46,Electric power generation - All other,0,0,0,0,0,0
+47,Electric power transmission and distribution,16.96794319152832,27813875.198364258,1763789.0577316284,-22833.274677395821,6839340.2099609375,5931635.3797912598
+48,Natural gas distribution,0,0,0,0,0,0
+49,"Water, sewage and other systems",19.520648956298828,3448461.0557556152,149272.53127098084,-63557.110726833344,263536.39364242554,865389.70470428467
+50,Construction of new health care structures,11.116846084594727,1514872.5509643555,437959.58161354065,95810.666680335999,271339.14828300476,25363.869965076447
+51,Construction of new manufacturing structures,17.51226806640625,2353666.3055419922,687643.76640319824,150752.84242630005,245183.5423707962,36304.078996181488
+52,Construction of new power and communication structures,25.513080596923828,4104995.7275390625,1007213.2349014282,235668.42079162598,937990.42701721191,77860.713005065918
+53,Construction of new educational and vocational structures,31.844718933105469,3811952.5909423828,1343766.3316726685,200878.87346744537,613479.97188568115,57865.764945745468
+54,Construction of new highways and streets,23.338325500488281,4372299.1943359375,957531.27336502075,190889.29891586304,913843.69134902954,68727.992475032806
+55,"Construction of new commercial structures, including farm structures",43.191913604736328,4989231.5864562988,1677881.121635437,371972.62048721313,390398.88978004456,121690.95128774643
+56,Construction of other new nonresidential structures,57.883773803710938,4293239.5935058594,2286233.4251403809,538773.47707748413,-1258029.9377441406,81753.253936767578
+57,Construction of new single-family residential structures,70.499382019042969,9340375.9002685547,2770251.5125274658,618367.19512939453,1596525.4306793213,178341.20988845825
+58,Construction of new multifamily residential structures,21.910905838012695,2121509.7904205322,865640.46144485474,191308.76660346985,506978.69062423706,36692.71245598793
+59,Construction of other new residential structures,49.871086120605469,9337786.6744995117,1996633.768081665,422126.38258934021,1301503.06224823,238693.86315345764
+60,Maintenance and repair construction of nonresidential structures,33.46331787109375,6308097.8393554688,1328284.0251922607,290877.8190612793,700219.86961364746,154082.83472061157
+61,Maintenance and repair construction of residential structures,15.42625617980957,3057001.5907287598,571771.14486694336,132000.20790100098,372929.93068695068,135747.29859828949
+62,"Maintenance and repair construction of highways, streets, bridges, and tunnels",11.976948738098145,1059479.1173934937,476397.78256416321,103808.72339010239,-211098.43254089356,30471.164733171463
+63,Dog and cat food manufacturing,0,0,0,0,0,0
+64,Other animal food manufacturing,2.2750930786132812,2300650.1197814941,131515.11549949646,0,81061.333417892456,59515.077620744705
+65,Flour milling,0,0,0,0,0,0
+66,Rice milling,0,0,0,0,0,0
+67,Malt manufacturing,0,0,0,0,0,0
+68,Wet corn milling,0,0,0,0,0,0
+69,Soybean and other oilseed processing,0,0,0,0,0,0
+70,Fats and oils refining and blending,0,0,0,0,0,0
+71,Breakfast cereal manufacturing,0,0,0,0,0,0
+72,Beet sugar manufacturing,0,0,0,0,0,0
+73,Sugar cane mills and refining,0,0,0,0,0,0
+74,Nonchocolate confectionery manufacturing,0,0,0,0,0,0
+75,Chocolate and confectionery manufacturing from cacao beans,0,0,0,0,0,0
+76,Confectionery manufacturing from purchased chocolate,0,0,0,0,0,0
+77,"Frozen fruits, juices and vegetables manufacturing",0,0,0,0,0,0
+78,Frozen specialties manufacturing,0,0,0,0,0,0
+79,Canned fruits and vegetables manufacturing,0,0,0,0,0,0
+80,Canned specialties,0,0,0,0,0,0
+81,Dehydrated food products manufacturing,0,0,0,0,0,0
+82,Cheese manufacturing,0,0,0,0,0,0
+83,"Dry, condensed, and evaporated dairy product manufacturing",0,0,0,0,0,0
+84,Fluid milk manufacturing,0,0,0,0,0,0
+85,Creamery butter manufacturing,0,0,0,0,0,0
+86,Ice cream and frozen dessert manufacturing,0,0,0,0,0,0
+87,Frozen cakes and other pastries manufacturing,4.404754638671875,377635.30015945435,111908.57738256455,2441.8781977146864,12981.949374079704,73976.077139377594
+88,Poultry processing,0,0,0,0,0,0
+89,"Animal, except poultry, slaughtering",3.3825552463531494,2150217.7715301514,71501.158177852631,0,22986.005991697311,15745.416283607483
+90,Meat processed from carcasses,0,0,0,0,0,0
+91,Rendering and meat byproduct processing,0,0,0,0,0,0
+92,Seafood product preparation and packaging,0,0,0,0,0,0
+93,"Bread and bakery product, except frozen, manufacturing",4.4038305282592773,540278.13673019409,111908.57738256455,2435.7037618756294,25684.172287583351,32941.009849309921
+94,Cookie and cracker manufacturing,0,0,0,0,0,0
+95,"Dry pasta, mixes, and dough manufacturing",0,0,0,0,0,0
+96,Tortilla manufacturing,0,0,0,0,0,0
+97,Roasted nuts and peanut butter manufacturing,0.37708917260169983,173691.24293327332,21834.343671798706,0,23792.998865246773,852.60858759284019
+98,Other snack food manufacturing,0.383625328540802,192098.27482700348,22557.91611969471,0,20425.377413630486,1236.4062713459134
+99,Coffee and tea manufacturing,0,0,0,0,0,0
+100,Flavoring syrup and concentrate manufacturing,0,0,0,0,0,0
+101,"Mayonnaise, dressing, and sauce manufacturing",0,0,0,0,0,0
+102,Spice and extract manufacturing,0,0,0,0,0,0
+103,All other food manufacturing,0,0,0,0,0,0
+104,Bottled and canned soft drinks & water,0,0,0,0,0,0
+105,Manufactured ice,0,0,0,0,0,0
+106,Breweries,0,0,0,0,0,0
+107,Wineries,4.4453678131103516,1251563.5490417481,81557.765603065491,0,49883.332103490829,41250.072419643402
+108,Distilleries,0,0,0,0,0,0
+109,Tobacco product manufacturing,0,0,0,0,0,0
+110,"Fiber, yarn, and thread mills",0,0,0,0,0,0
+111,Broadwoven fabric mills,0,0,0,0,0,0
+112,Narrow fabric mills and schiffli machine embroidery,0,0,0,0,0,0
+113,Nonwoven fabric mills,0,0,0,0,0,0
+114,Knit fabric mills,0,0,0,0,0,0
+115,Textile and fabric finishing mills,0,0,0,0,0,0
+116,Fabric coating mills,0,0,0,0,0,0
+117,Carpet and rug mills,0,0,0,0,0,0
+118,Curtain and linen mills,0,0,0,0,0,0
+119,Textile bag and canvas mills,0,0,0,0,0,0
+120,"Rope, cordage, twine, tire cord and tire fabric mills",0,0,0,0,0,0
+121,Other textile product mills,0,0,0,0,0,0
+122,Hosiery and sock mills,0,0,0,0,0,0
+123,Other apparel knitting mills,0,0,0,0,0,0
+124,Cut and sew apparel contractors,1.6728215217590332,54068.934172391891,0,783.11382094398141,0,3563.649719581008
+125,Mens and boys cut and sew apparel manufacturing,0,0,0,0,0,0
+126,Womens and girls cut and sew apparel manufacturing,0,0,0,0,0,0
+127,Other cut and sew apparel manufacturing,0,0,0,0,0,0
+128,Apparel accessories and other apparel manufacturing,0,0,0,0,0,0
+129,Leather and hide tanning and finishing,0,0,0,0,0,0
+130,Footwear manufacturing,0,0,0,0,0,0
+131,Other leather and allied product manufacturing,0,0,0,0,0,0
+132,Sawmills,0,0,0,0,0,0
+133,Wood preservation,0,0,0,0,0,0
+134,Veneer and plywood manufacturing,0,0,0,0,0,0
+135,Engineered wood member and truss manufacturing,0,0,0,0,0,0
+136,Reconstituted wood product manufacturing,0,0,0,0,0,0
+137,Wood windows and door manufacturing,0,0,0,0,0,0
+138,"Cut stock, resawing lumber, and planing",0,0,0,0,0,0
+139,"Other millwork, including flooring",0,0,0,0,0,0
+140,Wood container and pallet manufacturing,0,0,0,0,0,0
+141,Manufactured home (mobile home) manufacturing,0,0,0,0,0,0
+142,Prefabricated wood building manufacturing,0,0,0,0,0,0
+143,All other miscellaneous wood product manufacturing,3.6052098274230957,515065.90843200684,82806.162536144257,0,24047.460407018662,5613.426212221384
+144,Pulp mills,0,0,0,0,0,0
+145,Paper mills,0,0,0,0,0,0
+146,Paperboard mills,0,0,0,0,0,0
+147,Paperboard container manufacturing,0,0,0,0,0,0
+148,Paper bag and coated and treated paper manufacturing,0,0,0,0,0,0
+149,Stationery product manufacturing,0,0,0,0,0,0
+150,Sanitary paper product manufacturing,0,0,0,0,0,0
+151,All other converted paper product manufacturing,14.571771621704102,3995484.5905303955,482452.98862457275,0,138998.01671504974,50562.195479869843
+152,Printing,5.8685874938964844,701337.75472640991,135129.61566448212,7979.8838123679161,39162.576198577881,10207.018814980984
+153,Support activities for printing,0,0,0,0,0,0
+154,Petroleum refineries,0,0,0,0,0,0
+155,Asphalt paving mixture and block manufacturing,0,0,0,0,0,0
+156,Asphalt shingle and coating materials manufacturing,0,0,0,0,0,0
+157,Petroleum lubricating oil and grease manufacturing,0,0,0,0,0,0
+158,All other petroleum and coal products manufacturing,0,0,0,0,0,0
+159,Petrochemical manufacturing,0,0,0,0,0,0
+160,Industrial gas manufacturing,0,0,0,0,0,0
+161,Synthetic dye and pigment manufacturing,0,0,0,0,0,0
+162,Other basic inorganic chemical manufacturing,0,0,0,0,0,0
+163,Other basic organic chemical manufacturing,0,0,0,0,0,0
+164,Plastics material and resin manufacturing,0,0,0,0,0,0
+165,Synthetic rubber manufacturing,0,0,0,0,0,0
+166,Artificial and synthetic fibers and filaments manufacturing,0,0,0,0,0,0
+167,Nitrogenous fertilizer manufacturing,0,0,0,0,0,0
+168,Phosphatic fertilizer manufacturing,0,0,0,0,0,0
+169,Fertilizer mixing,0,0,0,0,0,0
+170,Pesticide and other agricultural chemical manufacturing,0,0,0,0,0,0
+171,Medicinal and botanical manufacturing,0,0,0,0,0,0
+172,Pharmaceutical preparation manufacturing,0,0,0,0,0,0
+173,In-vitro diagnostic substance manufacturing,0,0,0,0,0,0
+174,Biological product (except diagnostic) manufacturing,0,0,0,0,0,0
+175,Paint and coating manufacturing,0,0,0,0,0,0
+176,Adhesive manufacturing,0,0,0,0,0,0
+177,Soap and other detergent manufacturing,2.2724940776824951,1943157.5536727905,0,1418.2878658175468,0,41144.270449876785
+178,Polish and other sanitation good manufacturing,0,0,0,0,0,0
+179,Surface active agent manufacturing,0,0,0,0,0,0
+180,Toilet preparation manufacturing,0,0,0,0,0,0
+181,Printing ink manufacturing,0,0,0,0,0,0
+182,Explosives manufacturing,0,0,0,0,0,0
+183,Custom compounding of purchased resins,0,0,0,0,0,0
+184,Photographic film and chemical manufacturing,0,0,0,0,0,0
+185,Other miscellaneous chemical product manufacturing,0,0,0,0,0,0
+186,Plastics packaging materials and unlaminated film and sheet manufacturing,0,0,0,0,0,0
+187,Unlaminated plastics profile shape manufacturing,0,0,0,0,0,0
+188,Plastics pipe and pipe fitting manufacturing,0,0,0,0,0,0
+189,"Laminated plastics plate, sheet (except packaging), and shape manufacturing",0,0,0,0,0,0
+190,Polystyrene foam product manufacturing,0,0,0,0,0,0
+191,Urethane and other foam product (except polystyrene) manufacturing,0,0,0,0,0,0
+192,Plastics bottle manufacturing,0,0,0,0,0,0
+193,Other plastics product manufacturing,0.97013461589813232,182397.23145961762,0,-2966.1559965461493,0,1870.1141234487295
+194,Tire manufacturing,0,0,0,0,0,0
+195,Rubber and plastics hoses and belting manufacturing,0,0,0,0,0,0
+196,Other rubber product manufacturing,0,0,0,0,0,0
+197,"Pottery, ceramics, and plumbing fixture manufacturing",0,0,0,0,0,0
+198,"Brick, tile, and other structural clay product manufacturing",0,0,0,0,0,0
+199,Flat glass manufacturing,0,0,0,0,0,0
+200,Other pressed and blown glass and glassware manufacturing,0,0,0,0,0,0
+201,Glass container manufacturing,0,0,0,0,0,0
+202,Glass product manufacturing made of purchased glass,3.0303447246551514,482374.8767375946,0,10672.862641513348,0,7510.9563767910004
+203,Cement manufacturing,0,0,0,0,0,0
+204,Ready-mix concrete manufacturing,0,0,0,0,0,0
+205,Concrete block and brick manufacturing,0,0,0,0,0,0
+206,Concrete pipe manufacturing,0,0,0,0,0,0
+207,Other concrete product manufacturing,0,0,0,0,0,0
+208,Lime manufacturing,0,0,0,0,0,0
+209,Gypsum product manufacturing,0,0,0,0,0,0
+210,Abrasive product manufacturing,0,0,0,0,0,0
+211,Cut stone and stone product manufacturing,0,0,0,0,0,0
+212,Ground or treated mineral and earth manufacturing,0,0,0,0,0,0
+213,Mineral wool manufacturing,0,0,0,0,0,0
+214,Miscellaneous nonmetallic mineral products manufacturing,0,0,0,0,0,0
+215,Iron and steel mills and ferroalloy manufacturing,0.57461053133010864,454291.88013076782,0,-3675.597719848156,0,7500.2294033765793
+216,"Iron, steel pipe and tube manufacturing from purchased steel",0,0,0,0,0,0
+217,Rolled steel shape manufacturing,0,0,0,0,0,0
+218,Steel wire drawing,0,0,0,0,0,0
+219,Alumina refining and primary aluminum production,0,0,0,0,0,0
+220,Secondary smelting and alloying of aluminum,0,0,0,0,0,0
+221,"Aluminum sheet, plate, and foil manufacturing",0,0,0,0,0,0
+222,"Other aluminum rolling, drawing and extruding",0,0,0,0,0,0
+223,Nonferrous metal (exc aluminum) smelting and refining,0,0,0,0,0,0
+224,"Copper rolling, drawing, extruding and alloying",0,0,0,0,0,0
+225,"Nonferrous metal, except copper and aluminum, shaping",0,0,0,0,0,0
+226,Secondary processing of other nonferrous metals,0,0,0,0,0,0
+227,Ferrous metal foundries,0,0,0,0,0,0
+228,Nonferrous metal foundries,0,0,0,0,0,0
+229,Custom roll forming,0,0,0,0,0,0
+230,Crown and closure manufacturing and metal stamping,0,0,0,0,0,0
+231,Iron and steel forging,0,0,0,0,0,0
+232,Nonferrous forging,0,0,0,0,0,0
+233,"Cutlery, utensil, pot, and pan manufacturing",0,0,0,0,0,0
+234,Handtool manufacturing,0,0,0,0,0,0
+235,Prefabricated metal buildings and components manufacturing,0,0,0,0,0,0
+236,Fabricated structural metal manufacturing,0,0,0,0,0,0
+237,Plate work manufacturing,0,0,0,0,0,0
+238,Metal window and door manufacturing,0,0,0,0,0,0
+239,Sheet metal work manufacturing,0,0,0,0,0,0
+240,Ornamental and architectural metal work manufacturing,0,0,0,0,0,0
+241,Power boiler and heat exchanger manufacturing,0,0,0,0,0,0
+242,Metal tank (heavy gauge) manufacturing,0,0,0,0,0,0
+243,Metal cans manufacturing,0,0,0,0,0,0
+244,"Metal barrels, drums and pails manufacturing",0,0,0,0,0,0
+245,Hardware manufacturing,0,0,0,0,0,0
+246,Spring and wire product manufacturing,0,0,0,0,0,0
+247,Machine shops,3.7540853023529053,288445.05548477173,0,9441.4446502923965,0,4921.2388694286346
+248,"Turned product and screw, nut, and bolt manufacturing",0,0,0,0,0,0
+249,Metal heat treating,0,0,0,0,0,0
+250,Metal coating and nonprecious engraving,0,0,0,0,0,0
+251,"Electroplating, anodizing, and coloring metal",0,0,0,0,0,0
+252,"Valve and fittings, other than plumbing, manufacturing",0,0,0,0,0,0
+253,Plumbing fixture fitting and trim manufacturing,0,0,0,0,0,0
+254,Ball and roller bearing manufacturing,0,0,0,0,0,0
+255,Small arms ammunition manufacturing,0,0,0,0,0,0
+256,"Ammunition, except for small arms, manufacturing",0,0,0,0,0,0
+257,"Small arms, ordnance, and accessories manufacturing",0,0,0,0,0,0
+258,Fabricated pipe and pipe fitting manufacturing,0,0,0,0,0,0
+259,Other fabricated metal manufacturing,0,0,0,0,0,0
+260,Farm machinery and equipment manufacturing,0,0,0,0,0,0
+261,Lawn and garden equipment manufacturing,0,0,0,0,0,0
+262,Construction machinery manufacturing,0,0,0,0,0,0
+263,Mining machinery and equipment manufacturing,4.0230674743652344,919186.0556602478,126731.29141330719,0,17116.235569119453,12682.87654966116
+264,Oil and gas field machinery and equipment manufacturing,0,0,0,0,0,0
+265,Semiconductor machinery manufacturing,0,0,0,0,0,0
+266,Food product machinery manufacturing,0,0,0,0,0,0
+267,"Sawmill, woodworking, and paper machinery",0,0,0,0,0,0
+268,Printing machinery and equipment manufacturing,0,0,0,0,0,0
+269,All other industrial machinery manufacturing,0,0,0,0,0,0
+270,Optical instrument and lens manufacturing,0,0,0,0,0,0
+271,Photographic and photocopying equipment manufacturing,0,0,0,0,0,0
+272,Other commercial service industry machinery manufacturing,0,0,0,0,0,0
+273,Air purification and ventilation equipment manufacturing,0,0,0,0,0,0
+274,Heating equipment (except warm air furnaces) manufacturing,0,0,0,0,0,0
+275,"Air conditioning, refrigeration, and warm air heating equipment manufacturing",0,0,0,0,0,0
+276,Industrial mold manufacturing,0,0,0,0,0,0
+277,"Special tool, die, jig, and fixture manufacturing",0,0,0,0,0,0
+278,Cutting tool and machine tool accessory manufacturing,0,0,0,0,0,0
+279,Machine tool manufacturing,0,0,0,0,0,0
+280,Rolling mill and other metalworking machinery manufacturing,0,0,0,0,0,0
+281,Turbine and turbine generator set units manufacturing,0,0,0,0,0,0
+282,"Speed changer, industrial high-speed drive, and gear manufacturing",0,0,0,0,0,0
+283,Mechanical power transmission equipment manufacturing,0,0,0,0,0,0
+284,Other engine equipment manufacturing,0,0,0,0,0,0
+285,Pump and pumping equipment manufacturing,0,0,0,0,0,0
+286,Air and gas compressor manufacturing,0,0,0,0,0,0
+287,Elevator and moving stairway manufacturing,0,0,0,0,0,0
+288,Conveyor and conveying equipment manufacturing,0,0,0,0,0,0
+289,"Overhead cranes, hoists, and monorail systems manufacturing",0,0,0,0,0,0
+290,"Industrial truck, trailer, and stacker manufacturing",0,0,0,0,0,0
+291,Power-driven handtool manufacturing,0,0,0,0,0,0
+292,Welding and soldering equipment manufacturing,0,0,0,0,0,0
+293,Packaging machinery manufacturing,0,0,0,0,0,0
+294,Industrial process furnace and oven manufacturing,0,0,0,0,0,0
+295,Fluid power cylinder and actuator manufacturing,0,0,0,0,0,0
+296,Fluid power pump and motor manufacturing,0,0,0,0,0,0
+297,"Scales, balances, and miscellaneous general purpose machinery manufacturing",0,0,0,0,0,0
+298,Electronic computer manufacturing,0,0,0,0,0,0
+299,Computer storage device manufacturing,0,0,0,0,0,0
+300,Computer terminals and other computer peripheral equipment manufacturing,0,0,0,0,0,0
+301,Telephone apparatus manufacturing,0,0,0,0,0,0
+302,Broadcast and wireless communications equipment manufacturing,0,0,0,0,0,0
+303,Other communications equipment manufacturing,0,0,0,0,0,0
+304,Audio and video equipment manufacturing,0,0,0,0,0,0
+305,Printed circuit assembly (electronic assembly) manufacturing,0,0,0,0,0,0
+306,Bare printed circuit board manufacturing,0,0,0,0,0,0
+307,Semiconductor and related device manufacturing,0,0,0,0,0,0
+308,"Capacitor, resistor, coil, transformer, and other inductor manufacturing",0,0,0,0,0,0
+309,Electronic connector manufacturing,0,0,0,0,0,0
+310,Other electronic component manufacturing,0,0,0,0,0,0
+311,Electromedical and electrotherapeutic apparatus manufacturing,1.2734017372131348,344315.97590446472,0,-5012.348759919405,0,7911.5321859717369
+312,"Search, detection, and navigation instruments manufacturing",0,0,0,0,0,0
+313,Automatic environmental control manufacturing,0,0,0,0,0,0
+314,Industrial process variable instruments manufacturing,0,0,0,0,0,0
+315,Totalizing fluid meter and counting device manufacturing,0,0,0,0,0,0
+316,Electricity and signal testing instruments manufacturing,0,0,0,0,0,0
+317,Analytical laboratory instrument manufacturing,0,0,0,0,0,0
+318,Irradiation apparatus manufacturing,0,0,0,0,0,0
+319,"Watch, clock, and other measuring and controlling device manufacturing",0,0,0,0,0,0
+320,Blank magnetic and optical recording media manufacturing,0,0,0,0,0,0
+321,Software and other prerecorded and record reproducing,0,0,0,0,0,0
+322,Electric lamp bulb and part manufacturing,0,0,0,0,0,0
+323,Lighting fixture manufacturing,0.86692464351654053,180212.12518215179,0,-2493.1028019636869,0,2238.2787428796291
+324,Small electrical appliance manufacturing,0,0,0,0,0,0
+325,Household cooking appliance manufacturing,0,0,0,0,0,0
+326,Household refrigerator and home freezer manufacturing,0,0,0,0,0,0
+327,Household laundry equipment manufacturing,0,0,0,0,0,0
+328,Other major household appliance manufacturing,0,0,0,0,0,0
+329,"Power, distribution, and specialty transformer manufacturing",0,0,0,0,0,0
+330,Motor and generator manufacturing,0,0,0,0,0,0
+331,Switchgear and switchboard apparatus manufacturing,0,0,0,0,0,0
+332,Relay and industrial control manufacturing,0,0,0,0,0,0
+333,Storage battery manufacturing,0,0,0,0,0,0
+334,Primary battery manufacturing,0,0,0,0,0,0
+335,Fiber optic cable manufacturing,0,0,0,0,0,0
+336,Other communication and energy wire manufacturing,0,0,0,0,0,0
+337,Wiring device manufacturing,0,0,0,0,0,0
+338,Carbon and graphite product manufacturing,0,0,0,0,0,0
+339,All other miscellaneous electrical equipment and component manufacturing,0,0,0,0,0,0
+340,Automobile manufacturing,0,0,0,0,0,0
+341,Light truck and utility vehicle manufacturing,0,0,0,0,0,0
+342,Heavy duty truck manufacturing,0,0,0,0,0,0
+343,Motor vehicle body manufacturing,0,0,0,0,0,0
+344,Truck trailer manufacturing,0,0,0,0,0,0
+345,Motor home manufacturing,0,0,0,0,0,0
+346,Travel trailer and camper manufacturing,0,0,0,0,0,0
+347,Motor vehicle gasoline engine and engine parts manufacturing,0,0,0,0,0,0
+348,Motor vehicle electrical and electronic equipment manufacturing,0,0,0,0,0,0
+349,Motor vehicle transmission and power train parts manufacturing,0,0,0,0,0,0
+350,Motor vehicle seating and interior trim manufacturing,0,0,0,0,0,0
+351,Motor vehicle metal stamping,0,0,0,0,0,0
+352,Other motor vehicle parts manufacturing,0,0,0,0,0,0
+353,"Motor vehicle steering, suspension component (except spring), and brake systems manufacturing",0,0,0,0,0,0
+354,Aircraft manufacturing,0,0,0,0,0,0
+355,Aircraft engine and engine parts manufacturing,0,0,0,0,0,0
+356,Other aircraft parts and auxiliary equipment manufacturing,0.91732311248779297,200250.20837783814,0,21717.105060815811,0,1806.6340126097202
+357,Guided missile and space vehicle manufacturing,0,0,0,0,0,0
+358,Propulsion units and parts for space vehicles and guided missiles manufacturing,0,0,0,0,0,0
+359,Railroad rolling stock manufacturing,0,0,0,0,0,0
+360,Ship building and repairing,0,0,0,0,0,0
+361,Boat building,0,0,0,0,0,0
+362,"Motorcycle, bicycle, and parts manufacturing",0,0,0,0,0,0
+363,"Military armored vehicle, tank, and tank component manufacturing",0,0,0,0,0,0
+364,All other transportation equipment manufacturing,0,0,0,0,0,0
+365,Wood kitchen cabinet and countertop manufacturing,2.5479583740234375,203657.79101848602,0,1573.6868372187018,0,1761.6427503526211
+366,Upholstered household furniture manufacturing,0,0,0,0,0,0
+367,Nonupholstered wood household furniture manufacturing,0,0,0,0,0,0
+368,Other household nonupholstered furniture manufacturing,0,0,0,0,0,0
+369,Institutional furniture manufacturing,0,0,0,0,0,0
+370,Wood office furniture manufacturing,0,0,0,0,0,0
+371,Custom architectural woodwork and millwork,0,0,0,0,0,0
+372,"Office furniture, except wood, manufacturing",0,0,0,0,0,0
+373,"Showcase, partition, shelving, and locker manufacturing",0,0,0,0,0,0
+374,Mattress manufacturing,0,0,0,0,0,0
+375,Blind and shade manufacturing,0,0,0,0,0,0
+376,Surgical and medical instrument manufacturing,0,0,0,0,0,0
+377,Surgical appliance and supplies manufacturing,0,0,0,0,0,0
+378,Dental equipment and supplies manufacturing,0,0,0,0,0,0
+379,Ophthalmic goods manufacturing,0,0,0,0,0,0
+380,Dental laboratories,0,0,0,0,0,0
+381,Jewelry and silverware manufacturing,0,0,0,0,0,0
+382,Sporting and athletic goods manufacturing,0,0,0,0,0,0
+383,"Doll, toy, and game manufacturing",0,0,0,0,0,0
+384,Office supplies (except paper) manufacturing,0,0,0,0,0,0
+385,Sign manufacturing,10.727992057800293,750741.77980422974,0,10308.245196938515,0,10851.714760065079
+386,"Gasket, packing, and sealing device manufacturing",0,0,0,0,0,0
+387,Musical instrument manufacturing,0,0,0,0,0,0
+388,"Fasteners, buttons, needles, and pins manufacturing",0,0,0,0,0,0
+389,"Broom, brush, and mop manufacturing",0,0,0,0,0,0
+390,Burial casket manufacturing,0,0,0,0,0,0
+391,All other miscellaneous manufacturing,0,0,0,0,0,0
+392,Wholesale - Motor vehicle and motor vehicle parts and supplies,4.1903672218322754,1481034.517288208,189139.35124874115,11359.130963683128,314145.20740509033,110334.91045236588
+393,Wholesale - Professional and commercial equipment and supplies,0.35226267576217651,69892.287254333496,5893.1354433298111,1400.3623509779573,6011.6508975625038,7648.5662721097469
+394,Wholesale - Household appliances and electrical and electronic goods,3.947056770324707,2198454.6184539795,421889.00709152222,12883.450835943222,677222.66912460327,133742.82419681549
+395,"Wholesale - Machinery, equipment, and supplies",13.204398155212402,3279967.0696258545,770754.45652008057,10941.784828901291,716032.38582611084,300181.89549446106
+396,Wholesale - Other durable goods merchant wholesalers,0.44632285833358765,76187.737286090851,6020.1948508620262,6139.358039945364,3837.8005847334862,9146.9278559088707
+397,Wholesale - Drugs and druggists’ sundries,0,0,0,0,0,0
+398,Wholesale - Grocery and related product wholesalers,0,0,0,0,0,0
+399,Wholesale - Petroleum and petroleum products,0,0,0,0,0,0
+400,Wholesale - Other nondurable goods merchant wholesalers,233.59153747558594,72345268.249511719,13363705.635070801,135621.51789665222,11281132.698059082,15587841.033935547
+401,Wholesale - Wholesale electronic markets and agents and brokers,4.6695990562438965,211419.92509365082,216443.82178783417,59964.466840028763,-107728.16836833954,4552.3424632847309
+402,Retail - Motor vehicle and parts dealers,12.257526397705078,1720597.9824066162,615397.98974990845,18804.740160703659,47853.372991085052,557078.65953445435
+403,Retail - Furniture and home furnishings stores,3.503673791885376,249962.01694011688,14877.41619348526,29273.269698023796,1291.593536734581,82267.895340919495
+404,Retail - Electronics and appliance stores,2.7754514217376709,288087.09979057312,14877.41619348526,112873.20405244827,-4990.7416105270386,64005.255699157715
+405,Retail - Building material and garden equipment and supplies stores,24.421014785766602,2587232.5897216797,529409.52777862549,128124.83310699463,79727.247357368469,993062.19816207886
+406,Retail - Food and beverage stores,94.7999267578125,6819344.5205688477,2417370.080947876,51446.348428726196,178063.73536586762,1453859.3292236328
+407,Retail - Health and personal care stores,35.077507019042969,2322998.2852935791,839328.16982269287,71502.350270748138,22353.35111618042,403559.47613716125
+408,Retail - Gasoline stores,14.562442779541016,1913340.3301239014,291243.97039413452,258224.84493255615,28767.261654138565,600142.53854751587
+409,Retail - Clothing and clothing accessories stores,8.3432350158691406,577884.91249084473,0,6921.8641147017479,0,199272.61769771576
+410,"Retail - Sporting goods, hobby, musical instrument and book stores",21.918186187744141,1171913.3853912354,328021.73495292664,30520.755797624588,26403.779163956642,310564.3093585968
+411,Retail - General merchandise stores,1.754862904548645,101295.45629024506,0,8392.07973331213,0,45182.153582572937
+412,Retail - Miscellaneous store retailers,54.148979187011719,2770832.0617675781,339291.75138473511,783726.15575790405,-69088.79429101944,715594.88773345947
+413,Retail - Nonstore retailers,64.488334655761719,6417912.0063781738,0,316499.79948997498,0,1470317.7213668823
+414,Air transportation,1.1148649454116821,356793.37382316589,0,147541.13554954529,0,65899.960696697235
+415,Rail transportation,3.4721972942352295,1596418.3807373047,429072.58868217468,0,338686.28740310669,-859.92016829550266
+416,Water transportation,0,0,0,0,0,0
+417,Truck transportation,14.336512565612793,4098365.306854248,253373.14605712891,2468586.9216918945,30293.319374322891,73247.522115707397
+418,Transit and ground passenger transportation,21.501781463623047,1198294.7587966919,0,868387.10308074951,0,16951.480880379677
+419,Pipeline transportation,0,0,0,0,0,0
+420,Scenic and sightseeing transportation and support activities for transportation,2.9948594570159912,2221123.6953735352,23746.727034449577,1938537.2400283814,1652.5272512808442,10870.196856558323
+421,Couriers and messengers,5.9249930381774902,366802.8712272644,0,74638.813734054565,0,9889.7814750671387
+422,Warehousing and storage,24.401821136474609,3783108.4728240967,1810581.0880661011,285642.62390136719,228921.75614833832,26028.109714388847
+423,Newspaper publishers,25.539918899536133,2389607.1910858154,1051961.4219665527,-18122.995272278786,583263.5760307312,41119.523346424103
+424,Periodical publishers,0,0,0,0,0,0
+425,Book publishers,0,0,0,0,0,0
+426,"Directory, mailing list, and other publishers",0,0,0,0,0,0
+427,Greeting card publishing,0,0,0,0,0,0
+428,Software publishers,0.1049385741353035,32159.008085727692,9790.1104018092155,0,14131.654053926468,1148.441806435585
+429,Motion picture and video industries,0.63418686389923096,93926.63836479187,0,12052.728794515133,0,3574.9876406043768
+430,Sound recording industries,0.21262152493000031,34047.830849885941,0,1042.980351485312,0,6044.6588322520256
+431,Radio and television broadcasting,1.0318894386291504,344377.33888626099,0,102045.30507326126,0,5852.922797203064
+432,Cable and other subscription programming,0,0,0,0,0,0
+433,Wired telecommunications carriers,11.117414474487305,3530132.0552825928,273331.4037322998,0,122243.75456571579,373873.62122535706
+434,Wireless telecommunications carriers (except satellite),0,0,0,0,0,0
+435,"Satellite, telecommunications resellers, and all other telecommunications",0,0,0,0,0,0
+436,"Data processing, hosting, and related services",17.306112289428711,5052122.5929260254,519740.28348922729,7027.0714350044727,463643.31245422363,96904.084086418152
+437,"News syndicates, libraries, archives and all other information services",0,0,0,0,0,0
+438,Internet publishing and broadcasting and web search portals,0.95214730501174927,560601.11522674561,0,4511.234350502491,0,8142.1220675110817
+439,Nondepository credit intermediation and related activities,0.61450415849685669,94897.270202636719,31935.535371303558,0,7718.223612755537,5656.6870771348476
+440,Securities and commodity contracts intermediation and brokerage,0,0,0,0,0,0
+441,Monetary authorities and depository credit intermediation,50.551044464111328,13266784.66796875,2425745.0103759766,58275.528252124786,2867815.4945373535,376909.70301628113
+442,Other financial investment activities,40.634197235107422,3384446.382522583,6157.9053290188313,52067.719399929047,478.82672515697777,70743.553340435028
+443,Direct life insurance carriers,0,0,0,0,0,0
+444,"Insurance carriers, except direct life",0,0,0,0,0,0
+445,"Insurance agencies, brokerages, and related activities",11.881759643554688,1798858.4041595459,132302.98459529877,9075.7720172405243,53345.661610364914,22892.920300364494
+446,"Funds, trusts, and other financial vehicles",12.383335113525391,3727682.1136474609,387259.00650024414,23770.557716488838,18025.116994976997,3674.8694255948067
+447,Other real estate,38.207546234130859,5570106.9831848145,80485.992133617401,649114.90678787231,272740.09585380554,167100.60834884644
+448,Tenant-occupied housing,26.129003524780273,4411595.8213806152,76410.286128520966,403683.96043777466,1855435.9674453735,1029678.7023544312
+449,Owner-occupied dwellings,0,51521602.630615234,0,0,34919380.187988281,5857890.1290893555
+450,Automotive equipment rental and leasing,0,0,0,0,0,0
+451,General and consumer goods rental except video tapes and discs,2.9676351547241211,370783.29920768738,107915.31205177307,9880.6684836745262,16182.98701941967,101722.77688980103
+452,Video tape and disc rental,2.9676351547241211,371610.49246788025,107915.31205177307,9880.6684836745262,36501.277238130569,81029.660999774933
+453,Commercial and industrial machinery and equipment rental and leasing,41.29144287109375,7542989.7308349609,41306.871920824051,147920.26579380035,63178.941607475281,2512800.4550933838
+454,Lessors of nonfinancial intangible assets,1.1719248294830322,710536.77797317505,6636.5180537104607,12435.629963874817,123998.60471487045,103795.00687122345
+455,Legal services,47.187461853027344,9344712.2573852539,1578709.1255187988,386784.70253944397,1548831.582069397,2676224.2317199707
+456,"Accounting, tax preparation, bookkeeping, and payroll services",45.508098602294922,5524021.6255187988,1979222.1784591675,371389.32943344116,1337650.1798629761,75017.839670181274
+457,"Architectural, engineering, and related services",3.7915961742401123,504886.32917404175,54524.365812540054,120399.21432733536,16148.708760738373,7928.5623505711555
+458,Specialized design services,0,0,0,0,0,0
+459,Custom computer programming services,22.542819976806641,3079010.2481842041,1386544.942855835,145886.43610477448,313952.86321640015,92072.933912277222
+460,Computer systems design services,0.89838176965713501,63187.070190906525,26349.930092692375,0,578.14829051494598,3154.5315869152546
+461,"Other computer related services, including facilities management",0.85070669651031494,165229.73775863648,26338.450610637665,0,26716.483756899834,6790.5695177614689
+462,Management consulting services,8.3097562789916992,821722.09024429321,216745.15306949616,214416.95094108582,-3401.9595477730036,11837.24869042635
+463,Environmental and other technical consulting services,9.6456460952758789,779185.47391891479,265778.51176261902,213747.51627445221,-27016.660198569298,12785.105034708977
+464,Scientific research and development services,30.354946136474609,6526841.6404724121,1531166.0766601563,13408.929109573364,1038595.1995849609,96648.871898651123
+465,"Advertising, public relations, and related services",2.1997592449188232,298950.04630088806,67017.495632171631,6801.5595898032188,50806.917250156403,7630.1600784063339
+466,Photographic services,0,0,0,0,0,0
+467,Veterinary services,3.3674304485321045,305150.12145042419,52219.878882169724,85691.899061203003,35351.995378732681,5858.6494997143745
+468,"Marketing research and all other miscellaneous professional, scientific, and technical services",0,0,0,0,0,0
+469,Management of companies and enterprises,0,0,0,0,0,0
+470,Office administrative services,0,0,0,0,0,0
+471,Facilities support services,0,0,0,0,0,0
+472,Employment services,0.22993235290050507,41901.431977748871,21451.279520988464,0,11588.333174586296,521.97015611454844
+473,Business support services,0.81005614995956421,51925.543695688248,26884.898543357849,4885.7154324650764,-4842.2506079077721,1653.1542642042041
+474,Travel arrangement and reservation services,0,0,0,0,0,0
+475,Investigation and security services,0,0,0,0,0,0
+476,Services to buildings,31.358522415161133,1408133.6259841919,125682.19006061554,637680.7689666748,1737.2784204781055,75290.791690349579
+477,Landscape and horticultural services,21.896184921264648,1162365.3173446655,46454.176306724548,523226.85718536377,1348.0810448527336,71921.437978744507
+478,Other support services,18.852048873901367,1688704.6098709106,258387.77422904968,273533.52308273315,68570.666015148163,65265.104174613953
+479,Waste management and remediation services,18.688591003417969,3775664.3295288086,808585.46495437622,0,585066.19930267334,643241.04785919189
+480,Elementary and secondary schools,124.79546356201172,1283720.0164794922,29682.472348213196,21793.775260448456,-4518.8139192759991,125364.88473415375
+481,"Junior colleges, colleges, universities, and professional schools",0,0,0,0,0,0
+482,Other educational services,0.19275151193141937,8176.6732037067413,3920.2324114739895,0,-614.73972164094448,260.60777599923313
+483,Offices of physicians,0,0,0,0,0,0
+484,Offices of dentists,29.388393402099609,2277110.0997924805,620999.39584732056,208380.28192520142,175676.53954029083,26162.715628743172
+485,Offices of other health practitioners,16.11522102355957,862667.67978668213,199114.15874958038,322210.46090126038,-29551.021754741669,18215.222284197807
+486,Outpatient care centers,0.18645313382148743,16128.547489643097,4506.0273259878159,0,151.02955512702465,301.13061075098813
+487,Medical and diagnostic laboratories,0,0,0,0,0,0
+488,Home health care services,0,0,0,0,0,0
+489,Other ambulatory health care services,0,0,0,0,0,0
+490,Hospitals,2.0340886116027832,192136.83903217316,10714.052245020866,6294.0469942986965,1455.0196938216686,6068.2916082441807
+491,Nursing and community care facilities,34.741481781005859,3711967.945098877,928257.40575790405,1564509.7494125366,11169.631965458393,62611.915171146393
+492,"Residential mental retardation, mental health, substance abuse and other facilities",0,0,0,0,0,0
+493,Individual and family services,110.88071441650391,3194114.9234771729,1843561.2916946411,42771.235108375549,-194058.95471572876,56710.049510002136
+494,Child day care services,15.735932350158691,418907.58275985718,173586.74108982086,15050.47082901001,37444.893270730972,14374.03354793787
+495,"Community food, housing, and other relief services, including rehabilitation services",1.7328044176101685,132547.95968532562,41876.897215843201,0,3815.6548980623484,2823.7393125891685
+496,Performing arts companies,0.1561073511838913,9448.9781185984612,0,1855.0714012235403,0,477.65555791556835
+497,Commercial Sports Except Racing,11.373810768127441,864380.95569610596,304310.08338928223,40166.087448596954,1029.7066764906049,30138.611793518066
+498,Racing and Track Operation,0,0,0,0,0,0
+499,"Independent artists, writers, and performers",0,0,0,0,0,0
+500,Promoters of performing arts and sports and agents for public figures,0,0,0,0,0,0
+501,"Museums, historical sites, zoos, and parks",0.87053114175796509,34485.720098018646,0,1397.5563924759626,0,924.23969181254506
+502,Amusement parks and arcades,0,0,0,0,0,0
+503,Gambling industries (except casino hotels),5.9341201782226562,622269.69003677368,39845.559746026993,49281.556159257889,56841.287761926651,155276.08990669251
+504,Other amusement and recreation industries,9.4581270217895508,360831.97593688965,62614.239752292633,2321.42792083323,-371.82151572778821,78944.243490695953
+505,Fitness and recreational sports centers,0.19836521148681641,7425.4223145544529,0,2321.4134853333235,0,1724.8495714738965
+506,Bowling centers,0.19866003096103668,9760.6265917420387,0,2335.7698228210211,0,2330.2992340177298
+507,"Hotels and motels, including casino hotels",11.149643898010254,1261664.628982544,273077.13031768799,33257.380127906799,233180.76133728027,270257.6220035553
+508,Other accommodations,23.349935531616211,1184779.0479660034,279465.31772613525,181721.73202037811,64362.011849880219,171734.09461975098
+509,Full-service restaurants,51.38507080078125,2703831.9110870361,578713.29784393311,74133.843183517456,243580.05821704865,397326.05218887329
+510,Limited-service restaurants,67.558883666992188,4748901.3671875,857000.47016143799,162365.03422260284,376042.57464408875,677039.5040512085
+511,All other food and drinking places,32.356498718261719,1799299.0016937256,692087.11385726929,52424.054592847824,181650.71308612824,208323.55320453644
+512,"Automotive repair and maintenance, except car washes",43.570846557617188,3676634.7885131836,709597.28956222534,589527.01091766357,-54983.247071504593,1078511.9533538818
+513,Car washes,9.0562715530395508,1231439.9480819702,450484.15660858154,32543.17119717598,54380.856454372406,342207.84902572632
+514,Electronic and precision equipment repair and maintenance,1.963459849357605,190508.03780555725,14257.520437240601,16026.435419917107,7890.0037333369255,32763.388007879257
+515,Commercial and industrial machinery and equipment repair and maintenance,2.3590972423553467,303831.93492889404,125302.28495597839,4859.5680855214596,15778.21746468544,41874.397546052933
+516,Personal and household goods repair and maintenance,3.0312662124633789,132691.07043743134,88533.259928226471,13168.269768357277,-42961.381375789642,31265.228986740112
+517,Personal care services,55.559635162353516,1156833.6486816406,6755.0530657172203,616836.3094329834,-4263.6371217668056,137995.70500850678
+518,Death care services,15.06874942779541,750366.50896072388,6174.8824082314968,140064.58222866058,1349.9952619895339,132037.23728656769
+519,Dry-cleaning and laundry services,0,0,0,0,0,0
+520,Other personal services,1.7287818193435669,42996.417731046677,42435.996234416962,14622.458256781101,-34797.098487615585,5349.3757732212543
+521,Religious organizations,0,0,0,0,0,0
+522,"Grantmaking, giving, and social advocacy organizations",6.6983094215393066,1019968.1520462036,106613.01761865616,13225.181959569454,255252.45070457459,73588.497936725616
+523,Business and professional associations,5.9924449920654297,626544.41595077515,41814.364492893219,20061.148330569267,26902.914047241211,63969.582319259644
+524,Labor and civic organizations,0,0,0,0,0,0
+525,Private households,19.371084213256836,150830.37316799164,150830.37316799164,0,0,0
+526,Postal service,33.833469390869141,2455689.9070739746,2139317.2740936279,0,2130.4215770214796,0
+527,Federal electric utilities,0,0,0,0,0,0
+528,Other federal government enterprises,0,0,0,0,0,0
+529,State government passenger transit,0,0,0,0,0,0
+530,State government electric utilities,0,0,0,0,0,0
+531,Other state government enterprises,0,0,0,0,0,0
+532,Local government passenger transit,0,0,0,0,0,0
+533,Local government electric utilities,0,0,0,0,0,0
+534,Other local government enterprises,78.921875,26900001.525878906,6692830.5625915527,0,8781860.3515625,-1065184.473991394
+535,* Not an industry (Used and secondhand goods),0,0,0,0,0,0
+536,* Not an industry (Scrap),0,0,0,0,0,0
+537,* Not an industry (Rest of world adjustment),0,0,0,0,0,0
+538,* Not an industry (Noncomparable foreign imports),0,0,0,0,0,0
+539,"* Employment and payroll of state govt, education",0,0,0,0,0,0
+540,"* Employment and payroll of state govt, non-education",45.90478515625,3248065.710067749,2781828.1650543213,0,466237.6344203949,0
+541,"* Employment and payroll of local govt, education",499.56805419921875,30440174.102783203,26011146.545410156,0,4429027.0805358887,0
+542,"* Employment and payroll of local govt, non-education",458.51763916015625,33124034.881591797,28441137.313842773,0,4682898.0445861816,0
+543,"* Employment and payroll of federal govt, military",29.055690765380859,1167635.5600357056,973888.69524002075,0,193746.84989452362,0
+544,"* Employment and payroll of federal govt, non-military",30.513692855834961,3455472.7077484131,2295571.8040466309,0,1159901.0229110718,0
