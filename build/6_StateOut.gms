@@ -1,10 +1,12 @@
 $IF not set ST set ST AK
-PARAMETER   Y0, ID0, FD0, VA0, Y0_, ID0_, FD0_, VA0_, empl ;
+PARAMETER   Y0, ID0, FD0, VA0, Y0_, ID0_, FD0_, VA0_, empl, ty, tl, tk ;
 SET         r, g, fdcol, varow, h ;
 ALIAS       (g,s), (h, hh)   ;
 $GDXIN      ./data/%target%/IMPLAN_data_%target%.gdx
-$LOAD       ID0 FD0 VA0 r g fdcol varow empl h
+$LOAD       ID0 FD0 VA0 r g fdcol varow empl h ty tl tk
 $GDXIN  
+
+display ty, tl, tk ;
 
 Y0(r,s)         = sum(g, ID0(r,g,s)) + sum(varow, VA0(r,varow,s))  ;
 
@@ -60,6 +62,9 @@ $gdxin
 
 lpc(r,g,"LOC")$y0("%ST%",g)  = max(0, 1 + sum(im, FD0("%ST%",g,im)) / y0("%ST%",g)) ;
 lpc(r,g,"NAT")$y0("%ST%",g)  = max(0, 1 + FD0("%ST%",g,"imf")       / y0("%ST%",g)) ;
+
+DISPLAY lpc; 
+$exit
 
 mult("out","dir",geo,s) = lpc("%ST%",s,geo) ;
 mult("out","idr",geo,s) = sum(g, idr(g,s) * lpc("%ST%",g,geo)) - mult("out","dir",geo,s) ;
