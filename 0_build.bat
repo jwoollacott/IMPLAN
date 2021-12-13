@@ -50,10 +50,10 @@ if exist errors.txt type errors.txt
 if not exist data\nul mkdir data'
 if not exist data\%target%\nul mkdir data\%target%
 title Merge single data state files and check consistency:
-call gams build\2_merge o=.\listings\merge.lst --ds1=%REG%_001 --subdir=%sd%
+call gams build\2_merge o=.\listings\merge.lst --ds1=%REG% --subdir=%sd%
 
 :aggregation
-call gams build\3_aggregation o=.\listings\3_aggregation.lst --target=%target% --subdir=%sd% --ds1=%REG%_001
+call gams build\3_aggregation o=.\listings\3_aggregation.lst --target=%target% --subdir=%sd% --ds1=%REG%
 
 :tradeadj
 call gams build\4_tradeadj o=.\listings\4_tradeadj.lst --target=%target% 

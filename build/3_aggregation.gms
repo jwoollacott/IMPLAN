@@ -8,7 +8,7 @@ SET     f(*)    Factors,
         j(*)    Aggregated SAM accounts;
 
 * original code
-*#$GDXIN 'data\noaggr%subdir%\%ds1%.gdx'
+*$GDXIN 'data\noaggr%subdir%\%ds1%.gdx'
 
 * when I change it to this from the merge script, I get a dimension mismatch error
 *$GDXIN 'data\noaggr%subdir%\noaggr.gdx' 

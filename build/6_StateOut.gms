@@ -1,14 +1,15 @@
 $IF not set ST set ST AK
-PARAMETER   Y0, ID0, FD0, VA0, Y0_, ID0_, FD0_, VA0_, empl, labor, lab_adj ;
+PARAMETER   Y0, ID0, FD0, VA0, Y0_, ID0_, FD0_, VA0_, empl, ty, tl, tk ;
 SET         r, g, fdcol, varow, h ;
 ALIAS       (g,s), (h, hh)   ;
 $GDXIN      ./data/%target%/IMPLAN_data_%target%.gdx
-$LOAD       ID0 FD0 VA0 r g fdcol varow empl h
+$LOAD       ID0 FD0 VA0 r g fdcol varow empl h ty tl tk
 $GDXIN  
 
-$GDXIN      ./IMPLANData/%ST%_labor.gdx
+$GDXIN      ./IMPLANData/IMPLAN18/%ST%_labor.gdx
 $LOAD       labor
-$GDXIN      
+$GDXIN  
+   
 
 *   Adjustment factors: Empl Comp to Wages & Jobs to FTEs
 $GDXIN      .\data\%target%\%target%.gdx
@@ -21,14 +22,19 @@ $ELSE
     set r_ / %ST% / ;
 $ENDIF
 
-display r_, r ;
+display r_, ty, tl, tk ;
+parameter tax single parameter for tax rates ;
 
+$exit
 Y0(r,s)         = sum(g, ID0(r,g,s)) + sum(varow, VA0(r,varow,s))  ;
 
 ID0_(g,s)       = sum(r_, ID0(r_,g,s)    ) + eps ;
 FD0_(g,fdcol)   = sum(r_, FD0(r_,g,fdcol)) + eps ;
 VA0_(varow,s)   = sum(r_, VA0(r_,varow,s)) + eps ;
 Y0_(s)          = sum(r_,  Y0(r_,s)      ) + eps ;
+tax(r,s,"Y")    = ty(r,s) ; 
+tax(r,s,"L")    = tl(r,s) ;
+tax(r,s,"K")    = tk(r,s) ;
 
 parameter   mult    multipliers
             amat    A matrix -- direct requirements
@@ -103,13 +109,10 @@ mult(mq,"dir",geo,s) = lpc(s,geo) * amat(mq,s,geo);
 mult(mq,"idr",geo,s) = sum(g, idr(geo,g,s) * amat(mq,g,geo)) - mult(mq,"dir",geo,s);
 mult(mq,"idu",geo,s) = sum(g, idu(geo,g,s) * amat(mq,g,geo)) - mult(mq,"dir",geo,s) - mult(mq,"idr",geo,s);
 
-oshr("idr",geo,g,s)  = (idr(geo,g,s)  - mult("out","dir",geo,s)$sameas(g,s)) / 
-                       mult("out","idr",geo,s) ;
+Parameter 
 
 DISPLAY mult, idr, idu, lpc;
-
-$exit
-execute_unload './data/%target%/IMPLAN_data_%target%_%ST%.gdx', ID0_ FD0_ VA0_ Y0_ mult lpc idr idu amat ;
+execute_unload './data/%target%/IMPLAN_data_%target%_%ST%.gdx', ID0_ FD0_ VA0_ Y0_ mult lpc tax ;
 $onecho > out.txt
 PAR=ID0_    RNG=%ST%_ID!A1
 PAR=VA0_    RNG=%ST%_VA!A1
@@ -117,9 +120,7 @@ PAR=FD0_    RNG=%ST%_FD!A1
 PAR=Y0_     RNG=%ST%_Y!A1
 PAR=mult    RNG=%ST%_Mult!A1
 PAR=lpc     RNG=%ST%_LPC!A1
-PAR=idr     RNG=%ST%_idr!A1
-PAR=idu     RNG=%ST%_idu!A1
-PAR=amat    RNG=%ST%_amat!A1
+PAR=tax      RNG=%ST%_Tax!A1
 $offecho
 execute 'gdxxrw.exe ./data/%target%/IMPLAN_data_%target%_%ST%.gdx o=./data/%target%/%target%_SAMs.xlsx epsout=0 @out.txt' ;
 execute 'rm out.txt'
