@@ -1,11 +1,14 @@
 set target=%1
 set reg=%2
-set states= AK AL AR AZ CA CO CT DC DE FL GA HI IA ID IL IN KS KY LA MA MD ME MI MN MO MS MT NC ND NE NH NJ NM NV NY OH OK OR PA RI SC SD TN TX UT VA VT WA WI WV WY
+set states=AK AL AR AZ CA CO CT DC DE FL GA HI IA ID IL IN KS KY LA MA MD ME MI MN MO MS MT NC ND NE NH NJ NM NV NY OH OK OR PA RI SC SD TN TX UT VA VT WA WI WV WY
+
+
 ::  Sub-state regions from target.set
 ::  USCA: WA state regions
 :: set sstreg=WRIA7 BLUES NEWA NCENT SCENT ROWWA COPLT
 ::  USCA: NY state regions
 ::set sstreg=WESNY FNGLK STIER CENNY MHKVL CPREG MDHUD NYCLI NCNTY
+
 
 @echo off
 
@@ -23,6 +26,7 @@ if %REG% == USA (
 ::goto translate
 :: goto census_agg
 ::goto state_agg
+
 
 : Whenever possible, skip the reading of individual state data files --
 : it takes a while...
@@ -76,12 +80,14 @@ goto state_agg
 ::call ..\26.1\gams.exe build\6_census_agg o=.\listings\6_census_agg.lst 
 
 :state_agg
-@REM if %REG%==USA (
-@REM ::  LIST COUNTRY REGION GROUPINGS FROM AGGREGATION SET YOU WANT EXPORTED
-@REM     FOR %%s in (%states%) do (    
-@REM         call ..\26.1\gams.exe build\6_StateOut.gms o=.\listings\6_StateOut.lst --target=%target% --ST=%%s
-@REM     )
-@REM ) else (
+
+if %REG%==USA (
+    FOR %%s in (%states%) do (
+        call ..\26.1\gams.exe .\IMPLANData\LaborSectorAgg.gms o=.\listings\LaborSectorAgg.lst --target=%target% --ST=%%s
+        call ..\26.1\gams.exe build\6_StateOut.gms o=.\listings\6_StateOut_%%s.lst --target=%target% --ST=%%s --AGG="N"
+    )
+) 
+@REM else (
 @REM ::  EXPORT ONCE FOR STATE AND THEN FOR EA STATE REGION
 @REM     call ..\26.1\gams.exe build\6_StateOut.gms o=.\listings\6_StateOut.lst --target=%target% --ST=%REG% --AGG=Y
 @REM     FOR %%r in (%sstreg%) do (
