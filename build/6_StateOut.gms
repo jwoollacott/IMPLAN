@@ -25,7 +25,7 @@ display r;
 
 display s;
 
-PARAMETER Y0_, ID0_, FD0_, VA0_;
+PARAMETER Y0_, ID0_, FD0_, VA0_, tax;
 
 Y0(r,s)         = sum(g, ID0(r,g,s)) + sum(varow, VA0(r,varow,s))  ;
 
@@ -33,9 +33,9 @@ ID0_(g,s)       = sum(r_, ID0(r_,g,s)    ) + eps ;
 FD0_(g,fdcol)   = sum(r_, FD0(r_,g,fdcol)) + eps ;
 VA0_(varow,s)   = sum(r_, VA0(r_,varow,s)) + eps ;
 Y0_(s)          = sum(r_,  Y0(r_,s)      ) + eps ;
-*tax(r,s,"Y")    = ty(r,s) ; 
-*tax(r,s,"L")    = tl(r,s) ;
-*tax(r,s,"K")    = tk(r,s) ;
+tax(s,"Y")      = sum(r_, ty(r_,s)) ; 
+tax(s,"L")      = sum(r_, tl(r_,s)) ;
+tax(s,"K")      = sum(r_, tk(r_,s)) ;
 
 parameter   mult    multipliers
             amat    A matrix -- direct requirements
@@ -101,7 +101,7 @@ mult(mq,"idr",geo,s) = sum(g, idr(geo,g,s) * amat(mq,g,geo)) - mult(mq,"dir",geo
 mult(mq,"idu",geo,s) = sum(g, idu(geo,g,s) * amat(mq,g,geo)) - mult(mq,"dir",geo,s) - mult(mq,"idr",geo,s);
 
 DISPLAY mult, idr, idu, lpc;
-execute_unload './data/%target%/IMPLAN_data_%target%_%ST%.gdx', ID0_ FD0_ VA0_ Y0_ mult lpc /* tax*/ ;
+execute_unload './data/%target%/IMPLAN_data_%target%_%ST%.gdx', ID0_ FD0_ VA0_ Y0_ mult lpc tax ;
 $onecho > out.txt
 PAR=ID0_    RNG=%ST%_ID!A1
 PAR=VA0_    RNG=%ST%_VA!A1
@@ -109,8 +109,8 @@ PAR=FD0_    RNG=%ST%_FD!A1
 PAR=Y0_     RNG=%ST%_Y!A1
 PAR=mult    RNG=%ST%_Mult!A1
 PAR=lpc     RNG=%ST%_LPC!A1
+PAR=tax     RNG=%ST%_Tax!A1
 $offecho
-/*PAR=tax      RNG=%ST%_Tax!A1*/
 *$offecho
 execute 'gdxxrw ./data/%target%/IMPLAN_data_%target%_%ST%.gdx output=./data/%target%/%target%_%ST%_SAMs.xlsx epsout=0 @out.txt' ;
 *execute 'rm out.txt'

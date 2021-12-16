@@ -168,14 +168,13 @@ $LOAD  lab
 $GDXIN
 
 empl(reg,ss)            = sum((mapr(reg,r),maps(ss,s)), lab(r,s)) ;
-lab_adj(reg,ss,"WS_EC")$sum((mapr(reg,r), maps(ss,s)), vfm(r,"empl",s)) 
+lab_adj(reg,ss,"WS_EC")$sum((mapr(reg,r), maps(ss,s)), vfm(r,"empl",s) * lab_con(s,"ECtoWSInc")) 
                         = 1 / ( sum((mapr(reg,r), maps(ss,s)), vfm(r,"empl",s) * lab_con(s,"ECtoWSInc")) /
                                 sum((mapr(reg,r), maps(ss,s)), vfm(r,"empl",s))) ;
 
-*       Currently weighting the FTE conversion by wages but would ideally be by jobs (don't have )
-lab_adj(reg,ss,"FTE_JOB")$sum((mapr(reg,r), maps(ss,s)), vfm(r,"empl",s))
-                        = sum((mapr(reg,r), maps(ss,s)), vfm(r,"empl",s) * lab_con(s,"FTEperTotalEMP")) /
-                          sum((mapr(reg,r), maps(ss,s)), vfm(r,"empl",s)) ;
+lab_adj(reg,ss,"FTE_JOB")$sum((mapr(reg,r), maps(ss,s)), lab(r,s) * lab_con(s,"ECtoWSInc"))
+                        = sum((mapr(reg,r), maps(ss,s)), lab(r,s) * lab_con(s,"FTEperTotalEMP")) /
+                          sum((mapr(reg,r), maps(ss,s)), lab(r,s)) ;
 
 execute_unload '.\data\%target%\%target%.gdx', f,t,i,j,gg=g,reg=r,h,pub,corp,vdxm_=vdxm,vdfm_=vdfm,
         vifm_=vifm,vfm_=vfm,vxm_=vxm,vdpm_=vdpm,vipm_=vipm,

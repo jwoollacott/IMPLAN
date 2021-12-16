@@ -1,6 +1,7 @@
-PAR=ID0_    RNG=WY_ID!A1
-PAR=VA0_    RNG=WY_VA!A1
-PAR=FD0_    RNG=WY_FD!A1
-PAR=Y0_     RNG=WY_Y!A1
-PAR=mult    RNG=WY_Mult!A1
-PAR=lpc     RNG=WY_LPC!A1
+PAR=ID0_    RNG=CO_ID!A1
+PAR=VA0_    RNG=CO_VA!A1
+PAR=FD0_    RNG=CO_FD!A1
+PAR=Y0_     RNG=CO_Y!A1
+PAR=mult    RNG=CO_Mult!A1
+PAR=lpc     RNG=CO_LPC!A1
+PAR=tax     RNG=CO_Tax!A1
