@@ -1,10 +1,10 @@
 $oninline
 
-PARAMETER   Y0, ID0, FD0, VA0, empl/*, ty, tl, tk*/ ;
+PARAMETER   Y0, ID0, FD0, VA0, empl, ty, tl, tk ;
 SET         r, g, fdcol, varow, h ;
 ALIAS       (g,s), (h, hh)   ;
 $GDXIN      ./data/%target%/IMPLAN_data_%target%.gdx
-$LOAD       ID0 FD0 VA0 r g fdcol varow empl h /*ty tl tk*/
+$LOAD       ID0 FD0 VA0 r g fdcol varow empl h ty tl tk
 $GDXIN  
 
 PARAMETER labor;
@@ -19,9 +19,9 @@ $ELSE
     set r_ / %ST% / ;
 $ENDIF
 
-display r_ /*, ty, tl, tk*/ ;
+display r_, ty, tl, tk ;
 display r;
-*parameter tax single parameter for tax rates ;
+parameter tax single parameter for tax rates ;
 
 display s;
 
@@ -34,8 +34,10 @@ FD0_(g,fdcol)   = sum(r_, FD0(r_,g,fdcol)) + eps ;
 VA0_(varow,s)   = sum(r_, VA0(r_,varow,s)) + eps ;
 Y0_(s)          = sum(r_,  Y0(r_,s)      ) + eps ;
 tax(s,"Y")      = sum(r_, ty(r_,s)) ; 
-tax(s,"L")      = sum(r_, tl(r_,s)) ;
-tax(s,"K")      = sum(r_, tk(r_,s)) ;
+*tax(s,"L")      = sum(r_, tl(r_,s)) ;
+tax(s,"L")      = sum(r_, tl(r_)) ;
+*tax(s,"K")      = sum(r_, tk(r_,s)) ;
+tax(s,"K") = 0;
 
 parameter   mult    multipliers
             amat    A matrix -- direct requirements

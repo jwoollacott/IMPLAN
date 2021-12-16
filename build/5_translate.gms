@@ -197,6 +197,7 @@ y0(r,s)         = vom(r,s);
 ty(r,s)$vom(r,s)    = vfm(r,"btax",s) / vom(r,s);
 ty(r,s)$y0(r,s)     = vfm(r,"btax",s) / y0(r,s);
 
+display r;
 * Social security taxes
 tl(r)           = sum((ss,govins), evom(r,"empl",govins,ss)+evom(r,"prop",govins,ss)) / sum(s,ld0(r,s));
 pld0(r,s)       = 1 + tl(r);
@@ -403,5 +404,4 @@ VA0(r,"kap","GOV") = kd0(r,"GOV")  ;
 VA0(r,"tax",s)     = ty(r,s) * y0(r,s) + tl(r) * ld0(r,s) + tk(r) * kd0(r,s) ;
 VA0(r,"tax","GOV") = tl(r) * ld0(r,"GOV") + tk(r) * kd0(r,"GOV") ;
 
-execute_unload './data/%target%/IMPLAN_data_%target%.gdx', ID0, FD0, VA0, r, g, h, fdcol, varow, empl ;
-
+execute_unload './data/%target%/IMPLAN_data_%target%.gdx', ID0, FD0, VA0, r, g, h, fdcol, varow, empl, ty, tl, tk;
